@@ -24,7 +24,7 @@ Good unit tests follow a set of very simple rules:
   For example, pretend that you have method A that takes in value B and returns
   C.
 
-  ```c#
+  ```csharp
   public C A(B)
   ```
   If B is 0, C is null.
