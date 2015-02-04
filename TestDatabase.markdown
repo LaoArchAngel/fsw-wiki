@@ -119,5 +119,5 @@ process.
   through the connection process again.
 2. Check-out the _Database_ folder in the _UnitTest_ project.
   * `git checkout -- UnitTest/Database`
-3. Follow the steps in [**Updating the Schema**](updating-the-schema) and
- [**Dropping Database Constraints**](dropping-database-constraints).
+3. Follow the steps in **[Updating the Schema](#updating-the-schema)** and
+ **[Dropping Database Constraints](#dropping-database-constraints)**.
