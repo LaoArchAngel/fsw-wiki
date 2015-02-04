@@ -48,4 +48,4 @@ Good unit tests follow a set of very simple rules:
 
 ## Resources
 + [Writing Testable Code](TestableCode)
-+ [Testing Code using EFUnitOfWork](Testing/TestDatabase)
++ [Testing Code using EFUnitOfWork](TestDatabase)
