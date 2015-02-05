@@ -27,7 +27,7 @@ found under the [Pages](http://gitlab.fsw.com/tfs/library/wikis/pages) tab of th
 wiki, click the [+ New Page](http://gitlab.fsw.com/tfs/library/wikis/home#modal-new-wiki)
 button located at the top of the wiki.
 
-Always remember to add a commit message regarding the changes you made at the bottom of the page.
+Always remember to add a commit message regarding the changes you made at the bottom of the page before saving changes.
 
 If you would like to add an image to a page, you can simply drag-and-drop, or otherwise
 click on the attaching link at the bottom of the **Content** pane.
