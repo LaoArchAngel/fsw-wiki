@@ -27,19 +27,18 @@ Good unit tests follow a set of very simple rules:
   ```csharp
   public C A(B)
   ```
-  If B is 0, C is null.
-  If B is odd, C.IsEven is false.
-  If B is odd, C.Remainder cannot be 0.
+  If `B` is 0, `C` is null.
+  If `B` is odd, `C.IsEven` is false.
+  If `B` is odd, `C.Remainder` cannot be 0.
   These would turn into three separate unit tests, even though two of them could
   be potentially tested in the same code.
 + Unit tests should not rely on external dependencies.
   + This means that any dependencies should be either faked or mocked, depending
-  on whether what is being tested depends on the dependency or not.
+  on whether code being tested depends on the dependency or not.
 + Unit tests should mock 1 dependency per test.
-  + A fake and a mock are two different things, although they are very different.
-  A fake, simply, is a dependency that is being faked to test the code in the method
-  that uses it.
-  + A mock is a faked dependency in which the response of the dependency is, and
+  + A fake and a mock are two different things, although they are very similar.
+  A fake, simply, is a dependency that is being faked to test the code in the method that uses it.
+  + A mock is a faked dependency in which the response of the dependency, and
   the method's reaction to that response, is being tested.
   + Fakes and mocks can both be done easily using one of the many mocking frameworks.
   We use [Moq](https://github.com/Moq/moq4/blob/master/README.md).
