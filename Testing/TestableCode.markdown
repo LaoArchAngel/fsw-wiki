@@ -8,7 +8,7 @@ scope of the unit test.
 
 ## Writing Testable Code
 * Do not instantiate dependencies inside business logic.
-  * Pass in dependencies either via constructor or method signature.
+  * Pass in dependencies either via constructor, properties, or method signature.
 * Make dependencies interfaces that describe behavior rather than data.
   * Properties of an interface should describe behavior as well. Eg,
   [Keys](https://msdn.microsoft.com/en-us/library/system.collections.idictionary.keys.aspx)
