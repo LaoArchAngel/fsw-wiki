@@ -11,7 +11,7 @@ tests.
 The purpose of unit tests is often misunderstood.  Unit tests are not
 (inheritently) meant to discover bugs.  Unit tests are meant to describe the
 software and how it works.  Reading unit tests should give the reader a good
-grasp of how to use the software and what responds to expect.
+grasp of how to use the software and what responses to expect.
 
 Unit tests do discover bugs, of course, but most often not in the code that is
 currently being written.  Instead, while adding new code or editing existing
