@@ -30,7 +30,7 @@ dependency as a parameter to the methods.
 * Split code into one or multiple behavioral interfaces such that each interface
 follows SRP.
   * A good example are the interfaces used by the
-  `[Dictionary <TKey, TValue>](https://msdn.microsoft.com/en-us/library/xfhwa508.aspx)`
+  [Dictionary \<TKey, TValue\>](https://msdn.microsoft.com/en-us/library/xfhwa508.aspx)
   class from the .NET Framework.  A single class implements multiple interfaces,
   each with a single responsibility.  A Dictionary<TKey,TValue> instance should
   be able to work anywhere the behavior of its interfaces is expected.
