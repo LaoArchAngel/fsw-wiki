@@ -24,13 +24,11 @@ Good unit tests follow a set of very simple rules:
   test only tests one specific aspect of a method or service call.
   For example, pretend that you have method A that takes in value B and returns
   C.
-    + ```csharp
-    public C A(B)
-    ```
-      + If `B` is 0, `C` is null.
-      + If `B` is odd, `C.IsEven` is false.
-      + If `B` is odd, `C.Remainder` cannot be 0.
-      + These would turn into three separate unit tests, even though two of them
+    + ```csharp public C A(B)```
+        + If `B` is 0, `C` is null.
+        + If `B` is odd, `C.IsEven` is false.
+        + If `B` is odd, `C.Remainder` cannot be 0.
+        + These would turn into three separate unit tests, even though two of them
       could be potentially tested in the same code.
 + Unit tests should not rely on external dependencies.
   + This means that any dependencies should be either faked or mocked, depending
