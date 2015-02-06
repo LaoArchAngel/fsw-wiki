@@ -24,7 +24,7 @@ Good unit tests follow a set of very simple rules:
   test only tests one specific aspect of a method or service call.
   For example, pretend that you have method A that takes in value B and returns
   C.
-    + ```csharp public C A(B)```
+    + `public C A(B)`
         + If `B` is 0, `C` is null.
         + If `B` is odd, `C.IsEven` is false.
         + If `B` is odd, `C.Remainder` cannot be 0.
