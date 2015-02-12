@@ -9,10 +9,12 @@ ___
 >> # __2015_02_12__
 
 ### __New Features:__
+
 ####FSW.com 
 * __Changes to Top Brands:__ In the 'Top Brands' section of the homepage, Turbo Air and Vulcan have been replaced with Pinch and Supera
 
 ####FSWAdmin(Frogger/Pollywog/OD/Accellos)
+
 * __Changes to Top Brands:__ In the 'Top Brands' section of the homepage, Turbo Air and Vulcan have been replaced with Pinch and Supera
 * __Update Expiring Avalara Tax Codes:__ Non-taxable adjustment codes have been rectified prior to their expiration. 
 * __Customer Service Identity Protection__ Removed code which accommodated employee names populating the buyer field of outgoing PO.
@@ -20,6 +22,7 @@ ___
 * __M&A Switch MarketSource Parent Business Division:__ Updated the Market Source business division from Licensing to Mergers&Acquisitions.
 
 ### __Defect Corrections:__
+
 ####Licensing
 * __Eclipse Payment Processing:__ Eclipse Orders no longer throw errors in the order entry review page
 
