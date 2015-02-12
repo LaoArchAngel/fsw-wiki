@@ -8,7 +8,7 @@ ___
 
 >> # __2015_02_12__
 
-### __New Features:__
+## __New Features:__
 
 #### FSW.com 
 * __Changes to Top Brands:__ In the 'Top Brands' section of the homepage, Turbo Air and Vulcan have been replaced with Pinch and Supera
@@ -21,7 +21,7 @@ ___
 * __Automated Fulfillment Metrics__ Created automated daily report(s). 
 * __M&A Switch MarketSource Parent Business Division:__ Updated the Market Source business division from Licensing to Mergers&Acquisitions.
 
-### __Defect Corrections:__
+## __Defect Corrections:__
 
 #### Licensing
 * __Eclipse Payment Processing:__ Eclipse Orders no longer throw errors in the order entry review page
@@ -30,6 +30,6 @@ ___
 * __Pollywog sell price adjustment:__ Pollywog now handles unmatched items when adjusting item sell price upon completion 
 * __Accellos/Admin PO updates:__ PO in Accellos should now reflect PO in Admin 
 
-### __Known Issue(s):__
+## __Known Issue(s):__
 * N/A
 ___
