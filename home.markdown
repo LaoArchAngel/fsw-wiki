@@ -34,4 +34,5 @@ click on the attaching link at the bottom of the **Content** pane.
 
 ## Topics
 + [Git](Git)
++ [Nuget](Nuget/SetupVS)
 + [Unit Testing](Testing/UnitTesting)
