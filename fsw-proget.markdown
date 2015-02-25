@@ -1,4 +1,3 @@
-## FSW ProGet
 ProGet is a package management server that enables us to set up feeds for Nuget, Chocolatey, NPM, and Bower. We will be using at least the first two of these feeds. The Nuget feed also includes a symbol and source server, so we can publish packages with symbols and source code, allowing us to step into code from packages we consume from the feed.
 
 ### Web Interface
