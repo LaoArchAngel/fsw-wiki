@@ -36,3 +36,4 @@ click on the attaching link at the bottom of the **Content** pane.
 + [Git](Git)
 + [Nuget](Nuget/SetupVS)
 + [Unit Testing](Testing/UnitTesting)
++ [Automating Releases] (automated_releases)
