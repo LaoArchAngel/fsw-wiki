@@ -36,3 +36,5 @@ click on the attaching link at the bottom of the **Content** pane.
 + [Git](Git)
 + [Nuget](Nuget/SetupVS)
 + [Unit Testing](Testing/UnitTesting)
++ [Automating Releases] (automated_releases)
++ [Architecture Vision] (http://gitlab.fsw.com/tfs/library/raw/master/resources/Architecture-Vision_3-12-2015.pdf)
