@@ -6,14 +6,14 @@ are a few steps you will want to take in order to add or update FSW packages.
 
 ## Location of the FSW Nuget Feed
 Currently, FSW packages are split between the FSW share and
-[Proget](fsw-proget). The FSW share path is:
+[Proget](../fsw-proget). The FSW share path is:
 
 `\\Fswfs\fsw\Development\Software\nugetFeed`
 
 At this location you will find a large store of .nupkg files.  These are
 different versions of our packages.
 
-Please read the instruction in the [Fsw Proget](fsw-proget) page for setup additional
+Please read the instruction in the [Fsw Proget](~/fsw-proget) page for setup additional
 setup instructions.
 
 ## Visual Studio 2013 Setup
