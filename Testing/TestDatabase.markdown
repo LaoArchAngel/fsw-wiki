@@ -105,7 +105,7 @@ data, save the database, and run your tests.
 [Fact]
 public void Some_method_with_contact_with_no_projects_returns_false()
 {
-  var uow = new FswUnitOfWork();
+  var uow = new FswUnitOfWork(DbConfig.ConnectionString);
   var newContactId = uow.Contacts.Max(c => c.ContactID) + 1;
   var contact = Contact.CreateContact(newContactId, 1, DateTime.Now, 1, 1, true);
 
