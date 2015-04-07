@@ -4,17 +4,21 @@ packages. The FSW 4.0 solution, and most other current solutions, already have
 this set up for deployment.  However, when it comes to local development, there
 are a few steps you will want to take in order to add or update FSW packages.
 
+## IMPORTANT UPDATE
+As of 2015-04-17, we have deprecated the Windows-share nuget feed. All FSW
+packages are now being fed via the [Proget](fsw-proget) server.
+
 ## Location of the FSW Nuget Feed
-Currently, FSW packages are split between the FSW share and
-[Proget](fsw-proget). The FSW share path is:
+Currently, FSW packages are stored in our [Proget](fsw-proget) server.  The URL
+is:
 
-`\\Fswfs\fsw\Development\Software\nugetFeed`
+`http://proget.fsw.com/nuget/Default`
 
-At this location you will find a large store of .nupkg files.  These are
-different versions of our packages.
+At this location you will find a large store of nuget packages.  Each package
+has multiple different version, and some will have pre-release versions.
 
-Please read the instruction in the [Fsw Proget](fsw-proget) page for setup additional
-setup instructions.
+Please read the instruction in the [Fsw Proget](fsw-proget) page for setup
+additional setup instructions.
 
 ## Visual Studio 2013 Setup
 To make Visual Studio search the FSW package feed for packages, follow these
@@ -40,7 +44,8 @@ follow instructions under **Update Existing Source**.
 ### Update Existing Source
 
 1. Select the existing FSW source.
-2. At the bottom, set the **Source:** field to the Location of the FSW Nuget Feed.
+2. At the bottom, set the **Source:** field to the Location of the FSW Nuget
+Feed.
 3. Click OK.
 
 ## Verifying Setup
