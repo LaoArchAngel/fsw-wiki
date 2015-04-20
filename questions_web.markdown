@@ -1,3 +1,7 @@
+*Questions related to web skills.  For example, web services, LBs, how the web works, DNS, REST, etc.*
+
+---
+
 # Phone Screen Questions
 
 ## Easy Questions
