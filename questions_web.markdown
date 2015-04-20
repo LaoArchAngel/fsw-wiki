@@ -1,3 +1,9 @@
+# Phone Screen Questions
+
+## Easy Questions
+---
+## Med Questions
+
 #### Q: If you are building a form on a site, such as a form that takes a user’s address, do you think validation should happen on the client or the server side?
 
 #### A: Both.
@@ -15,3 +21,25 @@ Server-side because code should never trust that a client has validated input (s
 * If they only give one, ask if they see a downside to only focusing on that type.  That should guide them towards thinking about both.
 
 ---
+
+## Hard Questions
+
+---
+
+# In-person questions
+
+## Easy Questions
+
+## Med Questions
+
+## Hard Questions
+
+---
+
+# Whiteboard questions
+
+## Easy Questions
+
+## Med Questions
+
+## Hard Questions
