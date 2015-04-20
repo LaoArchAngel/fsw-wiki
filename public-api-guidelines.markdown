@@ -34,20 +34,31 @@ public class DistributableProduct {
 Additionally, for convenience, Service Models should implement `ICloneable.Clone()`, which is a deep copy.  A specific `Clone()` implementation maybe provided in the future to ensure implementation consistency.
 
 ```csharp
-object ICloneable.Clone()
-{
-    //call the strongly typed version
-    return this.Clone();
-}
+[Serializable]
+public class DistributableProduct: ICloneable {
+    object ICloneable.Clone()
+    {
+        //call the strongly typed version
+        return this.Clone();
+    }
 
-public DistributableProduct Clone()
-{
-    return (DistributableProduct) CloneHelper.CloneBySerializing(this);
+    public DistributableProduct Clone()
+    {
+        return (DistributableProduct) CloneHelper.CloneBySerializing(this);
+    }
 }
 ```
 -
 
 Service Models must override ToString(), GetHashCode(),  and Equals() – Specific guidance (regarding exactly how these methods should be implemented) will be provided in order to ensure a standard approach.
+```csharp
+    public override String ToString() {...}
+
+    public override Int32 GetHashCode() {...}
+
+    public override Boolean Equals(Object o) {...}
+```
+-
 
 Service Models should not represent tree structures and should not contain circular associations.  Composite Service Models should be kept small, if used at all, and should always be completely hydrated -- partially hydrated service models should be considered INVALID.
 All dates should be stored as a DateTimeOffsetTime object.  This ensures that time zone is not lost and allows the ToUniveralTime() method to always calculate DateTime correctly.  Dates and times should always be serialized to RFC1123 format.
