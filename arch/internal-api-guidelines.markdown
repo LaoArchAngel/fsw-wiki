@@ -140,22 +140,13 @@ If we follow [this guidance](https://itworksonmymachine.wordpress.com/2008/05/06
 * **Do** log handled exceptions if they are truly exceptional or provide useful information about what happened and how the exception is being handled by the application.  If a handled exception occurs often be sure to lower the log-level at which it is being logged (trace).
 
 ## Logging Requirements
-A good baseline regarding log levels and how to use them can be found [at the joy of coding, here](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx).  This is a good base set of guidance the bulk of which has been included below.
+A good baseline regarding log levels and how to use them can be found [at the joy of coding, here](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx).  This is a good base set of guidance the bulk of which has been included below:
 
-* Debug
-    This is the most verbose logging level (maximum volume setting). I usually consider Debug to be out-of-bounds for a production system and used it only for development and testing. I prefer to aim to get my logging levels just right so I have just enough information and endeavour to log this at the Information level or above.
-
-* Information
-    The Information level is typically used to output information that is useful to the running and management of your system. Information would also be the level used to log Entry and Exit points in key areas of your application. However, you may choose to add more entry and exit points at Debug level for more granularity during development and testing.
-
-* Warning
-    Warning is often used for handled 'exceptions' or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the Warning level should be used to log the missing configuration setting.
-
-* Error
-    Error is used to log all unhandled exceptions. This is typically logged inside a catch block at the boundary of your application.
-
-* Fatal
-    Fatal is reserved for special exceptions/conditions where it is imperative that you can quickly pick out these events. I normally wouldn't expect Fatal to be used early in an application's development. It's usually only with experience I can identify situations worthy of the FATAL moniker experience do specific events become worth of promotion to Fatal. After all, an error's an error.
+* Debug - This is the most verbose logging level (maximum volume setting). I usually consider Debug to be out-of-bounds for a production system and used it only for development and testing. I prefer to aim to get my logging levels just right so I have just enough information and endeavour to log this at the Information level or above.
+* Information - The Information level is typically used to output information that is useful to the running and management of your system. Information would also be the level used to log Entry and Exit points in key areas of your application. However, you may choose to add more entry and exit points at Debug level for more granularity during development and testing.
+* Warning - Often used for handled 'exceptions' or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the Warning level should be used to log the missing configuration setting.
+* Error - Used to log all unhandled exceptions. This is typically logged inside a catch block at the boundary of your application.
+* Fatal - Fatal is reserved for special exceptions/conditions where it is imperative that you can quickly pick out these events. I normally wouldn't expect Fatal to be used early in an application's development. It's usually only with experience I can identify situations worthy of the FATAL moniker experience do specific events become worth of promotion to Fatal. After all, an error's an error.
 
 ## Instrumentation Requirements
-*** Need to outline minimum level of instrumentation (reference framework components) ***
+We should use LogCentral to capture application metrics and request-level instrumentation.  LogCentral supports MS MVC web applications as well as MS Web API applications.  The implementation details vary depending which web technology is used.  Specific details regarding LogCentral can be found [here](http://gitlab.fsw.com/LogCentral/logcentral.net) TODO: Find the correct link!
