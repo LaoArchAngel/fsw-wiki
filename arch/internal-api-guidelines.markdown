@@ -72,10 +72,40 @@ String rfc1123 = myDate.ToString("r");
 Service Models should avoid inheritance under most circumstances.  Inheritance causes serializability issues which is one of the most important features of Service Models (portable types).  Marker interfaces are generally OK, and only serializable generic types should be used within Service Models due to serializability(portability) issues.
 
 ### Service Interfaces
-The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.
+The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.  As much as possible require Service Models instead of Id's when as parameters to service functions.  In fact, it is preferable to create a new Service Model having only an Id property and bind to that in the service contract instead of accepting a raw Id parameter.  This guidance is, of course, not applicable to `FindById()` methods.  Decisions made in this area are use case specific, however, the architecture team should be consulted before exceptions are made.
+```csharp
+
+// an actual sellable product (from another pillar API)
+public class SellableProduct {
+    public Guid Id { get; set; }
+    .
+    .
+    .
+}
+
+// specifically created for use by IOrderService.AddLineItem() (part of current API)
+public class ProductReference {
+    public Guid Id { get; set; }
+}
+
+// ordering service interface
+public interface IOrderService {
+    // preferred
+    void AddLineItem(Order order, SellableProduct product);
+
+    // acceptable
+    void AddLineItem(Order order, ProductReference productRef);
+
+    // discouraged
+    void AddLineItem(Order order, Guid sellableProductId);
+    .
+    .
+    .
+}
+```
 
 ### Service Factories
-Service Interfaces must be instantiated using a public Service Factory. The minimal implementation of a Service Factory should be as follows:
+Service Interfaces must be instantiated using a public Service Factory.  The point of these service factory is to control the create of Services without leaking implementation details.  The minimal implementation of a Service Factory should be as follows:
 
 ```csharp
 using System;
@@ -98,16 +128,34 @@ namespace Distribution.Core.Api
 ```
 
 ## Service Implementation Requirements
-Concrete service classes that implement service interfaces should be instantiated by a service factory.  Service implementation classes should be package visible **NOT Public**.  All service methods must validate the parameter input to ensure data consistency and detect (escape) injection attacks.
+Concrete service classes that implement service interfaces should be instantiated by a service factory.  Service implementation classes should be package visible and **NEVER Public**.  All service methods must validate the parameter input to ensure data consistency and detect (escape) injection attacks.
 
 ## Data Access Framework Requirements
-Data access code must use either Dapper framework or Entity framework for data tier.  Data tier should use a Repository class for data persistence encapsulating the data access framework behind the repository class.  While the repository can create a *Persistable Model*, taking the *Service Model* is preferred whenever possible.  If the data being persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.
+Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data tier.  Data tier should use a Repository Facade for data persistence encapsulating the data access framework within the Repository impementation.  While the Repository can create a *Persistable Model* (Data Model), taking the *Service Model* is preferred whenever possible.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
 
 ## Exception Handling Requirements
-*** Need to outline minimum level of exception handling (reference framework components) ***
+If we follow [this guidance](https://itworksonmymachine.wordpress.com/2008/05/06/exception-handling-dos-and-donts/) we will be in great shape.  Since they are not explicit called out in the above link, two additional points of guidance have been provided below:
+* **Don't** catch an exception if you do not know how to handle it -- just let the exception bubble up.  The application should support a `catch-all` exception handler so we should never be afraid of allow exceptions to bubble out of our code.
+* **Don't** log and exception if it is not being handled.  That is to say,  If you're code catches all exceptions for the sole purpose of logging the exception, **do not do this**.  Instead, let the exception bubble to the `catch-all` error handler.
+* **Do** log handled exceptions if they are truly exceptional or provide useful information about what happened and how the exception is being handled by the application.  If a handled exception occurs often be sure to lower the log-level at which it is being logged (trace).
 
 ## Logging Requirements
-*** Need to outline minimum level of logging (reference framework components) ***
+A good baseline regarding log levels and how to use them can be found [at the joy of coding, here](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx).  This is a good base set of guidance the bulk of which has been included below.
+
+* Debug
+    This is the most verbose logging level (maximum volume setting). I usually consider Debug to be out-of-bounds for a production system and used it only for development and testing. I prefer to aim to get my logging levels just right so I have just enough information and endeavour to log this at the Information level or above.
+
+* Information
+    The Information level is typically used to output information that is useful to the running and management of your system. Information would also be the level used to log Entry and Exit points in key areas of your application. However, you may choose to add more entry and exit points at Debug level for more granularity during development and testing.
+
+* Warning
+    Warning is often used for handled 'exceptions' or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the Warning level should be used to log the missing configuration setting.
+
+* Error
+    Error is used to log all unhandled exceptions. This is typically logged inside a catch block at the boundary of your application.
+
+* Fatal
+    Fatal is reserved for special exceptions/conditions where it is imperative that you can quickly pick out these events. I normally wouldn't expect Fatal to be used early in an application's development. It's usually only with experience I can identify situations worthy of the FATAL moniker experience do specific events become worth of promotion to Fatal. After all, an error's an error.
 
 ## Instrumentation Requirements
 *** Need to outline minimum level of instrumentation (reference framework components) ***
