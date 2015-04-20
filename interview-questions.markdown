@@ -1,6 +1,6 @@
 ## Interviews for Developers
 Our interviews will include a phone screen, in-person questions and whiteboard, then a coding test.  We will standardize the possible list of questions, then ask questions targeting areas that candidates claim to or appear to be strong in, going as deep in those areas as possible.
-Scoring Sheet for these questions here:
+Quick Scoring Sheet for these questions will be here:
 https://docs.google.com/spreadsheets/d/1-Kcg4NiBNKuEr54gzTNB6tCLShVmT4_zcg3ZkAVXqvI/edit?usp=sharing
 
 ### Question Areas
