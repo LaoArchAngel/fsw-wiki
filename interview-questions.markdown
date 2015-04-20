@@ -4,6 +4,12 @@ Quick Scoring Sheet for these questions will be here:
 https://docs.google.com/spreadsheets/d/1-Kcg4NiBNKuEr54gzTNB6tCLShVmT4_zcg3ZkAVXqvI/edit?usp=sharing
 
 ### Question Areas
+For each area, we need at least 3 easy, medium, and hard questions in three categories:
+1. Phone Screen.  Ben will conduct these, so these should be answers that Ben can gauge
+2. In-person interview.  Devs will conduct these, and these should be verbal Q&A
+3. Whiteboard.  Questions that we can brainstorm on the whiteboard with candidates.
+
+Areas:
 * [Cultural Fit](questions_cultural_fit)
 * [Aptitude/Passion](questions_aptitude_passion)
 * [OOP](questions_oop)
