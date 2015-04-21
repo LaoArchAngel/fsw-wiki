@@ -1,5 +1,5 @@
 ## Client/Consumer Requirements
-We want our API's to be as easy to use as possible.  This means no more setup necessary than knowing which environment the API has been deployed to.  If it is possible to discover environment, it will be even better.
+We want our API's to be as easy to use as possible.  This means as little setup as necessary; hopefully nothing more specifying which environment the API has been deployed to.  If possible run-time environment discovery would be even better (read environment variable?).
 
 Usage:
 * Use NuGet to find and reference the API assembly
@@ -94,7 +94,7 @@ String rfc1123 = myDate.ToString("r");
 Service Models should avoid inheritance under most circumstances.  Inheritance causes serializability issues which is one of the most important features of Service Models (portable types).  Marker interfaces are generally OK, and only serializable generic types should be used within Service Models due to serializability(portability) issues.
 
 ### Service Interfaces
-The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.  As much as possible require Service Models instead of Id's when as parameters to service functions.  In fact, it is preferable to create a new Service Model having only an Id property and bind to that in the service contract instead of accepting a raw Id parameter.  This guidance is, of course, not applicable to `FindById()` methods.  Decisions made in this area are use case specific, however, the architecture team should be consulted before exceptions are made.
+The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.  As much as possible require Service Models instead of Id's as parameters to service functions.  In fact, it is preferable to create a new Service Model having only an Id property and bind to that in the service contract instead of accepting a raw Id parameter.  This guidance is, of course, not applicable to `FindById()` methods.  Decisions made in this area are use case specific, however, the architecture team should be consulted before exceptions are made.
 ```csharp
 
 // an actual sellable product (from another pillar API)
@@ -127,7 +127,7 @@ public interface IOrderService {
 ```
 
 ### Service Factories
-Service Interfaces must be instantiated using a public Service Factory.  The point of these service factory is to control the create of Services without leaking implementation details.  The minimal implementation of a Service Factory should be as follows:
+Service Interfaces must be instantiated using a public Service Factory.  The point of the service factory is to control the creation of Services without leaking implementation details.  The minimal implementation of a Service Factory should be as follows:
 
 ```csharp
 using System;
@@ -153,18 +153,18 @@ namespace Distribution.Core.Api
 Concrete service classes that implement service interfaces should be instantiated by a service factory.  Service implementation classes should be package visible and **NEVER Public**.  All service methods must validate the parameter input to ensure data consistency and detect (escape) injection attacks.
 
 ## Data Access Framework Requirements
-Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data tier.  Data tier should use a Repository Facade for data persistence encapsulating the data access framework within the Repository impementation.  While the Repository can create a *Persistable Model* (Data Model), taking the *Service Model* is preferred whenever possible.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
+Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data persistence.  Data tiers should use a Repository Facade encapsulating the data access framework within the Repository implementation.  While the Repository can create a *Persistable Model* (Data Model), using the *Service Model* is preferred whenever possible to avoid excess object-to-object mapping/serialization.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
 
 ## Exception Handling Requirements
-If we follow [this guidance](https://itworksonmymachine.wordpress.com/2008/05/06/exception-handling-dos-and-donts/) we will be in great shape.  Since they are not explicit called out in the above link, two additional points of guidance have been provided below:
+If we follow [this guidance](https://itworksonmymachine.wordpress.com/2008/05/06/exception-handling-dos-and-donts/) we will be in great shape.  However, since the reference exception handling article does not explicitly address them, additional points of guidance have been provided below:
 * **Don't** catch an exception if you do not know how to handle it -- just let the exception bubble up.  The application should support a `catch-all` exception handler so we should never be afraid of allow exceptions to bubble out of our code.
-* **Don't** log and exception if it is not being handled.  That is to say,  If you're code catches all exceptions for the sole purpose of logging the exception, **do not do this**.  Instead, let the exception bubble to the `catch-all` error handler.
-* **Do** log handled exceptions if they are truly exceptional or provide useful information about what happened and how the exception is being handled by the application.  If a handled exception occurs often be sure to lower the log-level at which it is being logged (trace).
+* **Don't** log and exception if it is not being handled.  That is to say,  If your code catches all exceptions for the sole purpose of logging the exception, **resist the temptation**!  Instead, let the exception bubble to the `catch-all` error handler.
+* **Do** log handled exceptions if they are truly exceptional or provide useful information about what happened and how the exception is being handled by the application.  If a handled exception occurs often be sure to lower the log-level at which it is being logged (debug?).
 
 ## Logging Requirements
-A good baseline regarding log levels and how to use them can be found [at the joy of coding, here](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx).  This is a good base set of guidance the bulk of which has been included below:
+A good baseline regarding log levels and how to use them can be found [at the joy of coding](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx).  This is a good base set of guidance, the bulk of which has been included below:
 
-* Debug - This is the most verbose logging level (maximum volume setting). I usually consider Debug to be out-of-bounds for a production system and used it only for development and testing. I prefer to aim to get my logging levels just right so I have just enough information and endeavour to log this at the Information level or above.
+* Debug - This is the most verbose logging level (maximum volume setting). I usually consider Debug to be out-of-bounds for a production system and used it only for development and testing. I prefer to aim to get my logging levels just right so I have just enough information and endeavor to log this at the Information level or above.
 * Information - The Information level is typically used to output information that is useful to the running and management of your system. Information would also be the level used to log Entry and Exit points in key areas of your application. However, you may choose to add more entry and exit points at Debug level for more granularity during development and testing.
 * Warning - Often used for handled 'exceptions' or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the Warning level should be used to log the missing configuration setting.
 * Error - Used to log all unhandled exceptions. This is typically logged inside a catch block at the boundary of your application.
