@@ -13,8 +13,11 @@ using Disribution.Core.Api
 
 public class MyConsumer {
     public static async Task<DistributableProduct> DoWork(String sku) {
+        // use factory to get an instance of the ServiceInterface
         IDistributableProductService productSvc = ServiceFactory.GetIDistributableProductService(env);
-        DistributableProduct product = await productSvc.FindBySku(sku);
+
+        // call async methods on the service in a non-blocking way using await
+        DistributableProduct product = await productSvc.FindBySkuAsync(sku);
 
         // ToString() is overridden so it will return a "pretty" representation including all public fields
         Console.Log(product.ToString()); 
