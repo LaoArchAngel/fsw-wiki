@@ -12,10 +12,15 @@ Example:
 using Disribution.Core.Api
 
 public class MyConsumer {
-    public void main(String[] args) {
+    public static async Task<DistributableProduct> DoWork(String sku) {
         IDistributableProductService productSvc = ServiceFactory.GetIDistributableProductService(env);
-        DistributableProduct product = productSvc.FindBySku(args[0]);
-        Console.WriteLine(product.ToString());
+        DistributableProduct product = await productSvc.FindBySku(sku);
+
+        // ToString() is overridden so it will return a "pretty" representation including all public fields
+        Console.Log(product.ToString()); 
+
+        // return the retrieved product
+        return product
     }
 }
 ```
@@ -94,7 +99,7 @@ String rfc1123 = myDate.ToString("r");
 Service Models should avoid inheritance under most circumstances.  Inheritance causes serializability issues which is one of the most important features of Service Models (portable types).  Marker interfaces are generally OK, and only serializable generic types should be used within Service Models due to serializability(portability) issues.
 
 ### Service Interfaces
-The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.  As much as possible require Service Models instead of Id's as parameters to service functions.  In fact, it is preferable to create a new Service Model having only an Id property and bind to that in the service contract instead of accepting a raw Id parameter.  This guidance is, of course, not applicable to `FindById()` methods.  Decisions made in this area are use case specific, however, the architecture team should be consulted before exceptions are made.
+The public behavioral contract for any system should be specified using Service Interfaces.  Service Interfaces specify what behaviors the API provides and should, under most circumstances, take and return `Service Models`.  All service models should return Task or Task<T> to ensure future proofing for async behavior since Task can ultimately behave synchronously as well as asynchronously.  As much as possible require Service Models instead of Id's as parameters to service functions.  In fact, it is preferable to create a new Service Model having only an Id property and bind to that in the service contract instead of accepting a raw Id parameter.  This guidance is, of course, not applicable to `FindByIdAsnc()` methods.  Decisions made in this area are use case specific, however, the architecture team should be consulted before exceptions are made.
 ```csharp
 
 // an actual sellable product (from another pillar API)
@@ -113,13 +118,16 @@ public class ProductReference {
 // ordering service interface
 public interface IOrderService {
     // preferred
-    void AddLineItem(Order order, SellableProduct product);
+    Task AddLineItemAsync(Order order, SellableProduct product);
 
     // acceptable
-    void AddLineItem(Order order, ProductReference productRef);
+    Task AddLineItemAsync(Order order, ProductReference productRef);
 
     // discouraged
-    void AddLineItem(Order order, Guid sellableProductId);
+    Task AddLineItemAsync(Order order, Guid sellableProductId);
+
+    // a standard async find by Id method
+    Task<Order> FindByIdAsync(Guid id);
     .
     .
     .
@@ -154,17 +162,17 @@ Concrete service classes that implement service interfaces should be instantiate
 
 ```csharp
 class DistributableProductService: IDistributableProductService {
-   Boolean Create(DistributableProduct) {...}
-   DistributableProduct FindById(Guid id) {...}
-   DistributableProduct FindBySku(String sku) {...}
-   IList<DistributableProduct> FindByCost(double cost) {...}
-   Boolean Update(DistributableProduct) {...}
-   Boolean Delete(DistributableProduct) {...}
+   public async Task Create(DistributableProduct) {...}
+   public async Task<DistributableProduct> FindById(Guid id) {...}
+   public async Task<DistributableProduct> FindBySku(String sku) {...}
+   public async Task<IList<DistributableProduct>> FindByCost(double cost) {...}
+   public async Task Update(DistributableProduct) {...}
+   public async Task Delete(DistributableProduct) {...}
 }
 ``` 
 
 ## Data Access Framework Requirements
-Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data persistence.  Data tiers should use a Repository Facade encapsulating the data access framework within the Repository implementation.  While the Repository can create a *Persistable Model* (Data Model), using the *Service Model* is preferred whenever possible to avoid excess object-to-object mapping/serialization.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
+Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data persistence.  Data tiers should use a Repository Facade encapsulating the data access framework within the Repository implementation and use async persistence methods when they exist.  While the Repository can create a *Persistable Model* (Data Model), using the *Service Model* is preferred whenever possible to avoid excess object-to-object mapping/serialization.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
 
 ## Exception Handling Requirements
 If we follow [this guidance](https://itworksonmymachine.wordpress.com/2008/05/06/exception-handling-dos-and-donts/) we will be in great shape.  However, since the reference exception handling article does not explicitly address them, additional points of guidance have been provided below:
