@@ -1,5 +1,5 @@
 ## Client/Consumer Requirements
-We want our API's to be as easy to use as possible.  This means as little setup as necessary; hopefully nothing more specifying which environment the API has been deployed to.  If possible run-time environment discovery would be even better (read environment variable?).
+We want our API's to be as easy to use as possible.  This means as little setup as necessary; hopefully nothing more than specifying which environment the API has been deployed to.  If possible run-time environment discovery would be even better (using an environment variable or shared config entry?).
 
 Usage:
 * Use NuGet to find and reference the API assembly
