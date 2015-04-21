@@ -1,5 +1,24 @@
-## Internationalization Requirements
-Do we want to specify the use of resource managers and externalizing all resource strings that are otherwise exposed to the users?
+## Client/Consumer Requirements
+We want our API's to be as easy to use as possible.  This means no more setup necessary than knowing which environment the API has been deployed to.  If it is possible to discover environment, it will be even better.
+
+Usage:
+* Use NuGet to find and reference the API assembly
+* Reference the API namespace as a using statement
+* Use a static factory method on the service factory to create the needed service interface
+* Call the service methods on the service as necessary
+
+Example:
+```csharp
+using Disribution.Core.Api
+
+public class MyConsumer {
+    public void main(String[] args) {
+        IDistributableProductService productSvc = ServiceFactory.GetIDistributableProductService(env);
+        DistributableProduct product = productSvc.FindBySku(args[0]);
+        Console.WriteLine(product.ToString());
+    }
+}
+```
 
 ## Project File Naming Requirements
 Assemblies should be properly named as follows:
@@ -14,6 +33,9 @@ Assemblies should be properly named as follows:
 …where <projectName> is the base level namespace of all the contained classes.  For example:
 * Distribution.Core.API_Library.csproj     (contains Distribution.Core.API classes and, possibly private implementation)
 * Distribution.Core_Library.csproj         (contains all Distribution.Core classes except those contained in more specific projects/assemblies)
+
+## Project Scaffolding Generation
+A Service Library scaffolding generator has been create to simplify the process of creating new service libraries or new Service Models and their associated Service Interfaces as well as Service Implementation, Repository, and Test classes.  This also includes changes necessary to include the new source files in the .csproj files as well as creation of new methods on the service factory.  It is presently a work in progress, but will be completed in the coming weeks (1-2 weeks to completion).  For more information about scaffolding generation, or to contribute to the code generator source code, please see the [generator git repo](http://gitlab.fsw.com/architecture/generator-service-lib/tree/master) 
 
 ## System API Requirements
 Subsystem API's can exist in their own assembly separate from the Domain Code/Business Logic but will most often be combined with a private default implementation, hidden from consumers.  A `System API` must consist of one or more `Service Model`s, one or more `Service Interface`s, and a `Service Factory`; clearly indicated as a public, consumable API by their presence in a namespace ending with `API`. 
