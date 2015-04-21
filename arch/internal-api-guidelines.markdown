@@ -152,6 +152,17 @@ namespace Distribution.Core.Api
 ## Service Implementation Requirements
 Concrete service classes that implement service interfaces should be instantiated by a service factory.  Service implementation classes should be package visible and **NEVER Public**.  All service methods must validate the parameter input to ensure data consistency and detect (escape) injection attacks.
 
+```csharp
+class DistributableProductService: IDistributableProductService {
+   Boolean Create(DistributableProduct) {...}
+   DistributableProduct FindById(Guid id) {...}
+   DistributableProduct FindBySku(String sku) {...}
+   IList<DistributableProduct> FindByCost(double cost) {...}
+   Boolean Update(DistributableProduct) {...}
+   Boolean Delete(DistributableProduct) {...}
+}
+``` 
+
 ## Data Access Framework Requirements
 Data access code must use either [Dapper Framework](https://github.com/StackExchange/dapper-dot-net) or [Entity Framework](https://github.com/aspnet/EntityFramework/wiki) for data persistence.  Data tiers should use a Repository Facade encapsulating the data access framework within the Repository implementation.  While the Repository can create a *Persistable Model* (Data Model), using the *Service Model* is preferred whenever possible to avoid excess object-to-object mapping/serialization.  If the data to be persisted is not exactly the same as the fields exposed by the *Service Model*, a *Persistable Model* will be required.  More detail to come.
 
