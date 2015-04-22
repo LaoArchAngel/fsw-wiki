@@ -17,6 +17,11 @@
     `Follow-Ups`:
     * Ask “Why?” There are pos and cons of each.  Sometimes you need to use the debugging tools in the browser when you are debugging a problem only occurring on that browser.
 
+2. *What is the difference between "undefined" and "null"?*
+
+   `Answer`: 
+    * undefined: a variable has been declared but has not yet been assigned a value
+    * null: a variable has been assigned an empty value
 
 ## Med Questions
 
