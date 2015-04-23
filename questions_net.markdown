@@ -6,17 +6,46 @@
 
 ## Easy Questions
 
+1. What is the difference between reference types and value types?
+
+    **Answer:**
+    * Reference types are allocated on the heap. When passed into a method, the reference is copied, which means any changes to the object will affect the outer scope.
+    * Value types are allocated on the stack. When passed into a method, the value is copied, which means changes to the value will not affect the outer scope.
+
+2. What are the different access modifiers and what does each one mean?
+
+    **Answer:**
+    * `private`: Can be used only within the same class.
+    * `protected`: Can only be used within the same class or its subclasses.
+    * `internal`: Can only be used from within the same assembly.
+    * `public`: Can be used from anywhere.
+
+    **Follow-up:** What is the default access modifier (implied, if one is not explicitly provided) for:
+       - Classes? `internal`
+       - Member variables? `private`
+       - Methods? `private`
+
+3. What is the `virtual` keyword used for?
+
+    **Answer:** The `virtual` keyword can be applied only to a method, to indicate that it can be overridden. Methods without the `virtual` keyword cannot be overridden in C# (unlike Java where methods are virtual by default and can only be made `final`).
+
 ## Med Questions
 
 1. In C#, what is the difference between the 3 keywords `static`, `constant`, and `readonly`?
 
     `Answer`:
-    * Static: One copy of a `static` method, class, or class member will exist per application domain, and will be shared across all instances of an object.
+    * Static: One copy of a `static` method, class, or class member will exist per `ApplicationDomain`, and will be shared across all instances of an object.
     * Constant: A property marked as `constant` has its value set inline and can not be changed.  The value is actually compiled into the dll and is `static`.
     * Readonly: A property marked as `readonly` can be set inline or within the constructor of a class, but not set again after that.  This is useful for injecting values at run-time that you may not know at compile-time and you do not want an application to be able to modify.  A `readonly` property may or may not be `static`.
 
     `Notes`:
     * Most people will know constant and static but not readonly.  If a candidate does not understand static they barely know C# or OOP.
+
+2. What is an extension method? Why would you use one?
+
+    **Answer:** 
+
+    Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type. They enable you to "add" methods to existing types. Extension methods offer a few valuable options, such as the ability to call the method on a null reference, and to modify types for which source code is not available, such as those in the base class libraries.
 
 ## Hard Questions
 
