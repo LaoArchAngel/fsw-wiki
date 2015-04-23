@@ -48,10 +48,12 @@
 
     `Answer`: Using the 'push' function (i.e. `array.push("value")` adds "value to the end of the array)
 
-5. *What is the "This" keyword and what does it reference?
+5. *What is the "This" keyword and what does it reference?*
 
     `Answer1`: "this" refers to the "owner" of the function being executed
+
     `Answer2`: "this" refers to the object a function is a method of
+
     `Answer Details`: The caller provides the "this" value. If the "this" value provided by the caller is not an object (including the case where it is null), then the "this" value is the global object.
 
 
