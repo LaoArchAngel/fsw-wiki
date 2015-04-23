@@ -29,7 +29,7 @@
 
 4. *What is the DOM?*
 
-    `Answer`: **D**ument **O**bject **M**odel - object class that is visible and accessible to JavaScript and give access to all comment in and HTML page.
+    `Answer`: **D**ocument **O**bject **M**odel - object class that is visible and accessible to JavaScript and give access to all comment in and HTML page.
 
 
 ## Med Questions
