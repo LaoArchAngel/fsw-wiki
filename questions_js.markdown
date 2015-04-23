@@ -49,6 +49,9 @@
 
     `Answer`: 'undefined' is returned, unless it's a constructor, in which case 'this' is returned
 
+2. *What is a closure in javascript*
+
+`Answer`: A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
 ---
 
 # In-person questions
