@@ -4,7 +4,7 @@ We want our API's to be as easy to use as possible.  This means as little setup 
 Usage:
 * Use NuGet to find and reference the API assembly
 * Reference the API namespace as a using statement
-* Use a static factory method on the service factory to create the needed service interface
+* Use the service factory to create the needed service interface
 * Call the service methods on the service as necessary
 
 Example:
@@ -12,9 +12,9 @@ Example:
 using Disribution.Core.Api
 
 public class MyConsumer {
-    public static async Task<DistributableProduct> DoWork(String sku) {
+    public async Task<DistributableProduct> DoWork(String sku) {
         // use factory to get an instance of the ServiceInterface
-        IDistributableProductService productSvc = ServiceFactory.GetIDistributableProductService(env);
+        IDistributableProductService productSvc = this.serviceFactory.GetIDistributableProductService(env);
 
         // call async methods on the service in a non-blocking way using await
         DistributableProduct product = await productSvc.FindBySkuAsync(sku);
@@ -150,12 +150,12 @@ using Distribution.Core.Impl;
 
 namespace Distribution.Core.Api
 {
-    public static class ServiceFactory
+    public class ServiceFactory
     {
-        public static IDistributableProductService IDistributableProductService() {
+        public virtual IDistributableProductService IDistributableProductService() {
             return new Business.DistributableProductService();
         }
-         public static IInventoryService IInventoryService() {
+         public virtual IInventoryService IInventoryService() {
             return new Business.InventoryService();
         }
    }
