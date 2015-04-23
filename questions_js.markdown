@@ -17,11 +17,15 @@
     `Follow-Ups`:
     * Ask “Why?” There are pos and cons of each.  Sometimes you need to use the debugging tools in the browser when you are debugging a problem only occurring on that browser.
 
-2. *What is the difference between "undefined" and "null"?*
+2. *What is the difference between 'undefined' and 'null'?*
 
-   `Answer`: 
+    `Answer`: 
     * undefined: a variable has been declared but has not yet been assigned a value
     * null: a variable has been assigned an empty value
+
+3. *Is a function name required?*
+
+    `Answer`: No - anonymous function have no name, and can be assigned to a variable or passed into another function
 
 ## Med Questions
 
@@ -31,10 +35,14 @@
     
     `Partial Credit Answer`: using the AJAX functionality of an existing JS Framework (JQuery, Angular, etc..)
 
-2. *What is the difference between `var x = 3` and `x = 3`?*
-    
-    `Answer`: Using 'var' assigns the variable to the current scope, while not using 'var' assigns it to the global scope (unless x was previously defined with 'var' in the current scope)
+2. *What is the difference between 'var x = 3' and 'x = 3'?*
 
+    `Answer`:  Using 'var' assigns the variable to the current scope, while not using 'var' assigns it to the global scope (unless x was previously defined with 'var' in the current scope)
+
+3. How do you add an item to an array?
+
+    `Answer`: Using the 'push' function (i.e. `array.push("value")` adds "value to the end of the array)
+ 
 
 ## Hard Questions
 1. *If a function doesn't have a return statement, what if anything is returned?*
