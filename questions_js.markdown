@@ -48,10 +48,6 @@
 
     `Answer`: Using the 'push' function (i.e. `array.push("value")` adds "value to the end of the array)
 
-4. *What is a JavsScript Closure?*
-
-    `Answer`: A closure is a function whose local variables are kept alive after the function has returned.
-
 5. *What is the "This" keyword and what does it reference?
 
     `Answer1`: "this" refers to the "owner" of the function being executed
@@ -66,7 +62,11 @@
 
 2. *What is a closure in JavaScript*
 
-`Answer`: A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
+    `Answer`: A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: 
+    1. variable in its own scope
+    2. variables in the enclosing function’s scope
+    3. global variables
+
 ---
 
 # In-person questions
