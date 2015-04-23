@@ -104,7 +104,7 @@
 
 ## Easy Questions
 1. *where do directives and controllers live?*
-‘Answer’: in modules
+    `Answer`: in modules
 
 2. *how do you create a module?*
 `Answer`: angular.module(‘myModule’, []) where the first param is the modules name and the second parameter is an array of dependancies
