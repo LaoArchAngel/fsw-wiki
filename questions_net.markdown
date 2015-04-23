@@ -49,6 +49,17 @@
 
 ## Hard Questions
 
+1. How do you ensure that objects used as a generic's type parameter implement a specific interface?
+
+    `Answer`: Generic type constraints are the term for this.  The `where` keyword in .net is used for this, such as: `public class MyGenericClass<T> where T : IComparable { }`
+
+    A more complex example shows how you can actually assert that types adhere to built-in types as well, or even are new()able:
+`class MyClass<T, U, V>
+    where T : class 
+    where U : struct
+    where V : new
+{ }`
+
 ---
 
 # In-person questions
@@ -70,17 +81,6 @@
     The primary advantage of mark-sweep is that it handles cyclic references naturally. Moreover, no additional overheads are added while normal execution (e.g. allocation, pointer manipulations). Combined with compaction it ensures good locality of reference and reduced fragmentation and hence optimal subsequent allocations.
 
     However, mark-sweep pauses useful execution and walks entire memory marking and sweeping it. Hence it adds large freezes which is un-acceptable in most interactive systems. However, incremental variations of Mark-sweep are available which works around this limitation. Mark-sweep also starts thrashing when memory fills up as it fails to clean up memory and it gets triggered again and again as memory approaches exhaustion. Self tuning GC helps in this scenario.
-
-2. How do you ensure that objects used as a generic's type parameter implement a specific interface?
-
-    `Answer`: Generic type constraints are the term for this.  The `where` keyword in .net is used for this, such as: `public class MyGenericClass<T> where T : IComparable { }`
-
-    A more complex example shows how you can actually assert that types adhere to built-in types as well, or even are new()able:
-`class MyClass<T, U, V>
-    where T : class 
-    where U : struct
-    where V : new
-{ }`
 
 ---
 
