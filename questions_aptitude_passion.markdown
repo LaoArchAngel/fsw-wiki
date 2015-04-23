@@ -19,13 +19,3 @@
 ## Med Questions
 
 ## Hard Questions
-
----
-
-# Whiteboard questions
-
-## Easy Questions
-
-## Med Questions
-
-## Hard Questions
