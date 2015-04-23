@@ -34,7 +34,7 @@
 
     `Answer`: .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first enumerates all the roots and then starts visiting the objects referenced by them recursively (essentially travelling the nodes in the memory graph). When it reaches an object it marks it with a special flag indicating that the object is reachable and hence not garbage. At the end of this mark phase it gets into the sweep phase. Any object in memory that is not marked by this time is garbage and the system disposes it.
 
-    'Follow-up': What are the advantages and disadvantages of a mark-and-sweep GC algorithm over a reference counter GC?
+    'Follow-up': What are the advantages and disadvantages of a mark-and-sweep GC algorithm over other algorithms (such as a reference counter GC)?
 
     The primary advantage of mark-sweep is that it handles cyclic references naturally. Moreover, no additional overheads are added while normal execution (e.g. allocation, pointer manipulations). Combined with compaction it ensures good locality of reference and reduced fragmentation and hence optimal subsequent allocations.
 
