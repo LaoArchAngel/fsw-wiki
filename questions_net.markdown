@@ -36,7 +36,7 @@
 
     More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
 
-    'Follow-up': What are the advantages and disadvantages of a mark-and-sweep GC algorithm over other algorithms (such as a reference counter GC)?
+    `Follow-up`: What are the advantages and disadvantages of a mark-and-sweep GC algorithm over other algorithms (such as a reference counter GC)?
 
     The primary advantage of mark-sweep is that it handles cyclic references naturally. Moreover, no additional overheads are added while normal execution (e.g. allocation, pointer manipulations). Combined with compaction it ensures good locality of reference and reduced fragmentation and hence optimal subsequent allocations.
 
