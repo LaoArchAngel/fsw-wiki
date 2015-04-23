@@ -16,7 +16,7 @@
     * Readonly: A property marked as `readonly` can be set inline or within the constructor of a class, but not set again after that.  This is useful for injecting values at run-time that you may not know at compile-time and you do not want an application to be able to modify.  A `readonly` property may or may not be `static`.
 
     `Notes`:
-    * Most people will know constant and static but not readonly.
+    * Most people will know constant and static but not readonly.  If a candidate does not understand static they barely know C# or OOP.
 
 ## Hard Questions
 
