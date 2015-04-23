@@ -16,6 +16,7 @@ Areas:
 * [JS/UI](questions_js)
 * [.NET/C#](questions_net)
 * [Web](questions_web)
+* [SQL](questions_sql)
 
 ### Whiteboard Questions
 Language agnostic whiteboard questions can be found here: [Whiteboard Code Questions](whiteboard-code-questions)
