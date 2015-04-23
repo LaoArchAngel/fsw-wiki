@@ -17,6 +17,9 @@ Areas:
 * [.NET/C#](questions_net)
 * [Web](questions_web)
 
+### Whiteboard Questions
+Language agnostic whiteboard questions can be found here: [Whiteboard Code Questions](whiteboard-code-questions)
+
 ### Coding Test
 Details of how to conduct the coding test here: [Coding Test](coding_test)
 
