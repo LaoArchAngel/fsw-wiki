@@ -1,4 +1,7 @@
-*Questions related to .NET and C#, such as readonly vs. constant, how GC works, how reflection works.*
+# .NET / C# Interview Questions
+
+Questions related to .NET and C#, such as readonly vs. constant, how GC works,
+how reflection works.
 
 ---
 
@@ -6,15 +9,19 @@
 
 ## Easy Questions
 
-1. What is the difference between reference types and value types?
+__Q:__ What is the difference between reference types and value types?
 
-    **Answer:**
-    * Reference types are allocated on the heap. When passed into a method, the reference is copied, which means any changes to the object will affect the outer scope.
-    * Value types are allocated on the stack. When passed into a method, the value is copied, which means changes to the value will not affect the outer scope.
+__A:__
+* Reference types are allocated on the heap. When passed into a method, the
+reference is copied, which means any changes to the object will affect the outer
+scope.
+* Value types are allocated on the stack. When passed into a method, the value
+is copied, which means changes to the value will not affect the outer scope.
 
-2. What are the different access modifiers and what does each one mean?
+---
+__Q:__ What are the different access modifiers and what does each one mean?
 
-    **Answer:**
+__A:__
     * `private`: Can be used only within the same class.
     * `protected`: Can only be used within the same class or its subclasses.
     * `internal`: Can only be used from within the same assembly.
@@ -25,27 +32,50 @@
        - Member variables? `private`
        - Methods? `private`
 
-3. What is the `virtual` keyword used for?
+---
+__Q:__ What is the `virtual` keyword used for?
 
-    **Answer:** The `virtual` keyword can be applied only to a method, to indicate that it can be overridden. Methods without the `virtual` keyword cannot be overridden in C# (unlike Java where methods are virtual by default and can only be made `final`).
+__A:__ The `virtual` keyword can be applied only to a method, to indicate that
+it can be overridden. Methods without the `virtual` keyword cannot be overridden
+in C# (unlike Java where methods are virtual by default and can only be made
+`final`).
 
 ## Med Questions
 
-1. In C#, what is the difference between the 3 keywords `static`, `constant`, and `readonly`?
+__Q:__ In C#, what is the difference between the 3 keywords `static`,
+`constant`, and `readonly`?
 
-    `Answer`:
-    * Static: One copy of a `static` method, class, or class member will exist per `ApplicationDomain`, and will be shared across all instances of an object.
-    * Constant: A property marked as `constant` has its value set inline and can not be changed.  The value is actually compiled into the dll and is `static`.
-    * Readonly: A property marked as `readonly` can be set inline or within the constructor of a class, but not set again after that.  This is useful for injecting values at run-time that you may not know at compile-time and you do not want an application to be able to modify.  A `readonly` property may or may not be `static`.
+__A:__
+* __Static:__ One copy of a `static` method, class, or class member will exist
+per `ApplicationDomain`, and will be shared across all instances of an object.
+* __Constant:__ A property marked as `constant` has its value set inline and can
+not be changed.  The value is actually compiled into the dll and is `static`.
+* __Readonly:__ A property marked as `readonly` can be set inline or within the
+constructor of a class, but not set again after that.  This is useful for
+injecting values at run-time that you may not know at compile-time and you do
+not want an application to be able to modify.  A `readonly` property may or may
+not be `static`.
 
-    `Notes`:
-    * Most people will know constant and static but not readonly.  If a candidate does not understand static they barely know C# or OOP.
+_Notes:_
+* Most people will know constant and static but not readonly.  If a candidate
+does not understand static they barely know C# or OOP.
 
-2. What is an extension method? Why would you use one?
+---
+__Q:__ What is a delegate?
 
-    **Answer:** 
+__A:__ A delegate is a way of wrapping a method that matches a specific
+signature.  A delegate is similar to a function pointer, but is type-safe (
+allowing for inheritance variance.)  A single delegate can wrap many methods.
 
-    Extension methods are a special kind of static method, but they are called as if they were instance methods on the extended type. They enable you to "add" methods to existing types. Extension methods offer a few valuable options, such as the ability to call the method on a null reference, and to modify types for which source code is not available, such as those in the base class libraries.
+---
+__Q:__ What is an extension method? Why would you use one?
+
+__A:__ Extension methods are a special kind of static method, but they are
+called as if they were instance methods on the extended type. They enable you to
+"add" methods to existing types. Extension methods offer a few valuable
+options, such as the ability to call the method on a null reference, and to
+modify types for which source code is not available, such as those in the base
+class libraries.
 
 ## Hard Questions
 
@@ -68,19 +98,82 @@
 
 ## Med Questions
 
+__Q:__ Explain the limitation of overriding an inherited / parent class member
+that is not marked as `virtual`.
+
+__A:__ Any member not marked a virtual that is overridden by an inheriting /
+child class will return the result from the parent class when the child class
+is referred to polymorphically as the parent.
+
+```csharp
+class A
+{
+  public virtual void First()
+  {
+    Console.PrintLine("A.First");
+  }
+
+  public void Second()
+  {
+    Console.PrintLine("A.Second");
+  }
+}
+
+class B : A
+{
+  public override void First()
+  {
+    Console.PrintLine("B.First");
+  }
+
+  public new void Second()
+  {
+    Console.PrintLine("B.Second");
+  }
+}
+
+class Test
+{
+  public static void Main(string[] args)
+  {
+    A b_as_A = new B();
+
+    b_as_A.First();
+    // OUTPUT: B.First
+    b_as_A.Second();
+    // OUTPUT: A.Second
+    ((B)b_as_A).Second();
+    // OUTPUT: B.Second
+  }
+}
+```
+
+---
+__Q:__ What is an Anonymous Method?
+
+__A:__ An anonymous method is a function, including parameters and return type,
+that is not written as part of a class, but purely defined solely by a delegate.
+Anonymous methods can be written to the `delegate` keyword or using the lambda
+syntax.
+
 ## Hard Questions
 
-1. Explain how .Net's Garbage Collection algorithm works
+__Q:__ Explain how .Net's Garbage Collection algorithm works
 
     `Answer`: .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first enumerates all the roots (like registers, global or static fields, local variables on the stack, function arguments on stack, etc) and then starts visiting the objects referenced by them recursively (essentially travelling the nodes in the memory graph). When it reaches an object it marks it with a special flag indicating that the object is reachable and hence not garbage. At the end of this mark phase it gets into the sweep phase. Any object in memory that is not marked by this time is garbage and the system disposes it.
 
     More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
-
-    `Follow-up`: What are the advantages and disadvantages of a mark-and-sweep GC algorithm over other algorithms (such as a reference counter GC)?
+__Follow-up:__ What are the advantages and disadvantages of a mark-and-sweep GC
+algorithm over other algorithms (such as a reference counter GC)?__
 
     The primary advantage of mark-sweep is that it handles cyclic references naturally. Moreover, no additional overheads are added while normal execution (e.g. allocation, pointer manipulations). Combined with compaction it ensures good locality of reference and reduced fragmentation and hence optimal subsequent allocations.
 
-    However, mark-sweep pauses useful execution and walks entire memory marking and sweeping it. Hence it adds large freezes which is un-acceptable in most interactive systems. However, incremental variations of Mark-sweep are available which works around this limitation. Mark-sweep also starts thrashing when memory fills up as it fails to clean up memory and it gets triggered again and again as memory approaches exhaustion. Self tuning GC helps in this scenario.
+However, mark-sweep pauses useful execution and walks entire memory marking
+and sweeping it. Hence it adds large freezes which is un-acceptable in most
+interactive systems. However, incremental variations of Mark-sweep are available
+which works around this limitation. Mark-sweep also starts thrashing when memory
+fills up as it fails to clean up memory and it gets triggered again and again as
+memory approaches exhaustion. Self tuning GC helps in this scenario.
 
 ---
 
