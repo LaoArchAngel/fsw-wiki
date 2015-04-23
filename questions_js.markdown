@@ -97,3 +97,70 @@
 ## Med Questions
 
 ## Hard Questions
+
+---
+
+# AngularJS questions
+
+## Easy Questions
+where do directives and controllers live?
+‘Answer’: in modules
+
+how do you create a module?
+`Answer`: angular.module(‘myModule’, []) where the first param is the modules name and the second parameter is an array of dependancies
+
+how do you get a module
+`Answer`: angular.module(‘myModule’) with one param (the module’s name)
+
+if i define a property named ‘myNewProperty’ on an controller’s $scope, what syntax do i use to display that property’s value in a template
+`Answer`: double mustache syntax like {{myNewProperty}}
+
+what is the significance of the ng-app?
+`Answer`: it is the name of the applications primary module
+
+where should you modify the dom?
+`Answer`: in a directive
+
+## Med Questions
+
+name a few configurable properties of a directive
+`Answer`: restrict, require, scope, controller, link, controllerAs, bindToController, template, templateUrl, replace
+
+how does $templateCache work
+`Answer`: before requesting an .html file from the server, angular will check to see if that file exists in $templateCache first
+
+what two parameters does $scope.$watch accept?
+`Answer`: 2 functions. one which returns a value and one function which will be executed if the value changes.
+
+if i have code within a controller that i want to use in another controller, how do i share it?
+`Answer`: extract the shared code into a service or factory and inject it into both controllers
+
+what does ‘::’ indicate in a template?
+`Answer`: one way data binding
+
+how many digest cycles will angular run before throwing an exception?
+`Answer`: 10
+
+
+## Hard Questions
+
+if you see a provider, such as myFactoryProvider, which phase are you in?
+`Answer`: config
+
+name two easy ways to optimize ng-repeat
+`Answer`: track by / one time data binding
+
+how do you unbind a watcher?
+`Answer`: $scope.$watch returns a function which will unbind the watch when executed
+
+when would i use link vs controller in a directive?
+`Answer`: use link when you need to access a dom element or if you do not need to expose an api for your directive. use controller to expose an api to other directives.
+
+what is the advantage of using a provider over a factory or service
+`Answer`: providers can be configured during the module config phase
+
+why is annotation important in angular?
+`Answer`: if you were to minify your scripts, the application would break because of the way angular’s dependency injection works
+
+explain how the digest cycle works for a $scope
+`Answer`: angular iterates through every watch and executes those watches functions if necessary until all watches values stop changing
