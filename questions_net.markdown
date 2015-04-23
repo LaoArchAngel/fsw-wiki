@@ -32,7 +32,9 @@
 
 1. Explain how .Net's Garbage Collection algorithm works
 
-    `Answer`: .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first enumerates all the roots and then starts visiting the objects referenced by them recursively (essentially travelling the nodes in the memory graph). When it reaches an object it marks it with a special flag indicating that the object is reachable and hence not garbage. At the end of this mark phase it gets into the sweep phase. Any object in memory that is not marked by this time is garbage and the system disposes it.
+    `Answer`: .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first enumerates all the roots (like registers, global or static fields, local variables on the stack, function arguments on stack, etc) and then starts visiting the objects referenced by them recursively (essentially travelling the nodes in the memory graph). When it reaches an object it marks it with a special flag indicating that the object is reachable and hence not garbage. At the end of this mark phase it gets into the sweep phase. Any object in memory that is not marked by this time is garbage and the system disposes it.
+
+    More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
 
     'Follow-up': What are the advantages and disadvantages of a mark-and-sweep GC algorithm over other algorithms (such as a reference counter GC)?
 
