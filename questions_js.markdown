@@ -69,6 +69,10 @@
     2. variables in the enclosing function’s scope
     3. global variables
 
+3. *Explain DOM Event propagation.*
+
+    `Answer`: When an event is registered on a DOM element, it will travel up through the nodes in the DOM. The event can be listened for on the element that the event originated on AND all of its parent nodes.
+
 ---
 
 # In-person questions
