@@ -29,18 +29,7 @@ public class MyConsumer {
 ```
 
 ## Project File Naming Requirements
-Assemblies should be properly named as follows:
-* WinForm       - <projectname >_Winform
-* Console       - <projectname >_Console
-* Win service   - <projectname >_Service
-* Class Library - <projectname >_Library
-* Web Site      - <projectname >_Site
-* Web Service   - <projectname >_WS
-* Http Handler  - <projectname >_Handler
-
-…where <projectName> is the base level namespace of all the contained classes.  For example:
-* Distribution.Core.API_Library.csproj     (contains Distribution.Core.API classes and, possibly private implementation)
-* Distribution.Core_Library.csproj         (contains all Distribution.Core classes except those contained in more specific projects/assemblies)
+See: [.NET Project Naming](dotnet-project-naming-convention)
 
 ## Project Scaffolding Generation
 A Service Library scaffolding generator has been create to simplify the process of creating new service libraries or new Service Models and their associated Service Interfaces as well as Service Implementation, Repository, and Test classes.  This also includes changes necessary to include the new source files in the .csproj files as well as creation of new methods on the service factory.  It is presently a work in progress, but will be completed in the coming weeks (1-2 weeks to completion).  For more information about scaffolding generation, or to contribute to the code generator source code, please see the [generator git repo](http://gitlab.fsw.com/architecture/generator-service-lib/tree/master) 
