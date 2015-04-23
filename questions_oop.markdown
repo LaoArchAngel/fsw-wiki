@@ -1,22 +1,72 @@
-*Questions related to OO skills, for example: questions around IoC, Encapsulation, Data Abstraction, Polymorphism and Inheritance.*
+# Object-Oriented Programming Interview Questions
+
+Questions related to OO skills, for example: questions around IoC, Encapsulation, Data Abstraction, Polymorphism and Inheritance.
 
 ---
 
-# Phone Screen Questions
+## Phone Screen Questions
 
-## Easy Questions
+### Easy Questions
 
-## Med Questions
+__Q: What is an abstract class?__
 
-## Hard Questions
+__A: A class that cannot be instantiated and is used as a base class for other
+abstract classes or concrete classes.  Abstract classes can have implemented
+members as well as abstract, non-implemented members.__
 
 ---
 
-# In-person questions
+__Q: What is an interface?__
 
-## Easy Questions
+__A: A contract that the implementing class needs to fulfill.  It cannot contain
+any implementation.  It only defines a portion of the implementing's class
+structure.__
 
-## Med Questions
+---
+
+### Med Questions
+
+__Q: Class taxonomy, or the act of representing classes as a hierarchy of
+inherited behavior and attributes, is considered an anti-pattern in most cases.
+Why?__
+
+---
+__A: Class taxonomy is the act of prefering inheritance over implementation.
+Deep inheritance chains conceal properties and functionality of an object and
+make SOLID OO harder to achieve.__
+
+---
+### Hard Questions
+
+__Q: There are several methods of Inversion of Control.  Name two.__
+
+__A:  Any of the following.  Descriptions added in case terminology is
+unknown.__
+* Factory
+  * The act of unloading the creation of object instances to a factory.
+  this factory is often an implemented interface that returns the interface of
+  an object, allowing both the factory and the object to be implementation
+  details.
+* Service Locator
+  * Like Dependency Injection, except a Service Locator will instantiate or find
+  an instance of the service or object.  Sometimes considered an anti-pattern.
+* Dependency Injection
+  * The act of passing in a dependency to another class via constructor,
+  parameter, setter, or interface.
+* Contextualized Lookup
+  * A dependency injection container.
+* Template Method Design
+  * A method that unloads part of its logic to a subclass.
+* Strategy Pattern
+  * The encapsulation of algorithms (based on an interface) that are
+  interchangeable at runtime.
+---
+
+## In-person questions
+
+### Easy Questions
+
+### Med Questions
 
 1. What is polymorphism, and why is it useful?
 
@@ -34,14 +84,15 @@ In the programming world, polymorphism is used to make applications more modular
 2. Parametric Polymorphism: Basically, Generics, which accept an unknown type as a parameter.
 3. Compile-time Polymorphism: Method overloading, which most people do not think of as polymorphism
 
-## Hard Questions
+---
+### Hard Questions
 
 ---
 
-# Whiteboard questions
+## Whiteboard questions
 
-## Easy Questions
+### Easy Questions
 
-## Med Questions
+### Med Questions
 
-## Hard Questions
+### Hard Questions
