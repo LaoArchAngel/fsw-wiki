@@ -50,12 +50,17 @@
 
 5. *What is the "This" keyword and what does it reference?*
 
-    `Answer1`: "this" refers to the "owner" of the function being executed
+    `Answer 1`: "this" refers to the "owner" of the function being executed
 
-    `Answer2`: "this" refers to the object a function is a method of
+    `Answer 2`: "this" refers to the object a function is a method of
 
     `Answer Details`: The caller provides the "this" value. If the "this" value provided by the caller is not an object (including the case where it is null), then the "this" value is the global object.
 
+6. *What is the prototype of an object?*
+
+    `Answer 1`: It is a property that allows you to add properties (and methods) to all objects instantiated form that constructor function.
+
+    `Answer 2`: By using this property, it is possible to create a base constructor function that contains some basic properties and methods, and then define different objects that inherit (and eventually override) all the properties defined in the base object.
 
 ## Hard Questions
 1. *If a function doesn't have a return statement, what if anything is returned?*
