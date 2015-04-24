@@ -19,6 +19,8 @@ Given a starting directory and a file name, write a recursive function that will
 Simplest solution:
 
 ```
+using System.IO;
+
 FileInfo FindFile(DirectoryInfo dir, string filename)
 {
   foreach (var file in dir.GetFiles())
