@@ -28,7 +28,7 @@ Server-side because code should never trust that a client has validated input (s
 
 ## Hard Questions
 
-`Question`: What are some common load-balancing algorithms?
+`Question`: What are some common network load-balancing algorithms?
 
 `Answer`:
 
