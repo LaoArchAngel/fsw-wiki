@@ -14,15 +14,16 @@ These questions can be completed in any language and are "language feature agnos
 
 ## Write a recursive file search
 
-Given a starting path and a file name, write a recursive function that will search that directory and all sub-directories and return the full path to that file.  For example, I might give you "C:\" and "foo.txt", and the file may be on your desktop.
+Given a starting directory and a file name, write a recursive function that will search that directory and all sub-directories and return a pointer to that file.  For example, I might give you "C:\" and "foo.txt", and the file may be on your desktop.  Pseudocode is fine.
 
-Simplest solution (pseudocode):
+Simplest solution:
 
-string FindFile(string dir, string filename)
+````
+FileInfo FindFile(DirectoryInfo dir, string filename)
 {
   foreach (var file in dir.GetFiles())
   {
-    if (file.Name == filename) return dir;
+    if (file.Name == filename) return file;
   }
   foreach (var subDir in dir.GetDirectories())
   {
@@ -31,5 +32,9 @@ string FindFile(string dir, string filename)
   }
   return null;
 }
+````
 
-Some people will abbreviate this by using linq.
+    `Notes`:
+
+    * Some people will abbreviate this by using linq.
+    * This is not a test of `System.IO` or of `C#` syntax.  Tell them about `FileInfo` and `DirectoryInfo` if needed, or don't even require them.  You could just as easily return a string.  It's the recursion and the tree traversal that you care about.
