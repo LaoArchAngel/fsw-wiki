@@ -22,15 +22,16 @@ is copied, which means changes to the value will not affect the outer scope.
 __Q:__ What are the different access modifiers and what does each one mean?
 
 __A:__
-    * `private`: Can be used only within the same class.
-    * `protected`: Can only be used within the same class or its subclasses.
-    * `internal`: Can only be used from within the same assembly.
-    * `public`: Can be used from anywhere.
+* `private`: Can be used only within the same class.
+* `protected`: Can only be used within the same class or its subclasses.
+* `internal`: Can only be used from within the same assembly.
+* `public`: Can be used from anywhere.
 
-    **Follow-up:** What is the default access modifier (implied, if one is not explicitly provided) for:
-       - Classes? `internal`
-       - Member variables? `private`
-       - Methods? `private`
+**Follow-up:** What is the default access modifier (implied, if one is not
+explicitly provided) for:
+- Classes? `internal`
+- Member variables? `private`
+- Methods? `private`
 
 ---
 __Q:__ What is the `virtual` keyword used for?
@@ -79,16 +80,23 @@ class libraries.
 
 ## Hard Questions
 
-1. How do you ensure that objects used as a generic's type parameter implement a specific interface?
+__Q:__ How do you ensure that objects used as a generic's type parameter
+implement a specific interface?
 
-    `Answer`: Generic type constraints are the term for this.  The `where` keyword in .net is used for this, such as: `public class MyGenericClass<T> where T : IComparable { }`
-
-    A more complex example shows how you can actually assert that types adhere to built-in types as well, or even are new()able:
-`class MyClass<T, U, V>
-    where T : class 
+__A:__ Generic type constraints are the term for this.  The `where` keyword in
+.net is used for this, such as:
+```csharp
+public class MyGenericClass<T> where T : IComparable { }
+```
+A more complex example shows how you can actually assert that types adhere to
+built-in types as well, or even are `new()`able:
+```csharp
+class MyClass<T, U, V>
+    where T : class
     where U : struct
     where V : new
-{ }`
+{ }
+```
 
 ---
 
@@ -160,13 +168,25 @@ syntax.
 
 __Q:__ Explain how .Net's Garbage Collection algorithm works
 
-    `Answer`: .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first enumerates all the roots (like registers, global or static fields, local variables on the stack, function arguments on stack, etc) and then starts visiting the objects referenced by them recursively (essentially travelling the nodes in the memory graph). When it reaches an object it marks it with a special flag indicating that the object is reachable and hence not garbage. At the end of this mark phase it gets into the sweep phase. Any object in memory that is not marked by this time is garbage and the system disposes it.
+__A:__ .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first
+enumerates all the roots (like registers, global or static fields, local
+variables on the stack, function arguments on stack, etc) and then starts
+visiting the objects referenced by them recursively (essentially travelling the
+nodes in the memory graph). When it reaches an object it marks it with a special
+flag indicating that the object is reachable and hence not garbage. At the end
+of this mark phase it gets into the sweep phase. Any object in memory that is
+not marked by this time is garbage and the system disposes it.
 
-    More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
+More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
+
 __Follow-up:__ What are the advantages and disadvantages of a mark-and-sweep GC
-algorithm over other algorithms (such as a reference counter GC)?__
+algorithm over other algorithms (such as a reference counter GC)?
 
-    The primary advantage of mark-sweep is that it handles cyclic references naturally. Moreover, no additional overheads are added while normal execution (e.g. allocation, pointer manipulations). Combined with compaction it ensures good locality of reference and reduced fragmentation and hence optimal subsequent allocations.
+__A:__ The primary advantage of mark-sweep is that it handles cyclic references
+naturally. Moreover, no additional overheads are added while normal execution
+(e.g. allocation, pointer manipulations). Combined with compaction it ensures
+good locality of reference and reduced fragmentation and hence optimal
+subsequent allocations.
 
 However, mark-sweep pauses useful execution and walks entire memory marking
 and sweeping it. Hence it adds large freezes which is un-acceptable in most
