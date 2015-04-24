@@ -5,6 +5,13 @@
 # Phone Screen Questions
 
 ## Easy Questions
+1. On a scale of 1-10, 1 being you've just heard of it and 10 being you could write a book about it, rate yourself in the following technologies:
+    * c#
+    * javascript
+    * We/http
+    * sql / database
+
+    `Answer`: there is no correct answer
 
 ## Med Questions
 
