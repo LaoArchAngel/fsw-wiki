@@ -14,7 +14,7 @@ These questions can be completed in any language and are "language feature agnos
 
 ## Write a recursive file search
 
-Given a starting directory and a file name, write a recursive function that will search that directory and all sub-directories and return a pointer to that file.  For example, I might give you "C:\" and "foo.txt", and the file may be on your desktop.  Pseudocode is fine.
+Given a starting directory and a file name, write a recursive function that will search that directory and all sub-directories and return the location of that file.  For example, I might give you "C:\" and "foo.txt", and the file may be on your desktop.  Pseudocode is fine.
 
 Simplest solution:
 
