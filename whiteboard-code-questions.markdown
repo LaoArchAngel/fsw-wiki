@@ -34,6 +34,6 @@ FileInfo FindFile(DirectoryInfo dir, string filename)
 }
 ```
 
-    Notes:
-    * Some people will abbreviate this by using linq.
-    * This is not a test of `System.IO` or of `C#` syntax.  Tell them about `FileInfo` and `DirectoryInfo` if needed, or don't even require them.  You could just as easily return a string.  It's the recursion and the tree traversal that you care about.
+Notes:
+* Some people will abbreviate this by using linq.
+* This is not a test of `System.IO` or of `C#` syntax.  Tell them about `FileInfo` and `DirectoryInfo` if needed, or don't even require them.  You could just as easily return a string.  It's the recursion and the tree traversal that you care about.
