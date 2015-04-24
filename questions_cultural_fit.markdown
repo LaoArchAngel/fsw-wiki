@@ -4,18 +4,22 @@
 
 # Phone Screen Questions
 
-## Easy Questions
+* Describe the work environment or culture in which you are most productive and happy.
 
-## Med Questions
+* What is the single most important factor that must be present in your work environment for you to be successfully and happily employed?
 
-## Hard Questions
+* When you work with a team, describe the role that you are most likely to play on the team.
+
+* Describe your ideal company culture. What five characteristics does it have?
+
+* What kind of environments have you worked in previously and what did you like/dislike about them?
 
 ---
 
 # In-person questions
 
-## Easy Questions
+* After getting a peek at what our building looks like, how would you describe the environment?
 
-## Med Questions
+* When working in a team, describe the role you most often play? 
 
-## Hard Questions
+* How would your co-workers describe the role you play on the team?
