@@ -36,6 +36,17 @@ Server-side because code should never trust that a client has validated input (s
 
 ---
 
+#### Q: What are the primary modes of Session storage in ASP.NET?
+
+#### A:
+* InProc mode, which stores session state in memory on the Web server. This is the default.
+* StateServer mode, which stores session state in a separate process called the ASP.NET state service. This ensures that session state is preserved if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm.
+* SQLServer mode stores session state in a SQL Server database. This ensures that session state is preserved if the Web application is restarted and also makes session state available to multiple Web servers in a Web farm.
+* Custom mode, which enables you to specify a custom storage provider.
+* Off mode, which disables session state.
+
+---
+
 ## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
