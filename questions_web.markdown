@@ -69,6 +69,14 @@ Server-side because code should never trust that a client has validated input (s
 
 ---
 
+#### Q: 
+Why is the TTL of DNS records important for site speed?
+
+#### A: 
+Higher TTL values prevent repeat visitors from needing to perform frequent DNS lookups.  This saves time during requests and results in a quicker time to first byte.
+
+---
+
 ## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
