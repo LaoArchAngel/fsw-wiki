@@ -62,6 +62,10 @@
 
     `Answer 2`: By using this property, it is possible to create a base constructor function that contains some basic properties and methods, and then define different objects that inherit (and eventually override) all the properties defined in the base object.
 
+7. *When is it better to add a function to the object prototype as opposed to adding the function to an object literal/ object instance?*
+
+    `Answer`: When there will be many instances of the same type.
+
 ## Hard Questions
 1. *If a function doesn't have a return statement, what if anything is returned?*
 
@@ -77,6 +81,7 @@
 3. *Explain DOM Event propagation.*
 
     `Answer`: When an event is registered on a DOM element, it will travel up through the nodes in the DOM. The event can be listened for on the element that the event originated on AND all of its parent nodes.
+
 
 ---
 
