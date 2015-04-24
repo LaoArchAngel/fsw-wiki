@@ -20,6 +20,4 @@
 
 * After getting a peek at what our building looks like, how would you describe the environment?
 
-* When working in a team, describe the role you most often play? 
 
-* How would your co-workers describe the role you play on the team?
