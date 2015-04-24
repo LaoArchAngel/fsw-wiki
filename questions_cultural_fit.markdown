@@ -14,10 +14,16 @@
 
 * What kind of environments have you worked in previously and what did you like/dislike about them?
 
+* Describe the management style that motivates you and inspires you to do your best work.
+
 ---
 
 # In-person questions
 
 * After getting a peek at what our building looks like, how would you describe the environment?
+    * What do you like about the environment?
+    * What would you change about the environment?
+
+
 
 
