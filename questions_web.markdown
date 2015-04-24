@@ -18,6 +18,12 @@
 
 ---
 
+#### Q: What does it mean for a session to be sticky?
+
+#### A: When multiple servers are processing web requests, a load balancer will route requests to servers based on one of many possible strategies.  A Sticky Session means that the same web server will handle all requests from a user's session (that user's requests will not be sent to different web servers).
+
+---
+
 ## Med Questions
 
 #### Q: If you are building a form on a site, such as a form that takes a user’s address, do you think validation should happen on the client or the server side?
