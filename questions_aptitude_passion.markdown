@@ -13,6 +13,32 @@
 
     `Answer`: there is no correct answer
 
+2. How do you learn?
+
+    `Answer 1`: reading (books, blogs, etc)
+
+    `Answer 2`: online course-ware
+ 
+    `Answer 3`: meetups and user groups
+
+    `Follow-up`: What was the last *book* you read.  Tell me about it -- would you recommend it?
+
+    `Follow-up`: What have you learned this [day|week|month]?
+ 
+
+3. How do you keep with with changes in technology? How do you find out about new/cool/exciting tech (programming language, library, feature, tool/software)?
+
+    `Answer`:
+    * facebook
+    * twitter
+    * linked-in
+    * trending github repos
+    * blogs (RSS reader)
+
+   `Bad Answers`:
+    * google
+    * stack overflow
+
 ## Med Questions
 
 ## Hard Questions
