@@ -6,6 +6,16 @@
 
 ## Easy Questions
 
+#### Q: What is the difference between server-side and client-side code?
+
+#### A: Server-side code executes on a web server, while client-side code executes in a user's client (typically a browser).  For example, in an ASP.NET application, C# is server side and creates HTML and JS code that is sent back to the browser to be executed as client-side code.
+
+---
+
+#### Q: What is the difference between a cookie and a session?
+
+#### A: Sessions are server-side and contain user information, while Cookies are client-side files that contain user information. Sessions have a unique identifier that maps them to specific users. This identifier can be passed in the URL or saved into a session cookie.  In the latter case, clearing your cookie will result in clearing your session because your unique sessionID will be lost.
+
 ---
 
 ## Med Questions
