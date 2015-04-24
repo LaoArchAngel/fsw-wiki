@@ -5,7 +5,9 @@
 # Phone Screen Questions
 
 ## Easy Questions
+
 ---
+
 ## Med Questions
 
 #### Q: If you are building a form on a site, such as a form that takes a user’s address, do you think validation should happen on the client or the server side?
@@ -23,6 +25,14 @@ Server-side because code should never trust that a client has validated input (s
 #### Follow-Ups:
 * Ask them “Why?” if they don’t give much explanation
 * If they only give one, ask if they see a downside to only focusing on that type.  That should guide them towards thinking about both.
+
+---
+
+#### Q: What is the difference between and `HttpModule` and an `HttpHandler`?
+
+#### A: 
+* An `HttpModule` will execute for every request to your application, regardless of extension, and is generally used for cross-cutting concerns like security, statistics, logging, etc.  An `HttpModule` is a step in the execution of a web request.
+* An `HttpHandler` is generally associated with a specific extension, and is used for things like RSS feeds, dynamic image generation or modification, and the like.  An `HttpHandler` is the end destination of a web request.
 
 ---
 
