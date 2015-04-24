@@ -63,6 +63,12 @@ Server-side because code should never trust that a client has validated input (s
 
 ---
 
+`Question`: How does a CDN work?
+
+`Answer`: A Content Delivery Network is a method of distributing web-based content (like an image or CSS file) on Edge servers all over the country or world so that requests for those resources experience fewer network hops and are literally physically closer to requesting users' machines.  This minimizes the time it takes for resources to be deliver to a client, speeding site operation.  It also distributes load from web servers in 1-2 locations to redundant servers all around the world that are optimized to handle traffic elastically.
+
+---
+
 ## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
