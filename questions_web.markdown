@@ -107,6 +107,17 @@ A 301 response code indicates that the content has been moved permanently.  In a
 
 ---
 
+#### Q: Name a few IP addresses that are not internet routable.
+
+#### A:
+Any address in the following ranges is correct.
+* 10.0.0.0 - 10.255.255.255
+* 192.168.0.0 - 192.168.255.255
+* 172.16.0.0 - 172.31.255.255
+
+
+---
+
 # In-person questions
 
 ## Easy Questions
