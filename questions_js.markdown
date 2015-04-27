@@ -103,6 +103,20 @@
 
 ## Easy Questions
 
+#### What value does the following code alert?
+````javascript
+var foo = 1;
+function bar() {
+    if (!foo) {
+        var foo = 10;
+    }
+    alert(foo);
+}
+bar();
+```
+
+`Answer`: 10
+
 ## Med Questions
 
 ## Hard Questions
