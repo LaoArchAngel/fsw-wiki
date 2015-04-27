@@ -69,23 +69,21 @@ Server-side because code should never trust that a client has validated input (s
 
 ---
 
-#### Q: 
-Why is the TTL of DNS records important for site speed?
+#### Q: Why is the TTL of DNS records important for site speed?
 
 #### A: 
 Higher TTL values prevent repeat visitors from needing to perform frequent DNS lookups.  This saves time during requests and results in a quicker time to first byte.
 
 ---
 
-### Q:
-What are the 4 common HTTP methods used with REST services?
+#### Q: What are the 4 common HTTP methods used with REST services?
 
 #### A:
 GET, POST, PUT, DELETE
 
 ---
 
-### Q: What is the difference between a redirects using 301 and 302 response codes?
+#### Q: What is the difference between a redirects using 301 and 302 response codes?
 
 #### A:
 A 301 response code indicates that the content has been moved permanently.  In addition to this being cached heavily by browsers, it also has SEO significance.  A 302 response code indicates that the content is now found somewhere else, but maybe only temporarily.
