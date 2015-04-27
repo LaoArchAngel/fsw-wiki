@@ -82,6 +82,10 @@
 
     `Answer`: When an event is registered on a DOM element, it will travel up through the nodes in the DOM. The event can be listened for on the element that the event originated on AND all of its parent nodes.
 
+4. What is function hoisting?
+
+    `Answer`: Hoisting is the process by which JS function declarations are moved to the top of their scope by the interpreter.  This allows functions do be used before they are declared.  This happens with named functions only and not with anonymous functions that are assigned to variables.
+
 
 ---
 
