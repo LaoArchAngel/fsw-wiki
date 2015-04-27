@@ -86,6 +86,9 @@
 
     `Answer`: Hoisting is the process by which JS function declarations are moved to the top of their scope by the interpreter.  This allows functions do be used before they are declared.  This happens with named functions only and not with anonymous functions that are assigned to variables.
 
+5. What is an IIFE?
+
+    `Answer`: IIFE stands for Immediately Invoked Function Expression and can be used to create scopes in javascript.
 
 ---
 
