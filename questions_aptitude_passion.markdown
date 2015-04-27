@@ -1,5 +1,7 @@
 *Questions related to aptitude and passion for dev/tech, for example: blogs you read, last book you read, how you stay current*
 
+![Hire Motivated Poople](https://image-store.slidesharecdn.com/5577fd01-3f27-4433-a76e-34151a4b1883-medium.jpeg)
+
 ---
 
 # Phone Screen Questions
