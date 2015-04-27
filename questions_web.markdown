@@ -85,6 +85,13 @@ GET, POST, PUT, DELETE
 
 ---
 
+### Q: What is the difference between a redirects using 301 and 302 response codes?
+
+#### A:
+A 301 response code indicates that the content has been moved permanently.  In addition to this being cached heavily by browsers, it also has SEO significance.  A 302 response code indicates that the content is now found somewhere else, but maybe only temporarily.
+
+---
+
 ## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
