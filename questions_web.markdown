@@ -26,6 +26,12 @@
 
 ## Med Questions
 
+`Question`: What does it mean when we say that HTTP is stateless?
+
+`Answer`: All HTTP requests are separate and must contain enough information on their own to fulfill the request, in isolation.  HTTP requests cannot be associated with each other absent some shared info the server knows about (which is often some correlation id passed in the cookie header).
+
+---
+
 #### Q: If you are building a form on a site, such as a form that takes a user’s address, do you think validation should happen on the client or the server side?
 
 #### A: Both.
