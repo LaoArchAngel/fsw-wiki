@@ -210,6 +210,20 @@ __A:__
 
 ---
 
+__Q:__ 
+1. What is "double-checked locking:"? 
+2. What design pattern is it typically associated with?  
+3. What is wrong with it and what is the solution for this limitation?
+
+__A:__ 
+1. A software design pattern used to reduce the overhead of acquiring a lock by first testing the locking criterion (the "lock hint") without actually acquiring the lock. Only if the locking criterion check indicates that locking is required does the actual locking logic proceed.
+
+2. Double-checked locking is often used as part of the Singleton pattern.
+
+3. The pattern, when implemented in some language/hardware combinations, can be unsafe. At times, it can be considered an anti-pattern.  In C#, the volatile keyword indicates that a field might be modified by multiple threads that are executing at the same time. ields that are declared volatile are not subject to compiler optimizations that assume access by a single thread. This ensures that the most up-to-date value is present in the field at all times.
+
+---
+
 # Whiteboard questions
 
 ## Easy Questions
