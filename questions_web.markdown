@@ -77,6 +77,14 @@ Higher TTL values prevent repeat visitors from needing to perform frequent DNS l
 
 ---
 
+### Q:
+What are the 4 common HTTP methods used with REST services?
+
+#### A:
+GET, POST, PUT, DELETE
+
+---
+
 ## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
