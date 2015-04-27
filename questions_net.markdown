@@ -100,6 +100,7 @@ class MyClass<T, U, V>
 
 ---
 
+
 # In-person questions
 
 ## Easy Questions
@@ -194,6 +195,18 @@ interactive systems. However, incremental variations of Mark-sweep are available
 which works around this limitation. Mark-sweep also starts thrashing when memory
 fills up as it fails to clean up memory and it gets triggered again and again as
 memory approaches exhaustion. Self tuning GC helps in this scenario.
+
+---
+
+__Q:__ What does the `lock` key word do?  Where is it valid to use it (ie: inside a method call, static block, etc)?
+
+__A:__ 
+
+1. The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.  The lock keyword ensures that one thread does not enter a critical section of code while another thread is in the critical section. If another thread tries to enter a locked code, it will wait, block, until the object is released.
+
+2. The argument provided to the lock keyword **must be an object based on a reference type**, and is used to define the scope of the lock. In the example above, the lock scope is limited to this function because no references to the object lockThis exist outside the function.
+
+_bonus points_:  It is best to avoid locking on a public type, or on object instances beyond the control of your application. For example, lock(this) can be problematic if the instance can be accessed publicly, because code beyond your control may lock on the object as well. This could create deadlock situations where two or more threads wait for the release of the same object. As a result, it is best to lock a private or protected member that is not interned. 
 
 ---
 
