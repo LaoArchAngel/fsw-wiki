@@ -220,7 +220,7 @@ __A:__
 
 2. Double-checked locking is often used as part of the Singleton pattern.
 
-3. The pattern, when implemented in some language/hardware combinations, can be unsafe. At times, it can be considered an anti-pattern.  In C#, the volatile keyword indicates that a field might be modified by multiple threads that are executing at the same time. ields that are declared volatile are not subject to compiler optimizations that assume access by a single thread. This ensures that the most up-to-date value is present in the field at all times.
+3. The pattern, when implemented in some language/hardware combinations, can be unsafe. At times, it can be considered an anti-pattern.  In C#, this issue is addressed with the volatile keyword.  The volatile keyword indicates that a field might be modified by multiple threads that are executing at the same time. Fields that are declared volatile are not subject to compiler optimizations that assume access by a single thread. This ensures that the most up-to-date value is present in the field at all times.
 
 ---
 
