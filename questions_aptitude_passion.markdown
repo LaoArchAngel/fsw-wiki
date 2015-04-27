@@ -28,7 +28,7 @@
     `Follow-up`: What have you learned this [day|week|month]?
  
 
-3. How do you keep with with changes in technology? How do you find out about new/cool/exciting tech (programming language, library, feature, tool/software)?
+3. How do you keep with with changes in technology? How do you find out about new/cool/exciting tech (programming language, library, feature, tool/software)?  What are some of your favorite resources beyond Google (This could include websites, magazines, technical authors, experts, favorite blogs, ect...)?
 
     `Answer`:
     * facebook
@@ -41,6 +41,7 @@
     * google
     * stack overflow
 
+4. What will be the next language or devel9oment topic you want to learn about?
 
 ## Med Questions
 
