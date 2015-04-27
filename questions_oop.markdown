@@ -24,6 +24,12 @@ structure.__
 
 ---
 
+__Q: What is an anti-pattern?__
+
+__A: A common response to a recurring problem that is usually ineffective and risks being highly counter productive.__
+
+---
+
 ### Med Questions
 
 __Q: Class taxonomy, or the act of representing classes as a hierarchy of
