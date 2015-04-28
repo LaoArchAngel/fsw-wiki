@@ -1,11 +1,40 @@
 # Whiteboard Coding questions
 These questions can be completed in any language and are "language feature agnostic".  If specific language features are used to short-cut/solve the problem, then a follow-up question should be asked: "How would you solve this without language feature _x_?"
 
-## Remove Duplicates in a collection (easy)
+## Remove Duplicates in a list (easy)
+Write a function that, when given a list of strings (or numbers or whatever you choose), will return a new list with no duplicates.  Pseudocode is fine.
 
+One possible solution:
+```csharp
+public IList<T> RemoveDuplicates<T>(IList<T> list)
+{
+    IList<T> noDupes = new List<T>();
 
-## Reverse a String (easy)
+    foreach (T item in list) {
+        if (!Contains(noDupes, item))
+        {
+            noDupes.Add(item);
+        }
+    }
 
+    return noDupes;
+}
+
+public bool Contains<T>(IList<T> list, T item) {
+    bool exists = false;
+
+    foreach (T listItem in list)
+    {
+        if (item.Equals(listItem))
+        {
+            exists = true;
+            break;
+        }
+    }
+
+    return exists;
+}
+```
 
 ## Create a FindById() method for a linked list datastructure (medium)
 
@@ -18,7 +47,7 @@ Given a starting directory and a file name, write a recursive function that will
 
 Simplest solution:
 
-```
+```csharp
 using System.IO;
 
 FileInfo FindFile(DirectoryInfo dir, string filename)
