@@ -55,6 +55,7 @@ function convertToString(value){
 
 ## Write a factorial function (medium)
 Given Factorial is defined as follows:
+
  |  n   |  n!  |
  | ---- | ---- |
  |  0   |  **1**   |
