@@ -24,9 +24,9 @@ structure.__
 
 ---
 
-__Q: Follow-Up: As a rule of thumb, when would you recommend using one (abstract class vs interface) versus the other?__
+__Follow-Up:__ As a rule of thumb, when would you recommend using one (abstract class vs interface) versus the other?
 
-__A: Use an interface unless there is a strong 'is-a' relationship between the base *and* derived types as well as common behavior across all derived types.__
+__A:__ Use an interface unless there is a strong 'is-a' relationship between the base *and* derived types as well as common behavior across all derived types.
 
 ---
 
