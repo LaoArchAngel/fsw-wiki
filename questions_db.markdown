@@ -36,6 +36,17 @@ A deadlock is when two or more tasks are waiting on each other to release locks 
 
 A clustered index is a type of index that forces the data in a table to be stored in the same order as the values that are stored in the index.
 
+**4. Let's say there are two tables Customer -> *Order, with a one-to-many relationship such that a customer can have many orders but an order can only be associated with one customer. Can you please write a query the returns a list of customers who have never placed an order?**
+
+`Answer`
+
+1. SELECT * FROM Customer a WHERE NOT EXISTS (SELECT TOP 1 CustomerId FROM Order b WHERE a.CustomerId = b.CustomerId)
+2. SELECT a.* FROM Customer a LEFT OUTER JOIN Order b ON a.CustomerId = b.CustomerId WHERE b.CustomerId IS NULL
+3. SELECT * FROM Customer a WHERE 0 = (SELECT COUNT(CustomerId) FROM Order b WHERE a.CustomerId = b.CustomerId)
+
+(1) and (2) are good answers. (3) is inefficient and lame.
+
+
 ### Med Questions
 
 ### Hard Questions
