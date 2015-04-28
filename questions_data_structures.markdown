@@ -20,5 +20,5 @@
 #### Q: Implement a min-stack?
 #### A:
 
-#### Q: Cleanup file path (UNIX or Windows)? "/home/.././home/./indianajones/../margaret/." must be cleaned up to "/home/margaret", for windows you may assume that the drive letter has been removed and your procedure was passed "\home\..\.\home\.\indianajones\..\margaret\." and it should return "\home\margaret".
+#### Q: Cleanup file path (UNIX or Windows)? "/home/.././home/./indianajones/../margaret/." must be cleaned up to "/home/margaret", for windows you may assume that the drive letter has been removed and your procedure was passed "\\home\\..\\.\\home\\.\\indianajones\\..\\margaret\\." and it should return "\\home\\margaret".
 #### A:
