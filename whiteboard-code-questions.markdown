@@ -36,13 +36,13 @@ public bool Contains<T>(IList<T> list, T item) {
 }
 ```
 
-## Write a function to convert an integer to a string? a string to an integer?
+## Write a function to reverse the digits of an integer?
 
 ```javascript
-function convertToString(value){
-   var retVal = "";
+function reverseDigits(value){
+   var retVal = 0;
    while(value > 0){
-      retVal += "" + value % 10;
+      retVal = (retVal * 10) + (value % 10);
       value = value / 10;
    }
 
