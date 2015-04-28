@@ -96,8 +96,27 @@ A 301 response code indicates that the content has been moved permanently.  In a
 
 #### Q: When I type www.fsw.com in the address bar of a web browser, what happens next? Please be as descriptive as you possibly can to demonstrate the breadth of your knowledge. We can dig deeper into topics as you enumerate them.
 
-#### A: 
-This is a very open-ended question intended to understand the breadth of knowledge of the interviewee. The topics that they should be able to touch are IP packets, routing, DNS, load balancing, SSL/TLS, certificates, HTTP, HTTP Verbs, web servers, static html, web applications, distributed systems, databases, sessions, multi-threading, threadpools, etc.
+#### A: This is a very open-ended question intended to understand the breadth of knowledge of the interviewee. The topics that they should be able to touch are IP packets, routing, DNS, load balancing, SSL/TLS, web servers, static html, web applications, distributed systems, databases, sessions, multi-threading, threadpools, etc.
+
+---
+
+#### Q: What is XSS (Cross-Site Scripting)?
+
+#### A:  A type of web application security vulnerability enabling attackers to inject client-side script into Web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. 
+
+#### Follow-Up: How can XSS be prevented?
+
+#### A: <TODO>
+
+---
+
+#### Q: What is XSRF/CSRF (Cross-Site Request Forgery)?
+
+#### A:  Also known as a `one-click attack` or `session riding`, is a type of malicious exploit of a website whereby unauthorized commands are transmitted from a user that the website trusts. Unlike cross-site scripting (XSS), which exploits the trust a user has for a particular site, CSRF exploits the trust that a site has in a user's browser.
+
+#### Follow-Up: Who can XSRF be prevented?
+
+#### A: <TODO>
 
 ---
 
