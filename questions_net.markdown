@@ -236,6 +236,33 @@ __A:__
 
 ---
 
+__Q:__ What are heap generations?
+
+__A:__ The heap is organized into generations so it can handle long-lived and short-lived objects.  There are three generations of objects on the heap:
+* __Generation 0:__ the youngest generation containing short-lived objects such as ta temporary variable
+* __Generation 1:__  contains short-lived objects and services as a buffer between short-lived and long-lived objects
+* __Generation 2:__  contains long-lived objects such as static data that is live for the duration of the process
+
+--- 
+
+__Q:__ 
+1. What is the garbage collector?
+2. When does garbage collection occur?
+3. How does garbage collection work?
+
+__A:__ 
+1. The garbage collector is an automatic memory manager that allocates objects on the managed heap, reclaim objects that are no longer being used, and provides memory safety by making sure that an object cannot use the content of another object.
+2. Garbage collection occurs when one of the following conditions is true:
+    - the system has low physical memory
+    - the memory that is used by allocated object on the managed heap surpasses an acceptable threshold which is continuously adjusted as the process runs
+    - the GC.Collect method is called
+3. Garbage collection has the following phases:
+    - a `marking` phase that finds and creates a list of all live objects
+    - a `relocating` phase that updates the references to objects that will be compacted
+    - a `compacting` phase that reclaims the space occupied by the dead objects and compacts the surviving objects -- the compacting phase moves objects that have survived a garbage collection toward the older end of the segment
+
+---
+
 # Whiteboard questions
 
 ## Easy Questions
