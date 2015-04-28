@@ -18,6 +18,7 @@ Areas:
 * [.NET/C#](questions_net)
 * [Web](questions_web)
 * [Database/SQL](questions_db)
+* [Data Structures](questions_data_structures)
 
 ### Whiteboard Questions
 Language agnostic whiteboard questions can be found here: [Whiteboard Code Questions](whiteboard-code-questions)
