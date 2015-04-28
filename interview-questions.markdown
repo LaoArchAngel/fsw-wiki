@@ -19,6 +19,7 @@ Areas:
 * [Web](questions_web)
 * [Database/SQL](questions_db)
 * [Data Structures](questions_data_structures)
+* [Application Design](questions_design)
 
 ### Whiteboard Questions
 Language agnostic whiteboard questions can be found here: [Whiteboard Code Questions](whiteboard-code-questions)
