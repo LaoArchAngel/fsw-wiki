@@ -8,7 +8,7 @@ Use a tree to store all phone numbers, each digit would be a node in the tree
 
 ##### Q: How does that affect performance?
 ##### A:
-Using a tree change the performance to log(10) assuming all phone numbers are 10 digits long, which would still be constant time.
+Using a tree changes the performance to log(10) assuming all phone numbers are 10 digits long, which would still be constant time.
 
 #### Q: How do hashtables work?
 #### A:
