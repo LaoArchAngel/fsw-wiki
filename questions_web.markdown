@@ -104,11 +104,13 @@ A 301 response code indicates that the content has been moved permanently.  In a
 
 #### A:  A type of web application security vulnerability enabling attackers to inject client-side script into Web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. 
 
-#### Follow-Up: How can XSS be prevented?
+#### Follow-Up: How can XSS be mitigated?
 
 #### A: <TODO>
 
 ---
+
+## Hard Questions
 
 #### Q: What is XSRF/CSRF (Cross-Site Request Forgery)?
 
@@ -119,8 +121,6 @@ A 301 response code indicates that the content has been moved permanently.  In a
 #### A: <TODO>
 
 ---
-
-## Hard Questions
 
 `Question`: What are some common network load-balancing algorithms?
 
