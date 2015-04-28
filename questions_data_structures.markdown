@@ -34,6 +34,8 @@ public void findThem(int[] arr, int sum /* int product */, out int val1, out int
    for(int j=0; j <= arr.Length; j++)
    {
       diff = sum - arr[j]; /* diff = product / arr[j]; */
+      // at this point doubles (for sum) and squares (for product) require special handling
+      // or we can say that we can safely ignore that case.
       if(ht.ContainsKey(diff))
       {
          val1 = arr[j];
