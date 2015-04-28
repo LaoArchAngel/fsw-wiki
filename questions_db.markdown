@@ -30,6 +30,12 @@ A block is when one or more tasks are waiting on another task to release its loc
 
 A deadlock is when two or more tasks are waiting on each other to release locks on multiple shared resources. For example, task A has a lock on shared resource 1, but needs access to shared resource 2 and task B has a lock on shared resource 2, but needs access to shared resource 1. They are both waiting on each other and thus will never complete their work.
 
+**2. What is a clustered index**
+
+`Answer`
+
+A clustered index is a type of index that forces the data in a table to be stored in the same order as the values that are stored in the index.
+
 ### Med Questions
 
 ### Hard Questions
