@@ -41,23 +41,45 @@ public bool Contains<T>(IList<T> list, T item) {
 
 ## Write a factorial function (medium)
 Given Factorial is defined as follows:
+
 |  n   |  n!  |
 | ---- | ---- |
-|  0   |  1   |
-|  1   |  1   |
-|  2   |  1   |
-|  3   |  1   |
-|  4   |  1   |
-|  .   |  .   |
-|  .   |  .   |
-|  .   |  .   |
-|  5   |  1   |
+|  0   |  **1**   |
+|  1   |  **1**   |
+|  2   |  _2 * 1 =_ **2**   |
+|  3   |  _3 * 2 * 1 =_ **6**  |
+|  4   |  _4 * 3 * 2 * 1 =_ **24**  |
+|  5   |  _5 * 3 * 2 * 1 =_ **120** |
+|  .   |  . |
+|  .   |  . |
+|  n   |  _n * (n-1)!_ `<-- this is a HUGE hint and usually produces a recursive solution so avoid it w/ experienced developers`|
 
 
-Write a function that will take in _n_ and return _n!_.
+**Write a function that will take in _n_ and return _n!_.**
 
-One possible solution:
+Two possible solution:
 ```csharp
+public UInt64 RecursiveFactorial(UInt32 n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+
+    return n * RecursiveFactorial(n - 1);
+}
+
+public UInt64 LoopFactorial(UInt32 n)
+{
+    UInt64 result = 1;
+
+    for (UInt32 i = n; i > 1; i--)
+    {
+        result = result * i;
+    }
+
+    return result;
+}
 ```
 
 ## Write a recursive file search
