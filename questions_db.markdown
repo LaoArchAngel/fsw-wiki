@@ -22,6 +22,11 @@ An **outer join** between two tables will return a result record for every sourc
 `Tips`
 1. Bonus points if interviewee asks to specify what type of outer join - e.g. left, right, or full outer join
 
+**2. What is the difference between a block and a deadlock?
+`Answer`
+A block is when one or more tasks are waiting on another task to release its lock on a shared resource. 
+A deadlock is when two or more tasks are waiting on each other to release locks on multiple shared resources. For example, task A has a lock on shared resource 1, but needs access to shared resource 2 and task B has a lock on shared resource 2, but needs access to shared resource 1. They are both waiting on each other and thus will never complete their work.
+
 ### Med Questions
 
 ### Hard Questions
