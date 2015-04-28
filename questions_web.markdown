@@ -96,7 +96,8 @@ A 301 response code indicates that the content has been moved permanently.  In a
 
 #### Q: When I type www.fsw.com in the address bar of a web browser, what happens next? Please be as descriptive as you possibly can to demonstrate the breadth of your knowledge. We can dig deeper into topics as you enumerate them.
 
-#### A: This is a very open-ended question intended to understand the breadth of knowledge of the interviewee. The topics that they should be able to touch are IP packets, routing, DNS, load balancing, SSL/TLS, web servers, static html, web applications, distributed systems, databases, sessions, multi-threading, threadpools, etc.
+#### A: 
+This is a very open-ended question intended to understand the breadth of knowledge of the interviewee. The topics that they should be able to touch are IP packets, routing, DNS, load balancing, SSL/TLS, certificates, HTTP, HTTP Verbs, web servers, static html, web applications, distributed systems, databases, sessions, multi-threading, threadpools, etc.
 
 ---
 
