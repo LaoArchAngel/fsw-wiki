@@ -40,6 +40,25 @@ public bool Contains<T>(IList<T> list, T item) {
 
 
 ## Write a factorial function (medium)
+Given Factorial is defined as follows:
+|  n   |  n!  |
+| ---- | ---- |
+|  0   |  1   |
+|  1   |  1   |
+|  2   |  1   |
+|  3   |  1   |
+|  4   |  1   |
+|  .   |  .   |
+|  .   |  .   |
+|  .   |  .   |
+|  5   |  1   |
+
+
+Write a function that will take in _n_ and return _n!_.
+
+One possible solution:
+```csharp
+```
 
 ## Write a recursive file search
 
