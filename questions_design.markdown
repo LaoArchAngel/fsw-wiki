@@ -1,12 +1,12 @@
-#### Q: Design a game of Tic-Tac-Toe?
+#### Q: Draw a conceptual diagram of a game of Tic-Tac-Toe and describe the interactions between entities?
 #### A:
 
-#### Q: Design a Circus simulation?
+#### Q: Draw a conceptual diagram of a Circus simulation and describe the interactions between entities?
 #### A:
 
-#### Q: Design a County fair simulation?
+#### Q: Draw a conceptual diagram of a County fair simulation and describe the interactions between entities?
 #### A:
 
-#### Q: Design a game of Chess?
+#### Q: Draw a conceptual diagram of a game of Chess and describe the interactions between entities?
 #### A:
 
