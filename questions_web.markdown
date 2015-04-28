@@ -106,7 +106,10 @@ A 301 response code indicates that the content has been moved permanently.  In a
 
 #### Follow-Up: How can XSS be mitigated?
 
-#### A: <TODO>
+#### A:
+    * Encode/escape all user input
+    * HTML sanitization
+    * disable scripting
 
 ---
 
