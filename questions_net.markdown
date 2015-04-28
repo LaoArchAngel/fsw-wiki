@@ -167,37 +167,6 @@ syntax.
 
 ## Hard Questions
 
-__Q:__ Explain how .Net's Garbage Collection algorithm works
-
-__A:__ .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first
-enumerates all the roots (like registers, global or static fields, local
-variables on the stack, function arguments on stack, etc) and then starts
-visiting the objects referenced by them recursively (essentially travelling the
-nodes in the memory graph). When it reaches an object it marks it with a special
-flag indicating that the object is reachable and hence not garbage. At the end
-of this mark phase it gets into the sweep phase. Any object in memory that is
-not marked by this time is garbage and the system disposes it.
-
-More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
-
-__Follow-up:__ What are the advantages and disadvantages of a mark-and-sweep GC
-algorithm over other algorithms (such as a reference counter GC)?
-
-__A:__ The primary advantage of mark-sweep is that it handles cyclic references
-naturally. Moreover, no additional overheads are added while normal execution
-(e.g. allocation, pointer manipulations). Combined with compaction it ensures
-good locality of reference and reduced fragmentation and hence optimal
-subsequent allocations.
-
-However, mark-sweep pauses useful execution and walks entire memory marking
-and sweeping it. Hence it adds large freezes which is un-acceptable in most
-interactive systems. However, incremental variations of Mark-sweep are available
-which works around this limitation. Mark-sweep also starts thrashing when memory
-fills up as it fails to clean up memory and it gets triggered again and again as
-memory approaches exhaustion. Self tuning GC helps in this scenario.
-
----
-
 __Q:__ What does the `lock` key word do?  What argument should be provided to the lock keyword?
 
 __A:__ 
@@ -248,7 +217,7 @@ __A:__ The heap is organized into generations so it can handle long-lived and sh
 __Q:__ 
 1. What is the garbage collector?
 2. When does garbage collection occur?
-3. How does garbage collection work?
+3. Describe the phases of garbage collection.
 
 __A:__ 
 1. The garbage collector is an automatic memory manager that allocates objects on the managed heap, reclaim objects that are no longer being used, and provides memory safety by making sure that an object cannot use the content of another object.
@@ -260,6 +229,37 @@ __A:__
     - a `marking` phase that finds and creates a list of all live objects
     - a `relocating` phase that updates the references to objects that will be compacted
     - a `compacting` phase that reclaims the space occupied by the dead objects and compacts the surviving objects -- the compacting phase moves objects that have survived a garbage collection toward the older end of the segment
+
+---
+
+__Q:__ Explain how .Net's Garbage Collection algorithm works
+
+__A:__ .Net uses a mark-and-sweep GC algorithm.  When GC fires, it first
+enumerates all the roots (like registers, global or static fields, local
+variables on the stack, function arguments on stack, etc) and then starts
+visiting the objects referenced by them recursively (essentially traveling the
+nodes in the memory graph). When it reaches an object it marks it with a special
+flag indicating that the object is reachable and hence not garbage. At the end
+of this mark phase it gets into the sweep phase. Any object in memory that is
+not marked by this time is garbage and the system disposes it.
+
+More details here: http://blogs.msdn.com/b/abhinaba/archive/2009/01/30/back-to-basics-mark-and-sweep-garbage-collection.aspx
+
+__Follow-up:__ What are the advantages and disadvantages of a mark-and-sweep GC
+algorithm over other algorithms (such as a reference counter GC)?
+
+__A:__ The primary advantage of mark-sweep is that it handles cyclic references
+naturally. Moreover, no additional overheads are added while normal execution
+(e.g. allocation, pointer manipulations). Combined with compaction it ensures
+good locality of reference and reduced fragmentation and hence optimal
+subsequent allocations.
+
+However, mark-sweep pauses useful execution and walks entire memory marking
+and sweeping it. Hence it adds large freezes which is unacceptable in most
+interactive systems. However, incremental variations of Mark-sweep are available
+which works around this limitation. Mark-sweep also starts thrashing when memory
+fills up as it fails to clean up memory and it gets triggered again and again as
+memory approaches exhaustion. Self tuning GC helps in this scenario.
 
 ---
 
