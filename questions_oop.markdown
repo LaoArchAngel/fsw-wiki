@@ -24,6 +24,12 @@ structure.__
 
 ---
 
+__Follow-Up: As a rule of thumb, when would you recommend using one (abstract class vs interface) versus the other?
+
+__A: Use an interface unless there is a strong 'is-a' relationship between the base *and* derived types as well as common behavior across all derived types.__
+
+---
+
 __Q: What is an anti-pattern?__
 
 __A: A common response to a recurring problem that is usually ineffective and risks being highly counter productive.__
