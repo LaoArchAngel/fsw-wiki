@@ -12,13 +12,13 @@
 
 ---
 
-#### Q: What is the difference between a cookie and a session?
+#### Q: What is the difference between a cookie and an asp.net session?
 
 #### A: Sessions are server-side and contain user information, while Cookies are client-side files that contain user information. Sessions have a unique identifier that maps them to specific users. This identifier can be passed in the URL or saved into a session cookie.  In the latter case, clearing your cookie will result in clearing your session because your unique sessionID will be lost.
 
 ---
 
-#### Q: What does it mean for a session to be sticky?
+#### Q: In terms of load balancing, what does *sticky session* mean?
 
 #### A: When multiple servers are processing web requests, a load balancer will route requests to servers based on one of many possible strategies.  A Sticky Session means that the same web server will handle all requests from a user's session (that user's requests will not be sent to different web servers).
 
