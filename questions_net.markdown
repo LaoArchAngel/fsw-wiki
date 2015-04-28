@@ -225,14 +225,14 @@ __A:__
 ---
 
 __Q:__ 
-1. .NET Framework 4.5 / C# 5.0 introduced the async and await keywords.
-2. Explain the intended purpose of each and a scenario where async and await would be well used.
+1. .NET Framework 4.5 / C# 5.0 introduced the 'async' and 'await' keywords, explain the intended purpose of each.
+2. What types of situations are async and await well suited?
 3. Is async-await a good choice for long-running, high CPU tasks?
 
 __A:__ 
 1. Use the `async` modifier to specify that a method, lambda expression, or anonymous method is asynchronous. If you use this modifier on a method or expression, it's referred to as an async method.  The `await` operator is applied to a task in an asynchronous method to suspend the execution of the method until the awaited task completes. The task represents ongoing work.
-2. Any I/O operation is a good candidate for async-await.  This would include disk/file access; database activity; and remote service calls (such as web requests).
-3. No, async-await was specifically created to avoid blocking on *long-running, low cpu* tasks.  Stated another way, async-await is a great solution for *parallelizing waits* (a list of remote service calls or db requests).  Placing async-await around high CPU activity removes the callers ability to manage thread allocation for high CPU work, which inhibits optimal tuning in the consuming application.
+2. Any *long-running, low cpu* tasks is a good candidate for async-await.  This would include disk/file access; database activity; and remote service calls (such as web requests).
+3. No, async-await was specifically created to allow for *parallelizing waiting without blocking the current thread* (ie: to parallelize a list of remote service calls or db requests).  Utilizing async and await for high CPU methods removes the callers ability to manage thread allocation for the high CPU work which inhibits optimal tuning in the consuming application.
 
 ---
 
