@@ -64,7 +64,7 @@ def clean_up_path(path)
    path_elements.each { |path_element|
       if path_element == '.'
          continue
-      elsif path_element == '.'
+      elsif path_element == '..'
          clean_path_elements.pop
       else
          clean_path_elements.push path_element
