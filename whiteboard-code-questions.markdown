@@ -26,7 +26,7 @@ _see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
 * How might you improve performance of the algorithm you chose?
 * How can you ensure the algorithm functions as expected? (`answers`: step through code, **write unit tests**, etc)
 
-## Remove Duplicates in a list (easy)
+## Remove Duplicates in a list (medium)
 Write a function that, when given a list of strings (or numbers or whatever you choose), will return a new list with no duplicates.  Pseudocode is fine.
 
 One possible solution:
