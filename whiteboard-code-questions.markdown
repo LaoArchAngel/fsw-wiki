@@ -4,10 +4,10 @@ These questions can be completed in any language and are "language feature agnos
 #### A note about Big O Notation `O`
 Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
 
-A Big O cheetsheet:
+A Big O cheat sheet:
 * `O(1)` - an algorithm that will always execute in the same time (or space) regardless of the size of the input data set
 * `O(n)` - an algorithm whose performance will grow linearly and in direct proportion to the size of the input data set - this is common with alogrithms that involve a loop
-* `O(N^2) - an algorithm whose performance is directly proportional to the square of the size of the input data set - this is common with algorithms that involve nested iterations over the data set (Deeper nested iterations will result in O(N&3), O(N^4), etc)
+* `O(N^2)` - an algorithm whose performance is directly proportional to the square of the size of the input data set - this is common with algorithms that involve nested iterations over the data set (Deeper nested iterations will result in O(N&3), O(N^4), etc)
 * `O(2^n)` - an algorithm whose growth will double with each additional element in the input data set - The execution time of an O(2^N) function will quickly become very large
 
 _see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
@@ -17,7 +17,7 @@ _see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
 * Did they require help?
 * Does the solution appear to work?
 * Do they show an ability to think through the problem even if they do know know the answer?
-* 
+
 
 ### Possible follow up questions for the coding problems below
 * What is _Big O_ for performance and space?
