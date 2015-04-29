@@ -22,7 +22,7 @@ _see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
 
 ### Possible follow up questions for the coding problems below
 * What is _Big O_ for performance and space?
-* Did you use a a loop or recursion?  What are the implications of this choice?
+* Is the solution recursive or iterative?  What are the implications of this choice?
 * How might you improve performance of the algorithm you chose?
 * How can you ensure the algorithm functions as expected? (`answers`: step through code, **write unit tests**, etc)
 
