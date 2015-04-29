@@ -1,6 +1,30 @@
 # Whiteboard Coding questions
 These questions can be completed in any language and are "language feature agnostic".  If specific language features are used to short-cut/solve the problem, then a follow-up question should be asked: "How would you solve this without language feature _x_?"
 
+#### A note about Big O Notation `O`
+Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
+
+A Big O cheetsheet:
+* `O(1)` - an algorithm that will always execute in the same time (or space) regardless of the size of the input data set
+* `O(n)` - an algorithm whose performance will grow linearly and in direct proportion to the size of the input data set - this is common with alogrithms that involve a loop
+* `O(N^2) - an algorithm whose performance is directly proportional to the square of the size of the input data set - this is common with algorithms that involve nested iterations over the data set (Deeper nested iterations will result in O(N&3), O(N^4), etc)
+* `O(2^n)` - an algorithm whose growth will double with each additional element in the input data set - The execution time of an O(2^N) function will quickly become very large
+
+_see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+
+### Things to keep in mind during these coding questions:
+* Did the candidate complete the task?
+* Did they require help?
+* Does the solution appear to work?
+* Do they show an ability to think through the problem even if they do know know the answer?
+* 
+
+### Possible follow up questions for the coding problems below
+* What is _Big O_ for performance and space?
+* Did you use a a loop or recursion?  What are the implications of this choice?
+* How might you improve performance of the algorithm you chose?
+* How can you ensure the algorithm functions as expected? (`answers`: step through code, **write unit tests**, etc)
+
 ## Remove Duplicates in a list (easy)
 Write a function that, when given a list of strings (or numbers or whatever you choose), will return a new list with no duplicates.  Pseudocode is fine.
 
