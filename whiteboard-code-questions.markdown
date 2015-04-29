@@ -17,7 +17,7 @@ _see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
 * Did they require help?
 * Does the solution appear to work?
 * Do they show an ability to think through the problem even if they do know know the answer?
-* Have the candidate walk you through the code with a sample input; are they able to do this without issue?
+* If asked, can the candidate walk you through the code with a sample input; are they able to do this without issue?
 * Does the candidate describe what they are thinking about / doing when they get stuck or do they stare at the board blankly?
 
 ### Possible follow up questions for the coding problems below
