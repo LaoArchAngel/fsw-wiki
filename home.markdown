@@ -39,4 +39,4 @@ click on the attaching link at the bottom of the **Content** pane.
 + [Unit Testing](Testing/UnitTesting)
 + [Automating Releases] (automated_releases)
 + [Architecture Vision] (http://gitlab.fsw.com/tfs/library/raw/master/resources/Architecture-Vision_3-12-2015.pdf)
-+ [Configuration Package] (configuration_package)
++ [Configuration Package] (configuration-package)
