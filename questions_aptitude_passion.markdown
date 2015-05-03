@@ -6,7 +6,6 @@
 
 # Phone Screen Questions
 
-## Easy Questions
 1. On a scale of 1-10, 1 being you've just heard of it and 10 being you could write a book about it, rate yourself in the following technologies:
     * c#
     * javascript
@@ -43,16 +42,8 @@
 
 4. What will be the next language or devel9oment topic you want to learn about?
 
-## Med Questions
-
-## Hard Questions
 
 ---
 
 # In-person questions
 
-## Easy Questions
-
-## Med Questions
-
-## Hard Questions
