@@ -10,7 +10,9 @@ A Big O cheat sheet:
 * `O(N^2)` - an algorithm whose performance is directly proportional to the square of the size of the input data set - this is common with algorithms that involve nested iterations over the data set (Deeper nested iterations will result in O(N^3), O(N^4), etc)
 * `O(2^n)` - an algorithm whose growth will double with each additional element in the input data set - The execution time of an O(2^N) function will quickly become very large
 
-_see also_: http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+_references_: 
+* http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+* http://en.wikipedia.org/wiki/Big_O_notation
 
 ### Things to keep in mind during these coding questions:
 * Did the candidate complete the task?
@@ -61,6 +63,26 @@ public bool Contains<T>(IList<T> list, T item) {
 }
 ```
 
+The above algorithm can improve Big O from O(n^2) to O(n) by using a HashSet which provides O(1) look-up efficiency:
+
+```csharp
+public IList<T> RemoveDuplicates<T>(IList<T> list)
+{
+    IList<T> noDupes = new List<T>();
+    HashSet<T> tracker = new HashSet<T>();
+
+    foreach (T item in list) {
+        if (!tracker.Contains(item))
+        {
+            tracker.Add(item);  // this can be O(n), but only when capacity is small
+            noDupes.Add(item);
+        }
+    }
+
+    return noDupes;
+}
+```
+
 ## Write a function to reverse the digits of an integer?
 
 ```javascript
@@ -75,8 +97,9 @@ function reverseDigits(value){
 }
 ```
 
-## Create a FindById() method for a linked list datastructure (medium)
+Big O of the above algorithm is O(n).
 
+## Create a FindById() method for a linked list datastructure (medium)
 
 ## Write a factorial function (medium)
 Given Factorial is defined as follows:
@@ -121,6 +144,9 @@ public UInt64 LoopFactorial(UInt32 n)
 }
 ```
 
+Big O of the above algorithms is O(n).
+
+
 ## Write a recursive file search
 
 Given a starting directory and a file name, write a recursive function that will search that directory and all sub-directories and return the location of that file.  For example, I might give you "C:\" and "foo.txt", and the file may be on your desktop.  Pseudocode is fine.
@@ -144,6 +170,7 @@ FileInfo FindFile(DirectoryInfo dir, string filename)
   return null;
 }
 ```
+
 
 Notes:
 * Some people will abbreviate this by using linq.
