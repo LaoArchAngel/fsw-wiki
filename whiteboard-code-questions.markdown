@@ -83,23 +83,7 @@ public IList<T> RemoveDuplicates<T>(IList<T> list)
 }
 ```
 
-## Write a function to reverse the digits of an integer?
-
-```javascript
-function reverseDigits(value){
-   var retVal = 0;
-   while(value > 0){
-      retVal = (retVal * 10) + (value % 10);
-      value = value / 10;
-   }
-
-   return retVal;
-}
-```
-
 Big O of the above algorithm is O(n).
-
-## Create a FindById() method for a linked list datastructure (medium)
 
 ## Write a factorial function (medium)
 Given Factorial is defined as follows:
@@ -171,7 +155,22 @@ FileInfo FindFile(DirectoryInfo dir, string filename)
 }
 ```
 
-
 Notes:
 * Some people will abbreviate this by using linq.
 * This is not a test of `System.IO` or of `C#` syntax.  Tell them about `FileInfo` and `DirectoryInfo` if needed, or don't even require them.  You could just as easily return a string.  It's the recursion and the tree traversal that you care about.
+
+## Write a function to reverse the digits of an integer?
+
+```javascript
+function reverseDigits(value){
+   var retVal = 0;
+   while(value > 0){
+      retVal = (retVal * 10) + (value % 10);
+      value = value / 10;
+   }
+
+   return retVal;
+}
+```
+
+## Create a FindById() method for a linked list data structure (medium)
