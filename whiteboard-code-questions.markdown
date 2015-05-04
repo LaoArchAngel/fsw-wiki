@@ -1,6 +1,8 @@
 # Whiteboard Coding questions
 These questions can be completed in any language and are "language feature agnostic".  If specific language features are used to short-cut/solve the problem, then a follow-up question should be asked: "How would you solve this without language feature _x_?"
 
+**Pick 1 or 2 of the questions below**.  The first 3 or so are the best, but the others can be used if they better fit a particular candidate.
+
 #### A note about Big O Notation (`O`)
 Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
 
