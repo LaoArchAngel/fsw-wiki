@@ -81,7 +81,7 @@ Service Models must override ToString(), GetHashCode(),  and Equals() – Specif
 
 Service Models should not represent tree structures and should not contain circular associations.  Composite Service Models should be kept small, if used at all, and should always be completely hydrated -- partially hydrated service models should be considered INVALID.
 All dates should be stored as a DateTimeOffsetTime object.  This ensures that time zone is not lost and allows the ToUniveralTime() method to always calculate DateTime correctly.  Dates and times should always be serialized to ISO 8601 using the fully-enhanced format that includes hours, minutes, seconds and a decimal fraction of seconds (e.g.
-yyyy-MM-dd'T'HH:mm:ss.SSS'Z').
+`yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`).
 
 ```csharp
 // ISO8601 Format -- see: 
