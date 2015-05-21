@@ -185,3 +185,6 @@ A good baseline regarding log levels and how to use them can be found [at the jo
 
 ## Instrumentation Requirements
 We should use LogCentral to capture application metrics and request-level instrumentation.  LogCentral supports MS MVC web applications as well as MS Web API applications.  The implementation details vary depending which web technology is used.  Specific details regarding LogCentral can be found [here](http://gitlab.fsw.com/LogCentral/logcentral.net) TODO: Find the correct link!
+
+# Internal SOA API Guidance
+For internal SOA Guidance, please see [SOA Approach Tradeoff Analysis](https://docs.google.com/document/d/1bZq9cTcQlc9iPtE4bUBBjnEZGQj7j4FGuiUJWc7CAcY/edit?usp=sharing).  Additional SOA API Guidance will be added to this wiki in the near future.
