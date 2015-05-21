@@ -86,7 +86,7 @@ All dates should be stored as a DateTimeOffsetTime object.  This ensures that ti
 ```csharp
 // ISO8601 Format -- see: 
 //    http://wiert.me/2014/04/22/in-c-given-a-datetime-object-how-do-i-get-a-iso8601-date-in-string-format-stack-overflow/
-String rfc1123 = System.DateTime.Now.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssK");
+String iso8601 = System.DateTime.Now.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssK");
 ```
 -
 
