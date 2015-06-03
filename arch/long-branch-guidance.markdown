@@ -172,3 +172,77 @@ fulfillment. An Order service should not be adding a credit card to customer.
 And, of course, just because the project is to remodel the whole kitchen, that
 does not mean that replacing the counters is the same job as installing a new
 sink.
+
+### The Testable Portion
+
+One way of separating a project into multiple, separately deployable branches is
+to identify the independently testable portions.  For example, when writing unit
+tests, each public method becomes a testable portion. However, This could lead to
+an excessive amount of branches.  Even in the desert a typhoon will drown you.
+Instead, we can measure a testable portion as a class.  Each object generally
+has a single unit testing class associated with it.
+
+In OOP, each object should be defined by its behavior. In other words, each
+object should be independently testable. If an object does not have behavior
+then it is anemic, and in some OO circles, not an object but a struct or DTO.
+This makes it untestable, and all of changes to it should generally be deployed
+independently of anything else.  If you are adding values, make the changes before
+the rest of the code.  If you are removing values, do it after.
+
+In Microservices there are [5 architectural constraints](http://nirmata.com/2015/02/microservices-five-architectural-constraints/)
+similar to OOP's SOLID. The two we are concerned with here, however, are Minimal
+and Complete. Each service should provide a single business function, but no less.
+This means that each service should be independently testable, much like an object from OOP.  
+
+One of the reasons for branching based on testable portions is that, even though
+the project is incomplete, the branch can be merged and released with some level
+of confidence. The more complete the test suite, the higher the confidence.
+This way each deployment brings the project closer to completion.  It can even
+be set aside for other priorities without fear of losing relevance of the existing
+code.
+
+### Small Commits
+
+Commit early and often.  This is one of the [holy tenants of git](http://sethrobertson.github.io/GitBestPractices/).
+How does this help us make smaller branches?  Well, it doesn't.  This allows us
+to take what would have been a very long branch and gives us the opportunity to
+prune it into a smaller one.  How? Through the beautiful process of rebasing.
+It's like being told to go to the dentist, isn't it? Some people accuse me of
+taking pleasure in my work.
+
+So how does rebasing help us?  Well, an [interactive rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase-i)
+allows us to re-order the commits in our branch.  If you commit early and often,
+what we should have is the ability to organize those commits so that we can merge
+and there are are times you should really avoid it. For example, it's considered
+a portion of them. Of course, a lot of caution should be taken when rebasing,
+taboo to rebase a branch that has been pushed to a remote repository; or a
+branch other people have branched from or are otherwise working on. Doing so
+generally leads to the type of popularity you associate to "that one kid who
+always pees in the pool".
+
+Rebasing is something we should avoid, but it's a powerful tool if you know how
+and when to use it. When it comes to the flexibility of fixing your branches and
+releases, git and rebasing are great allies.
+
+### The Power of Planning
+
+We consistently measure the work associated with the projects assigned to us.
+One of the processes that can make us more accurate at determining that measure
+is actually to appropriately split each project into small-branch-sized tasks.
+We should adopt a state of mind that a task isn't dev-complete until a branch is
+ready to merge into develop.
+
+Obviously this by itself doesn't help us because all that means is that we can
+have one long-running branch that just isn't dev complete.  What it does give us,
+however, is visibility. A task and a project should not be the same thing. A
+task that does not move from in-progress stands out, and conceals the progress
+we are actually making on the project.
+
+The difficulty with good planning is the dependency on a strong knowledge of the
+code base. It also requires a familiarity with solving similar problems. That
+means that newer developers will depend heavily on their team leaders for
+planning.
+
+## Conclusion
+
+Long branch bad. Short branch good. Zug-zug.
