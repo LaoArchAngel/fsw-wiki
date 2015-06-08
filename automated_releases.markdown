@@ -12,7 +12,7 @@
 ## Branching Strategy
 
 * master
-    * All code entering this branch should be reviewed and merged using gitlab's merge request feature.  Any code merged into this branch should be considered production `ready`, but not necessarily production 'deployed'. This branch will be automatically built (and unit tests run) by the build server and deployed to the `dev` environment any time new code is committed.
+    * All code entering this branch should be reviewed and merged using gitlab's merge request feature.  Any code merged into this branch should be considered production 'ready', but not necessarily production 'deployed'. This branch will be automatically built (and unit tests run) by the build server and deployed to the 'dev' environment any time new code is committed.
 * topic|feature|bugfix/* (ex: feature/detect-user-agent)
     * A branch should be created per user story (bugfix, feature, etc) from master.  This branch should rarely be a shared branch (if ever) and should be considered independently deploy-able. This branch will be automatically built (and unit tests run) by the build server.  The built package produced by the build job for this branch can be deployed to the dev environment upon request, but it will not be done automatically.
 
@@ -25,12 +25,12 @@ A [visio diagram](http://sp.foodservicewarehouse.com/Development/EngineeringStan
 ## Jenkins Build Jobs
 
 A Jenkins build job should be expected to always produce one package.  The package could be a Nuget package (in the case of .net assemblies) a Chocolatey package (in the case of a windows application); a module (in the case of javascript or node.js); a yum package (in the case of a centos application).  A build job should, at minimum, include the following steps:
-    1. build
-    2. unit test
-    3. package
+1. build
+2. unit test
+3. package
 
-There should be 2 types of builds: 
-* snapshot builds 
+There should be 2 types of builds:
+* snapshot builds
     * builds run against topic|feature|bugfix branches
 * release builds
     * builds run against the master branch
@@ -45,7 +45,15 @@ Another variation of this usage is to manually promote builds (based on instinct
 
 ### Jenkins Release Flow Pipeline
 
-Where a particular build is in its release path can be tracked and viewed using the [Delivery Pipeline Plugin] (https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin).
+Where a particular build is in its release path can be tracked and viewed using the [Delivery Pipeline Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin).
 ![Example Delivery Pipeline](https://wiki.jenkins-ci.org/download/attachments/69764097/screenshot2.png?version=1&modificationDate=1400172472000)
 
-### TODO: The rest of this document
+#### Pipeline Steps
+
+1. Development
+  * Used to deploy snapshot packages and applications for staging
+* Stage
+  * Used to deploy release branches to staging environments and pre-release
+  packages
+* Release
+  * Used to deploy packages to their production environments
