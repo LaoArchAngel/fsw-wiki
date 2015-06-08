@@ -21,3 +21,7 @@ an event bus.
 All events should be saved in database storage prior to being published.
 This will ensure that any events can be replayed in the future in case of
 catastrophic failure.
+
+Each event available by a team should be documented in at least two separate
+locations: the documentation of the software that is generating the event,
+and a document listing all events that the team is publishing.
