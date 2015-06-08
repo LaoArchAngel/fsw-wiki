@@ -86,3 +86,11 @@ advantage of multiple queues is letting RabbitMQ handle failures from the
 consumer. The disadvantage comes from maintaining more queues, consumers, and
 could eventually raise resource concerns.
 
+## Queue Consumers
+
+Each queue consumer "processes" the events received by the queue, like the
+implementation of a C#
+[event-handler](https://msdn.microsoft.com/en-us/library/aa720052%28v=vs.71%29.aspx).
+These queue consumers can contain all of the event-handling code, or can
+otherwise call other processes to handle the information. This code will be
+completely dependent on the needs of the team for the associated event.
