@@ -28,6 +28,11 @@ and a document listing all events that the team is publishing.
 
 ## Exchange
 
+The Exchange is like the
+[Event](https://msdn.microsoft.com/en-us/library/8627sbea%28v=vs.120%29.aspx)
+in C# and .NET. It tells all listening delegates that the event was called and
+provides all associated data.
+
 An Exchange is how each team will "publish" their events to other teams. Each
 exchange will be bound to one or more queues, depending on the different teams
 or applications that are interested in an event published through the exchange.
