@@ -65,3 +65,24 @@ only the events in which its consumers are interested.
 For example, if an event is named _ProductNameChange_, queues can choose to
 accept it based on the name, but no other criteria. This is useful when
 dealing with a manageable number of events.
+
+## Message Queues
+
+A message queue is like a
+[delegate](https://msdn.microsoft.com/en-us/library/aa720047%28v=vs.71%29.aspx)
+for an event. Its purpose is simply to be "called" and given data by the event
+and conceals the actual logic that occurs as a result.
+
+A message queue is how a team "subscribes" to a series of events. Depending
+on the type of exchange provided, the queue can filter the event messages based
+on event name or other criteria.  When creating a message queue, the queue
+owners should ensure that the queue is durable and has a high-availability
+policy. This will help avoid catastrophic failure in the queue system.
+
+A team can create multiple queues to consume the same events from a single
+exchange if necessary for different applications. Alternatively, a single queue
+can have a queue consumer that spawns multiple "event-handling" processes. The
+advantage of multiple queues is letting RabbitMQ handle failures from the
+consumer. The disadvantage comes from maintaining more queues, consumers, and
+could eventually raise resource concerns.
+
