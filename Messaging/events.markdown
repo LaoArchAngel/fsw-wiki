@@ -25,3 +25,38 @@ catastrophic failure.
 Each event available by a team should be documented in at least two separate
 locations: the documentation of the software that is generating the event,
 and a document listing all events that the team is publishing.
+
+## Exchange
+
+An Exchange is how each team will "publish" their events to other teams. Each
+exchange will be bound to one or more queues, depending on the different teams
+or applications that are interested in an event published through the exchange.
+
+Each team should have at least one exchange for events. It will make more
+sense for each bounded context, and sometimes one for each application. These
+event Exchanges cannot be Direct, as multiple queues should be able to accept
+events from a single exchange.
+
+Different types of events are available depending on the type of event
+filtering available to the consuming queues.
+
+### Fan-Out Exchange
+
+**Fan-Out Exchanges** are useful when you want every queue listening to the
+exchange to process the same event. The usefulness of this type of exchange is
+limited to single or simple event streams.
+
+### Header Exchange
+
+**Header Exchanges** provide the most filtering capability but also the most
+complexity. Header exchanges will be useful when dealing with a large number
+of events or a large volume of the same type of event. Providing filterable
+information in the header of the event message would allow queues to accept
+only the events in which its consumers are interested.
+
+### Topic Exchange
+
+**Topic Exchanges** are useful when events only need to be filtered by name.
+For example, if an event is named _ProductNameChange_, queues can choose to
+accept it based on the name, but no other criteria. This is useful when
+dealing with a manageable number of events.
