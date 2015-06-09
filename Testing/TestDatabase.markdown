@@ -47,7 +47,7 @@ _Make sure to change the **AttachDbFileName** setting to your appropriate path_
   * If you cannot find the _Server Explorer_ window, click on _VIEW > Server
   Explorer_.
 2. Click the _Connect to Database_ icon.
-3. In the _Add Conection_ window, click the _Change..._ button next to the _Data
+3. In the _Add Connection_ window, click the _Change..._ button next to the _Data
 Source_ field.
 4. In the _Change Data Source_ window, select _Microsoft SQL Server Database
 File_ and click the _OK_ button.
@@ -58,6 +58,11 @@ database, select it, and click the _OK_ button.
   _FswGit_ repository.
 7. You can see the database as a _SQL Server Object_ by right-clicking on the _Main.mdf_ database connection in the _Server Explorer_ window and clicking the
 _Browse in SQL Server Object Explorer_ option.
+
+Alternate Path (Visual Studio 2013 Pro)
+3. Select _Microsoft SQL Server Database File_ and click the _Continue_ button.
+4. Click _Browse_ button
+5. Select "fswgit/UnitTest/Database/Main.mdf"
 
 ### Updating the Schema
 1. Open the _SQL Server Object Explorer_ window.
