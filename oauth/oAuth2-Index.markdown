@@ -1,5 +1,5 @@
 ## oAuth Flows we intend to support
-#### [OpenID Connect Profile Flow](OpenID-Connect-Profile-Flow)
+#### [OpenID Connect Profile Flow](oAuth-OpenID-Connect-Profile-Flow)
 #### [Access Token Refresh](oAuth-Access_Token-Refresh-Flow)
 #### [Client Credentials Flow](oAuth-Client-Credentials-Flow)
 
