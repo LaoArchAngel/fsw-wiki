@@ -34,6 +34,7 @@ click on the attaching link at the bottom of the **Content** pane.
 
 ## Topics
 + [Git](Git)
++ [oAuth](oauth/oAuth2-Index)
 + [Nuget](Nuget/SetupVS)
 + [Interviews](interview-questions)
 + [Unit Testing](Testing/UnitTesting)
