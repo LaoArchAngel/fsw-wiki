@@ -3,7 +3,7 @@
 #### [Access Token Refresh](oAuth-Access_Token-Refresh-Flow)
 #### [Client Credentials Flow](oAuth-Client-Credentials-Flow)
 
-## Management Flows
+## Management Flows expect to need
 #### [Register New FSW Client](oAuth-Register-New-FSW-Client-Flow)
 #### [User Registration](oAuth-Register-New-User-Flow)
 #### [Logout](oAuth-Logout-Flow)
