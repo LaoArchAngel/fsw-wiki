@@ -7,7 +7,7 @@ sudo firewall-cmd --zone=public --list-all
 ### update firewall config and reload
 
 ```bash
-sudo firewall-cmd --permanent --zone=public --add-port=<PORT>/tcp && sudo firewall-cmd –-reload
+sudo firewall-cmd --permanent --zone=public --add-port=<PORT>/tcp && sudo firewall-cmd --reload
 ```
 
 ### list the new firewall rules
