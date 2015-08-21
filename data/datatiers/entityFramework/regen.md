@@ -11,7 +11,7 @@ tier of specific domains.
 1. Create a [data tier regeneration branch](1).
 * Load a [clean solution](2).
 * Refresh the Entity Framework model.
-* Regenerate entity files.
+  * Regenerate entity files.
 * Merge Request.
 
 ## Procedure
