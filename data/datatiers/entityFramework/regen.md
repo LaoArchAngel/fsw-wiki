@@ -63,6 +63,16 @@ three level 8 spells.
   * Click the **Finish** button at the bottom and wait for the process to finish.
   to the database.  Coordinate these changes as much as possible.
 
+#### Regenerate Entity Files
 
-[1]: ../git/branching/dataTierRegen
-[2]: ../git/cleanRepo
+After clicking the **Finish** button, the EDMX will automatically run the
+associated .tt T4 script. When this happens, a _Security Warning_ dialogue may
+appear (unless you had previously chosen not to receive them). Click OK.
+
+If you would like to run the T4 file yourself to be extra cautious, you will
+find it in the same location as the EDMX file. Most of the time you will have
+to expand the EDMX file group in Solution Explorer to see it.  Right-click
+on the .tt file and click **Run Custom Tool**.
+
+[1]: /git/branching/dataTierRegen
+[2]: /git/cleanRepo
