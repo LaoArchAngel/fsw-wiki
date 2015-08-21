@@ -74,5 +74,18 @@ find it in the same location as the EDMX file. Most of the time you will have
 to expand the EDMX file group in Solution Explorer to see it.  Right-click
 on the .tt file and click **Run Custom Tool**.
 
+### Merge Request
+
+Once the entity files have been regenerated, make sure you perform a _Save All_
+to ensure that any new or removed files are appropriately handled at the project
+level.  To ensure all changes are added to the commit, it is recommended that
+you save your work and close visual studio before using git.
+
+If all data tier changes are done, a merge request of just the data tier branch
+should be created into the branch from which it originated.  Please make sure
+all necessary changes are complete, such as any related
+[Linq2Sql data tier regeneration](/data/datatier/linq2sql/regen) or
+[extra SQL scripts executed](/data/database/scripts).
+
 [1]: /git/branching/dataTierRegen
 [2]: /git/cleanRepo
