@@ -60,11 +60,8 @@ three level 8 spells.
   are on the list and no other objects.
     * If objects you did not delete from the database appear in this list, inform
     your team lead and try to determine if someone else is making similar changes
-    to the database.  Coordinate these changes as much as possible.
-* Click the **Finish** button at the bottom and wait for the process to finish.
-  * After clicking the **Finish** button, a _Security Warning_ dialogue may
-  appear. If it does pop up, continue to step **6**.
-* Save your changes to the EDMX and close the tab.
+  * Click the **Finish** button at the bottom and wait for the process to finish.
+  to the database.  Coordinate these changes as much as possible.
 
 
 [1]: ../git/branching/dataTierRegen
