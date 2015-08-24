@@ -8,8 +8,8 @@ tier of specific domains.
 
 ## Overview
 
-1. Create a [data tier regeneration branch](1).
-* Load a [clean solution](2).
+1. Create a [data tier regeneration branch][1].
+* Load a [clean solution][2].
 * Refresh the Entity Framework model.
   * Regenerate entity files.
 * Merge Request.
@@ -22,7 +22,7 @@ There are plenty of different situations that require a data tier regeneration.
 The branching strategies for these situations are mainly going to be the same,
 but will occasionally differ greatly.  Identifying those situations and their
 branching strategies are beyond the scope of this document.  Please see the
-[git Data Tier Regeneration Branching](1) document.
+[git Data Tier Regeneration Branching][1] document.
 
 In any case, it is highly recommended that a clean branch be created solely for
 data tier regenerations.  This will provide greater flexibility and problem
@@ -36,7 +36,7 @@ Should a problem occur with the data tier regeneration, even if it has nothing
 to do with changes being inadvertently included with the regeneration, it will
 make keeping both the regeneration and the extra changes extremely painful.
 
-Please read the instructions for [cleaning your repository](2) to ensure you
+Please read the instructions for [cleaning your repository][2] to ensure you
 are not in danger of including unrelated changes.
 
 ### Refresh the Entity Framework model
@@ -84,17 +84,17 @@ you save your work and close visual studio before using git.
 If all data tier changes are done, a merge request of just the data tier branch
 should be created into the branch from which it originated.  Please make sure
 all necessary changes are complete, such as any related
-[Linq2Sql data tier regeneration](3) or
+[Linq2Sql data tier regeneration][3] or
 [extra SQL scripts executed](/data/database/scripts).
 
 ---
 
 #### See Also
 
-* [Clean Local Git Repository](2)
+* [Clean Local Git Repository][2]
 * [Database Change Overview](/data/database/changeOverview)
-* [Data Tier Regeneration Branches](1)
-* [Linq2Sql Data Tier Regeneration](3)
+* [Data Tier Regeneration Branches][1]
+* [Linq2Sql Data Tier Regeneration][3]
 
 
 [1]: /git/branching/dataTierRegen
