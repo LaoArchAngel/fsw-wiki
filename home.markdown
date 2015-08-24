@@ -36,16 +36,21 @@ click on the attaching link at the bottom of the **Content** pane.
 + [Automating Releases] (automated_releases)
 + [Git](Git)
 + [Interviews](interview-questions)
+
 ### Nuget
 + [Nuget](Nuget/SetupVS)
+
 ### oAuth
 + [oAuth](oauth/oAuth2-Index)
+
 ### Resources
 + [Architecture Vision] (http://gitlab.fsw.com/tfs/library/raw/master/resources/Architecture-Vision_3-12-2015.pdf)
 + [LogCentral presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/FSW%20LogCentral.pptx)
 + [MongoDB presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/MongoDB.pptx)
+
 ### Testing
 + [Unit Testing](Testing/UnitTesting)
+
 ### Data
 #### DataTiers
 ##### Entity Framework
