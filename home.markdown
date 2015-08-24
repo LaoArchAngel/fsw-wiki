@@ -33,12 +33,20 @@ If you would like to add an image to a page, you can simply drag-and-drop, or ot
 click on the attaching link at the bottom of the **Content** pane.
 
 ## Topics
-+ [Git](Git)
-+ [oAuth](oauth/oAuth2-Index)
-+ [Nuget](Nuget/SetupVS)
-+ [Interviews](interview-questions)
-+ [Unit Testing](Testing/UnitTesting)
 + [Automating Releases] (automated_releases)
++ [Git](Git)
++ [Interviews](interview-questions)
+### Nuget
++ [Nuget](Nuget/SetupVS)
+### oAuth
++ [oAuth](oauth/oAuth2-Index)
+### Resources
 + [Architecture Vision] (http://gitlab.fsw.com/tfs/library/raw/master/resources/Architecture-Vision_3-12-2015.pdf)
 + [LogCentral presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/FSW%20LogCentral.pptx)
 + [MongoDB presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/MongoDB.pptx)
+### Testing
++ [Unit Testing](Testing/UnitTesting)
+### Data
+#### DataTiers
+##### Entity Framework
++ [Regenerating Entity Framework Data Tiers](data/datatiers/entityFramework/regen)
