@@ -84,8 +84,19 @@ you save your work and close visual studio before using git.
 If all data tier changes are done, a merge request of just the data tier branch
 should be created into the branch from which it originated.  Please make sure
 all necessary changes are complete, such as any related
-[Linq2Sql data tier regeneration](/data/datatier/linq2sql/regen) or
+[Linq2Sql data tier regeneration](3) or
 [extra SQL scripts executed](/data/database/scripts).
+
+---
+
+#### See Also
+
+* [Clean Local Git Repository](2)
+* [Database Change Overview](/data/database/changeOverview)
+* [Data Tier Regeneration Branches](1)
+* [Linq2Sql Data Tier Regeneration](3)
+
 
 [1]: /git/branching/dataTierRegen
 [2]: /git/cleanRepo
+[3]: /data/datatier/linq2sql/regen
