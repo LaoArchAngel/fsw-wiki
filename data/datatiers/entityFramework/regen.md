@@ -41,7 +41,10 @@ are not in danger of including unrelated changes.
 
 ### Refresh the Entity Framework model
 
-1. Find and open the EDMX file associated to your specific Entity Framework
+1. Open the `App.config` file for the Domain project.  Make sure that the
+`FswEntities` connection string is pointing to the correct dev database from
+which you would like to regenerate the data tier.
+* Find and open the EDMX file associated to your specific Entity Framework
 model.
   * For example, the Fsw4.0 solution, the *Main* data model is
   `$/Core/Domain/Fsw3/Domain/Entities/Main/FswModel.edmx`.
