@@ -50,7 +50,7 @@ model.
   `$/Core/Domain/Fsw3/Domain/Entities/Main/FswModel.edmx`.
   * Opening the EDMX file will likely result in one of the model diagrams being
   open.  If no diagram is available, an empty-looking tab will load.
-* Right-click in the EDMX tab and select **Update Model from Database...**.
+* Right-click in the EDMX tab/background and select **Update Model from Database...**.
 * An Update Wizard will appear.  He is level 15, has a 28 Charisma and knows
 three level 8 spells.
   * In the **Add** tab, expand and select any *Tables*, *Views*,
