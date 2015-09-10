@@ -4,7 +4,7 @@ Technical Specialist volunteers are below--there are HipChat rooms for each of t
 + **Node.js:** Collin, Jeremy, Jake
 + **API:** Jordon, Collin, Jason Burbage
 + **Sql & Datatiers:** Nick Corley, JVD, Arthur, Malick, Mike Albair
-+ **Mongo/ElasticSearch/NoSql:** Troy, Jeremy
++ **Mongo/ElasticSearch/NoSql:** Troy, Jeremy, JVD
 + **C#/OOP:** Jeremy, Malick, Matt Arnold
 + **Unit Tests:** Malick, Jeff
 + **Jenkins/Deployment:** Dom, Matt James, Derrick
