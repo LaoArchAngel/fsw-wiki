@@ -1,6 +1,6 @@
 Technical Specialist volunteers are below--there are HipChat rooms for each of these specialties.  Anyone can volunteer to add themselves to this list, just get the thumbs-up from the existing members of that specialty.  There may be hazing/initiation, so be prepared!  :)
 
-+ Client-side/Angular/JS: Eric, Collin, Danny, Jeremy
++ **Client-side/Angular/JS:** Eric, Collin, Danny, Jeremy
 + Node.js: Collin, Jeremy, Jake
 + API: Jordon, Collin, Jason Burbage
 + Sql & Datatiers: Nick Corley, JVD, Arthur, Malick, Mike Albair
@@ -10,7 +10,7 @@ Technical Specialist volunteers are below--there are HipChat rooms for each of t
 + Jenkins/Deployment: Dom, Matt James, Derrick
 + Ansible/Docker: Dom, Eric, Matt James, Derrick, Jordon, Jake
 
-Technical Specialists Responsibilities:
+**Technical Specialists Responsibilities:**
 + Hang out in your specialty's hipchat room
 + Help people who need it
 + Help serve as a code reviewer for code changes affecting your area
