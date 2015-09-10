@@ -1,14 +1,14 @@
 Technical Specialist volunteers are below--there are HipChat rooms for each of these specialties.  Anyone can volunteer to add themselves to this list, just get the thumbs-up from the existing members of that specialty.  There may be hazing/initiation, so be prepared!  :)
 
 + **Client-side/Angular/JS:** Eric, Collin, Danny, Jeremy
-+ Node.js: Collin, Jeremy, Jake
-+ API: Jordon, Collin, Jason Burbage
-+ Sql & Datatiers: Nick Corley, JVD, Arthur, Malick, Mike Albair
-+ Mongo/ElasticSearch/NoSql: Troy, Jeremy
-+ C#/OOP: Jeremy, Malick, Matt Arnold
-+ Unit Tests: Malick, Jeff
-+ Jenkins/Deployment: Dom, Matt James, Derrick
-+ Ansible/Docker: Dom, Eric, Matt James, Derrick, Jordon, Jake
++ **Node.js:** Collin, Jeremy, Jake
++ **API:** Jordon, Collin, Jason Burbage
++ **Sql & Datatiers:** Nick Corley, JVD, Arthur, Malick, Mike Albair
++ **Mongo/ElasticSearch/NoSql:** Troy, Jeremy
++ **C#/OOP:** Jeremy, Malick, Matt Arnold
++ **Unit Tests:** Malick, Jeff
++ **Jenkins/Deployment:** Dom, Matt James, Derrick
++ **Ansible/Docker:** Dom, Eric, Matt James, Derrick, Jordon, Jake
 
 **Technical Specialists Responsibilities:**
 + Hang out in your specialty's hipchat room
@@ -16,7 +16,7 @@ Technical Specialist volunteers are below--there are HipChat rooms for each of t
 + Help serve as a code reviewer for code changes affecting your area
 Thanks for helping the team!
 
-Explanation below:
+**Explanation below:**
 
 After discussions with the dev team lead and the architecture guilds, we’ve decided to attempt to distribute the architecture team’s role as real-time Q&A/support by introducing the concept of Technology Specialists and scaling this responsibility out to the entire tech organization in the direction of a `community support` model.
  
