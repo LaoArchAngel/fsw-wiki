@@ -47,6 +47,7 @@ click on the attaching link at the bottom of the **Content** pane.
 + [Architecture Vision] (http://gitlab.fsw.com/tfs/library/raw/master/resources/Architecture-Vision_3-12-2015.pdf)
 + [LogCentral presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/FSW%20LogCentral.pptx)
 + [MongoDB presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/MongoDB.pptx)
++ [Technical Specialists] (technical_specialists)
 
 ### Testing
 + [Unit Testing](Testing/UnitTesting)
