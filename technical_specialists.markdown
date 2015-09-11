@@ -5,7 +5,7 @@ Technical Specialist volunteers are below--there are HipChat rooms for each of t
 + **API:** Jordon, Collin, Jason Burbage
 + **Sql & Datatiers:** Nick Corley, JVD, Arthur, Malick, Mike Albair
 + **Mongo/ElasticSearch/NoSql:** Troy, Jeremy, JVD
-+ **C#/OOP:** Jeremy, Malick, Matt Arnold
++ **C#/OOP:** Jeremy, Malick, Matt Arnold, Jeff (SOLID)
 + **Unit Tests:** Malick, Jeff
 + **Jenkins/Deployment:** Dom, Matt James, Derrick
 + **Ansible/Docker:** Dom, Eric, Matt James, Derrick, Jordon, Jake
