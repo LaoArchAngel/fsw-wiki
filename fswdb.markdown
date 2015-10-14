@@ -24,7 +24,7 @@ There are two types of changes that may require a branch of FswDB:
 
 ### Branching and testing steps:
 
-1. Pull latest version of master from the FswDB repository.
+1. Pull latest version of master from the [FswDB repository](http://gitlab.fsw.com/tfs/FswDB).
 * Create branch from master
 * Apply changes to branch
 * Push your changes from FswDB project on the branch to fswdev3.fsw database
