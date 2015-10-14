@@ -7,7 +7,7 @@ to production.
 
 1. Create FswDB branch.
 * Apply changes to FswDB branch.
-* Apply changes to fswdev3.fsw
+* Apply changes to fswdev3.fsw database
 * Generate script for stage/production
 * Get QA approval (testing in stage).
 * Deploy changes to production.
