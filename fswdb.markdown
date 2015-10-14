@@ -45,12 +45,5 @@ There are two types of changes that may require a branch of FswDB:
 #### See Also
 
 * [FswDB project in GitLab](http://gitlab.fsw.com/tfs/FswDB)
-* [Clean Local Git Repository][2]
-* [Database Change Overview](../../database/changeOverview)
-* [Data Tier Regeneration Branches][1]
-* [Linq2Sql Data Tier Regeneration][3]
+* [Regenerating Entity Framework Data Tiers](http://gitlab.fsw.com/tfs/library/wikis/data/datatiers/entityFramework/regen)
 
-
-[1]: ../../../git/branching/dataTierRegen
-[2]: ../../../git/cleanRepo
-[3]: ../linq2sql/regen
