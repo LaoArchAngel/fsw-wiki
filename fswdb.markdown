@@ -31,7 +31,9 @@ There are two types of changes that may require a branch of FswDB:
 * Compare branch with FswStg database
 * Generate script that will update FswStg database with ONLY YOUR changes
  * If other items appear in comparison, ignore them when generating the script
-* Commit script to branch under either Post-Release or Pre-Release folder
+* Delete any existing scripts in the _ReleaseScripts folder
+* Commit new script to _ReleaseScripts folder in branch
+* Push branch to origin
 * Submit merge request of branch into master via GitLab
  * QA pulls branch
  * QA runs script against test database
