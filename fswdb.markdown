@@ -42,7 +42,7 @@ There are two types of changes that may require a branch of FswDB:
   ![fswdb5](http://gitlab.fsw.com/tfs/library/uploads/fa70783090d29aded8d4b53f7d9c44b2/fswdb5.PNG)
  * Everything up to the USE statement may be safely removed:  
   ![fswdb6](http://gitlab.fsw.com/tfs/library/uploads/1dde359d05cb7f6e35d08e5d02a8a9ea/fswdb6.PNG)
- * The USE statement(s) should then be changes to use the FSW database:  
+ * The USE statement(s) should then be changed to use the "FSW" database:  
   ![fswdb7](http://gitlab.fsw.com/tfs/library/uploads/e43708018698bf1d9b61188d55f85581/fswdb7.PNG)
  * Save the file locally
 * In your branch, delete any existing scripts in the _ReleaseScripts folder
