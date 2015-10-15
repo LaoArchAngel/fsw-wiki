@@ -27,7 +27,6 @@ There are two types of changes that may require a branch of FswDB:
 1. Pull latest version of master from the [FswDB repository](http://gitlab.fsw.com/tfs/FswDB).
 * Create branch from master
 * Apply changes to branch
-* Push your changes from FswDB project on the branch to fswdev3.fsw database
 * Compare branch with FswStg database
 * Generate script that will update FswStg database with ONLY YOUR changes
  * To generate a script containing your changes, open the StgCompare.scmp file in Visual Studio:  
@@ -54,6 +53,7 @@ There are two types of changes that may require a branch of FswDB:
  * QA runs script against test database
  * QA approves branch
  * Branch is merged
+* Push your changes from the FswDB master branch to fswdev3.fsw database
 * Script may then be added to the [Change Log: SQL asana project](https://app.asana.com/0/30603980759983/list) and run in production
 
 
