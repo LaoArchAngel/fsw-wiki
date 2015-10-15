@@ -50,11 +50,12 @@ There are two types of changes that may require a branch of FswDB:
 * Push branch to origin
 * Submit merge request of branch into master via GitLab
  * QA pulls branch
- * QA runs script against test database
+ * QA runs script against one of the test databases (FswMoon, FswMars, FswVenus, FswSaturn, FswMercury)
+ * QA runs script against FswStg3.FswStg database
  * QA approves branch
  * Branch is merged
-* Push your changes from the FswDB master branch to fswdev3.fsw database
-* Script may then be added to the [Change Log: SQL asana project](https://app.asana.com/0/30603980759983/list) and run in production
+* Run your script on the fswdev3.fsw database
+* Script may then be added to the [Change Log: SQL asana project](https://app.asana.com/0/30603980759983/list) and run in production by DBA
 
 
 #### See Also
