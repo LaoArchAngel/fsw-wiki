@@ -51,7 +51,7 @@ There are two types of changes that may require a branch of FswDB:
 * Submit merge request of branch into master via GitLab
  * QA pulls branch
  * QA runs script against one of the test databases (FswMoon, FswMars, FswVenus, FswSaturn, FswMercury)
- * QA runs script against FswStg3.FswStg database
+ * QA runs script against FswStg3.FswStg database and performs any regression testing, if necessary
  * QA approves branch
  * Branch is merged
 * Run your script on the fswdev3.fsw database
