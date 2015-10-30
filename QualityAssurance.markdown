@@ -1,0 +1,1 @@
+[Link Title](page-slug)
