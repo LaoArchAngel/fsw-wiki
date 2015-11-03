@@ -57,7 +57,7 @@ There are two types of changes that may require a branch of FswDB:
 10. Run your script against the FswDev3.Fsw database
  * The comparison can be run against FswDev3.Fsw to confirm there is no drift between FswDB master and that database
  * If there are differences between the FswDev3.Fsw database and the master branch, and email should be sent to the Dev department to find out who owns those changes
-11. [Update the schema of the local "unit test" database](http://gitlab.fsw.com/tfs/library/wikis/Testing/TestDatabase#updating-the-schema)
+11. [Update the schema of the local "unit test" database](http://gitlab.fsw.com/tfs/library/wikis/Testing/TestDatabase#updating-the-schema).  This is mostly important if the database changes affected table schemas (contrasted with stored procs and other DB objects).
 12. Script may then be added to the [Change Log: SQL asana project](https://app.asana.com/0/30603980759983/list) and run in production by DBA
 
 
