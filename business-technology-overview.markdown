@@ -211,114 +211,114 @@
 
 ## Distribution
 * Major functions:
- * Fulfillment
- * Shipping
- * Warehouse/Inventory
- * Products
+   * Fulfillment
+   * Shipping
+   * Warehouse/Inventory
+   * Products
 * Key Technologies:
- * FswAdmin.com Components (Internal tools with a UI)
-  * WMS Purchase Orders
-   * Create and edit outgoing purchase orders for replenishing warehouse inventory
-   * 3+ years old
-  * Pricing Manager
-   * Set default pricing, Unit Of Sale, Sale Incentives and other settings of Skus by manufacturer (Fsw only)
-   * 4+ years old
-  * Pricing Availability Manager
-   * Manage pricing, Unit Of Sale, and other settings of Skus by business partner (Fsw, IPPbuy, Amazon, Staples, Quill, etc)
-   * 4+ years old
-  * Kit Sku Manager
-   * Manage Skus which represent multiple Skus as a single item
-    * E.g. Ice Machine Sku + Ice Machine Bin Sku = Single Ice Machine Kit Sku
-   * 2+ years old
- * Accellos (3rd party UI)
-   * 3rd Party UI and database for managing warehouse inventory and incoming order picking, packing, and shipping
- * NightlyDbUpdates
-   * Back end process that performs nightly Inventory updates
-   * Performs Moving Average Cost calculation
-   * 5+ years old
- * Scheduled Transmission Processor
-   * Backend process that provides near real time inventory updates
- * Queue Consumer Service
-   * Backend service that handles inventory sync and price change notifications
-   * 1 year old
- * TransmissionInConsumer Service
-   * Backend service that processes pricing updates in batches from CSV file import
-   * 2+ years old
- * Partner Portal
-   * Publicly facing website for partner fulfillers to update order status
-   * 4+ years old
+   * FswAdmin.com Components (Internal tools with a UI)
+       * WMS Purchase Orders
+           * Create and edit outgoing purchase orders for replenishing warehouse inventory
+           * 3+ years old
+       * Pricing Manager
+           * Set default pricing, Unit Of Sale, Sale Incentives and other settings of Skus by manufacturer (Fsw only)
+           * 4+ years old
+       * Pricing Availability Manager
+           * Manage pricing, Unit Of Sale, and other settings of Skus by business partner (Fsw, IPPbuy, Amazon, Staples, Quill, etc)
+           * 4+ years old
+       * Kit Sku Manager
+           * Manage Skus which represent multiple Skus as a single item
+                * E.g. Ice Machine Sku + Ice Machine Bin Sku = Single Ice Machine Kit Sku
+           * 2+ years old
+  * Accellos (3rd party UI)
+       * 3rd Party UI and database for managing warehouse inventory and incoming order picking, packing, and shipping
+  * NightlyDbUpdates
+       * Back end process that performs nightly Inventory updates
+       * Performs Moving Average Cost calculation
+       * 5+ years old
+  * Scheduled Transmission Processor
+       * Backend process that provides near real time inventory updates
+  * Queue Consumer Service
+       * Backend service that handles inventory sync and price change notifications
+       * 1 year old
+  * TransmissionInConsumer Service
+       * Backend service that processes pricing updates in batches from CSV file import
+       * 2+ years old
+  * Partner Portal
+       * Publicly facing website for partner fulfillers to update order status
+       * 4+ years old
 
 ## Finance
 #### Invoicing
 * User Count: 10
 * Major functions:
- * Invoice dealers
+  * Invoice dealers
 * Key Technologies:
- * Ocr Import
-  * Tool for processing digitized paper invoices
-  * 5+ years old
- * Invoice Manager (FswAdmin)
-  * FswAdmin Tool for viewing and managing core Fsw orders ready for invoicing
-   * Recently given UI/performance upgrades
-   * 3+ years old
- * Pride Procurement App
-  * Tool accounting team uses to handle invoices that have already been sent or are being paid
-  * Written in VB6
+  * Ocr Import
+      * Tool for processing digitized paper invoices
+      * 5+ years old
+  * Invoice Manager (FswAdmin)
+      * FswAdmin Tool for viewing and managing core Fsw orders ready for invoicing
+      * Recently given UI/performance upgrades
+      * 3+ years old
+  * Pride Procurement App
+     * Tool accounting team uses to handle invoices that have already been sent or are being paid
+     * Written in VB6
 
 #### Operations
 * User Count: 5
 * Major functions:
-  * Monitor potentially fraudulent orders across all business domains
-   * Fsw.com
-   * Phone Sales
-   * National Accounts/M&A
- * Approve cancellations/returns/store credit
+   * Monitor potentially fraudulent orders across all business domains
+       * Fsw.com
+       * Phone Sales
+       * National Accounts/M&A
+  * Approve cancellations/returns/store credit
 * Key Technologies:
- * FswAdmin.com Components (Internal tools with a UI)
-  * Fraud Queue
-   * Queue for viewing and managing orders marked as Potential Fraud
-   * 4+ years old
-  * Store Credit Manager
-   * Tool for managing and approving requests for store credit by order
-   * 3+ years old
-  * Reimbursements Queue
-   * Queue for viewing and managing requests for monetary reimbursement to customers
-   * 3+ years old
+  * FswAdmin.com Components (Internal tools with a UI)
+      * Fraud Queue
+          * Queue for viewing and managing orders marked as Potential Fraud
+          * 4+ years old
+      * Store Credit Manager
+          * Tool for managing and approving requests for store credit by order
+          * 3+ years old
+       * Reimbursements Queue
+          * Queue for viewing and managing requests for monetary reimbursement to customers
+          * 3+ years old
   * Kount ENS
-   * Backend service that receives incoming messages from Kount and updates the Fsw database accordingly
-   * 3+ years old
- * Kount Web UI (3rd party UI)
-   * 3rd Party web UI for viewing, approving, and declining orders identified as Potential Fraud
-   * 3+ years old
- * Avalara (3rd party backend service)
-   * Unseen 3rd party service/integration for getting tax rates by location a specific location
-   * 3+ years old
- * Paymentech (3rd party backend service)
-   * Backend service to validate/authorize credit cards and capture funds
-   * Checks newly added customer credit cards for validity
-   * 5+++ years old
+       * Backend service that receives incoming messages from Kount and updates the Fsw database accordingly
+       * 3+ years old
+  * Kount Web UI (3rd party UI)
+       * 3rd Party web UI for viewing, approving, and declining orders identified as Potential Fraud
+       * 3+ years old
+  * Avalara (3rd party backend service)
+       * Unseen 3rd party service/integration for getting tax rates by location a specific location
+       * 3+ years old
+  * Paymentech (3rd party backend service)
+       * Backend service to validate/authorize credit cards and capture funds
+       * Checks newly added customer credit cards for validity
+       * 5+++ years old
 
 ## OrderUp/Reup
 * According to Collin, OrderUp will not be released again and ReUp is dead
 * Any orders placed on OrderUp will go to the Unverified Orders Queue to be completed manually by a National Accounts sales representative
 
-Mergers & Acquisitions
+## Mergers & Acquisitions
 * Major functions:
- * Assimilate and integrate dealers/warehouses we purchase into our systems
+  * Assimilate and integrate dealers/warehouses we purchase into our systems
 * ~9.6% of yearly revenue
 
-Reports
+## Reports
 * Major functions:
- * Present accurate data
+  * Present accurate data
 * Key Technologies:
- * CliqView
-   * Tool for building reports from data warehouse
-   * 1+ year old
- * rpt.foodservicewarehouse.com
-   * Internally facing website
-   * Displays reports generated from database stored procedures that run overnight
-   * Data/reports are questionable
-   * 5+++ years old
+  * CliqView
+      * Tool for building reports from data warehouse
+      * 1+ year old
+  * rpt.foodservicewarehouse.com
+      * Internally facing website
+      * Displays reports generated from database stored procedures that run overnight
+      * Data/reports are questionable
+      * 5+++ years old
 
 
 Revenue data from http://fswqv.foodservicewarehouse.com/qlikview/ “Sales Data Export” report
