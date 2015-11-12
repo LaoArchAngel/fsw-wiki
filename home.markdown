@@ -48,6 +48,7 @@ click on the attaching link at the bottom of the **Content** pane.
 + [LogCentral presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/FSW%20LogCentral.pptx)
 + [MongoDB presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/MongoDB.pptx)
 + [Technical Specialists] (technical_specialists)
++ [Business-Technology Overview] (http://gitlab.fsw.com/tfs/library/wikis/business-technology-overview)
 
 ### Testing
 + [Unit Testing](Testing/UnitTesting)
