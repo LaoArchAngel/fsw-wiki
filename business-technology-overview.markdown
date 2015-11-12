@@ -1,4 +1,4 @@
-# Business sector
+# Business Sector
 
 ## Fsw.com
 * Major functions:
