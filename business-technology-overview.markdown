@@ -9,50 +9,50 @@
 * User Count: 
  * ~33,600 sessions daily
   * ~24,462 unique users daily
-  * Data courtesy Jamie Alberico
- * 40+ Sales staff (Internal)
+   * Data courtesy Jamie Alberico
+  * 40+ Sales staff (Internal)
 * Key Technologies:
  * Fsw.com project(s)
-  * Old site (Darwin)
-   * ~3 years old
-   * Inside of Fsw4.0 solution
-  * New site (Archer)
-   * Launched 10/2015
-   * Independent repository
+   * Old site (Darwin)
+     * ~3 years old
+     * Inside of Fsw4.0 solution
+   * New site (Archer)
+     * Launched 10/2015
+     * Independent repository
  * Winnowing Service 
-  * Backend service that generates Darwin-era product listing pages
-  * 4+ years old
- * Solr Search Service 
-  * Backend Darwin era product search indexer
-  * 3+ years old
- * Cart Consumer 
-  * Backend service that integrates with fsw.com shopping cart process
-  * Converts carts, updates inventory, auths cards, sends emails, and sends POs
-  * 3+ years old
- * NightlyDbUpdates
-  * Backend processes triggered on a schedule
-  * Updates Incentives on Skus
-  * Generates Solr Search synonyms
-   * Used for matching search patterns
-  * 2+ years old
- * FswAdmin.com Components (Internal tools with a UI)
-  * Model Type Auto Complete Tool
-   * Manages whether or not orders on Fsw.com will autocomplete (send POs without intervention by phone sales team) by item model type
-  * 5+ years old
-  * Marketing Content Manager
-   * Manages header banners and advertisements on public Fsw.com
-  * 1+ year old
- * SEO Manager 2
-  * Tool for managing/manipulating how search engines rank and index our pages
-   * Can set canonical, nofollow, and other SEO related aspects of public website
-  * 2+ years old
+   * Backend service that generates Darwin-era product listing pages
+    * 4+ years old
+ * Solr Search Service  
+   * Backend Darwin era product search indexer
+   * 3+ years old
+  * Cart Consumer 
+   * Backend service that integrates with fsw.com shopping cart process
+   * Converts carts, updates inventory, auths cards, sends emails, and sends POs
+   * 3+ years old
+  * NightlyDbUpdates
+   * Backend processes triggered on a schedule
+   * Updates Incentives on Skus
+   * Generates Solr Search synonyms
+        * Used for matching search patterns
+   * 2+ years old
+  * FswAdmin.com Components (Internal tools with a UI)
+   * Model Type Auto Complete Tool
+     * Manages whether or not orders on Fsw.com will autocomplete (send POs without intervention by phone sales team) by item model type
+     * 5+ years old
+   * Marketing Content Manager
+     * Manages header banners and advertisements on public Fsw.com
+     * 1+ year old
+   * SEO Manager 2
+     * Tool for managing/manipulating how search engines rank and index our pages
+     * Can set canonical, nofollow, and other SEO related aspects of public website
+     * 2+ years old
  * Avalara (3rd party backend service)
-  * Unseen 3rd party service/integration for getting tax rates by location a specific location
-  * 3+ years old
+    * Unseen 3rd party service/integration for getting tax rates by location a specific location
+   * 3+ years old
  * Paymentech (3rd party backend service)
-  * Backend service to validate/authorize credit cards and capture funds
-  * Checks newly added customer credit cards for validity
-  * 5+++ years old
+   * Backend service to validate/authorize credit cards and capture funds
+   * Checks newly added customer credit cards for validity
+   * 5+++ years old
 
 ## Phone Sales
 * Major functions:
@@ -61,43 +61,43 @@
  * Follow up on Unverified Orders from fsw.com
 * Vital to business
  * ~26.7% of yearly revenue
- * User Count: 30
+* User Count: 30
 * Key Technologies:
  * FswAdmin.com Components (Internal tools with a UI)
-  * Frogger
-   * Order creation and editing tool
-   * Generate and send quotes
-   * 4+ years old
-  * Odie
-   * Order fulfillment tool
-   * Track item/order status
-   * Make Cancellations/Returns/Concessions on items and orders
-   * 5+ years old
- * Async Queue Consumer
-  * Backend service that integrates with Frogger and Odie
-  * Updates inventory, auths cards, sends emails, and sends POs
-  * 2+ years old
- * Site Search Windows Service
-  * Backend search indexing service that powers:
-   * Admin header search
-   * Frogger product search
-  * 5+ years old
+   * Frogger
+     * Order creation and editing tool
+     * Generate and send quotes
+     * 4+ years old
+   * Odie
+     * Order fulfillment tool
+     * Track item/order status
+     * Make Cancellations/Returns/Concessions on items and orders
+     * 5+ years old
+   * Async Queue Consumer
+     * Backend service that integrates with Frogger and Odie
+     * Updates inventory, auths cards, sends emails, and sends POs
+     * 2+ years old
+   * Site Search Windows Service
+     * Backend search indexing service that powers:
+       * Admin header search
+       * Frogger product search
+     * 5+ years old
  * SalesForce Windows Service
-  * Backend service that provides real-time SalesForce data sync
-  * 5+ years old
+   * Backend service that provides real-time SalesForce data sync
+   * 5+ years old
  * Bat Console
-  * Backend service that runs every two minutes to perform SalesForce data sync in batches
-  * 1 year old
+   * Backend service that runs every two minutes to perform SalesForce data sync in batches
+   * 1 year old
  * SalesForce.com CRM (3rd party UI – Limited customization for Fsw)
-  * SalesForce UI for managing contacts
-  * Leads/Contacts/Accounts/Projects can all be managed in this UI
+   * SalesForce UI for managing contacts
+   * Leads/Contacts/Accounts/Projects can all be managed in this UI
  * Avalara (3rd party backend service)
-  * Unseen 3rd party service/integration for getting tax rates by location a specific location
-  * 3+ years old
+   * Unseen 3rd party service/integration for getting tax rates by location a specific location
+   * 3+ years old
  * Paymentech (3rd party backend service)
-  * Backend service to validate/authorize credit cards and capture funds
-  * Checks newly added customer credit cards for validity
-  * 5+++ years old
+   * Backend service to validate/authorize credit cards and capture funds
+   * Checks newly added customer credit cards for validity
+   * 5+++ years old
 
 ## National Accounts
 * Major functions:
@@ -168,7 +168,7 @@
   * Brand Manager
    * An internal application that allows us to define addresses for brands and which distributors can fulfill certain brands
 
-IppBuy
+## IppBuy
 * Major functions:
  * Ordering platform for Pride dealers
 * User Count: 5 in Fsw + any dealers using the program
@@ -231,25 +231,25 @@ IppBuy
     * E.g. Ice Machine Sku + Ice Machine Bin Sku = Single Ice Machine Kit Sku
    * 2+ years old
  * Accellos (3rd party UI)
-  * 3rd Party UI and database for managing warehouse inventory and incoming order picking, packing, and shipping
+   * 3rd Party UI and database for managing warehouse inventory and incoming order picking, packing, and shipping
  * NightlyDbUpdates
-  * Back end process that performs nightly Inventory updates
-  * Performs Moving Average Cost calculation
-  * 5+ years old
+   * Back end process that performs nightly Inventory updates
+   * Performs Moving Average Cost calculation
+   * 5+ years old
  * Scheduled Transmission Processor
-  * Backend process that provides near real time inventory updates
+   * Backend process that provides near real time inventory updates
  * Queue Consumer Service
-  * Backend service that handles inventory sync and price change notifications
-  * 1 year old
+   * Backend service that handles inventory sync and price change notifications
+   * 1 year old
  * TransmissionInConsumer Service
-  * Backend service that processes pricing updates in batches from CSV file import
-  * 2+ years old
+   * Backend service that processes pricing updates in batches from CSV file import
+   * 2+ years old
  * Partner Portal
-  * Publicly facing website for partner fulfillers to update order status
-  * 4+ years old
+   * Publicly facing website for partner fulfillers to update order status
+   * 4+ years old
 
-##Finance
-### Invoicing
+## Finance
+#### Invoicing
 * User Count: 10
 * Major functions:
  * Invoice dealers
@@ -265,7 +265,7 @@ IppBuy
   * Tool accounting team uses to handle invoices that have already been sent or are being paid
   * Written in VB6
 
-### Operations
+#### Operations
 * User Count: 5
 * Major functions:
   * Monitor potentially fraudulent orders across all business domains
@@ -288,15 +288,15 @@ IppBuy
    * Backend service that receives incoming messages from Kount and updates the Fsw database accordingly
    * 3+ years old
  * Kount Web UI (3rd party UI)
-  * 3rd Party web UI for viewing, approving, and declining orders identified as Potential Fraud
-  * 3+ years old
+   * 3rd Party web UI for viewing, approving, and declining orders identified as Potential Fraud
+   * 3+ years old
  * Avalara (3rd party backend service)
-  * Unseen 3rd party service/integration for getting tax rates by location a specific location
-  * 3+ years old
+   * Unseen 3rd party service/integration for getting tax rates by location a specific location
+   * 3+ years old
  * Paymentech (3rd party backend service)
-  * Backend service to validate/authorize credit cards and capture funds
-  * Checks newly added customer credit cards for validity
-  * 5+++ years old
+   * Backend service to validate/authorize credit cards and capture funds
+   * Checks newly added customer credit cards for validity
+   * 5+++ years old
 
 ## OrderUp/Reup
 * According to Collin, OrderUp will not be released again and ReUp is dead
@@ -312,12 +312,13 @@ Reports
  * Present accurate data
 * Key Technologies:
  * CliqView
-  * Tool for building reports from data warehouse
+   * Tool for building reports from data warehouse
+   * 1+ year old
  * rpt.foodservicewarehouse.com
-  * Internally facing website
-  * Displays reports generated from database stored procedures that run overnight
-  * Data/reports are questionable
-  * 5+++ years old
+   * Internally facing website
+   * Displays reports generated from database stored procedures that run overnight
+   * Data/reports are questionable
+   * 5+++ years old
 
 
 Revenue data from http://fswqv.foodservicewarehouse.com/qlikview/ “Sales Data Export” report
