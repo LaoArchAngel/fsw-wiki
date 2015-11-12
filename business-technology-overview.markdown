@@ -8,51 +8,51 @@
  * ~15% of yearly revenue
 * User Count: 
  * ~33,600 sessions daily
-  * ~24,462 unique users daily
-   * Data courtesy Jamie Alberico
-  * 40+ Sales staff (Internal)
+     * ~24,462 unique users daily
+       * Data courtesy Jamie Alberico
+    * 40+ Sales staff (Internal)
 * Key Technologies:
  * Fsw.com project(s)
-   * Old site (Darwin)
-     * ~3 years old
-     * Inside of Fsw4.0 solution
-   * New site (Archer)
-     * Launched 10/2015
-     * Independent repository
+     * Old site (Darwin)
+          * ~3 years old
+          * Inside of Fsw4.0 solution
+     * New site (Archer)
+          * Launched 10/2015
+          * Independent repository
  * Winnowing Service 
-   * Backend service that generates Darwin-era product listing pages
-    * 4+ years old
+     * Backend service that generates Darwin-era product listing pages
+     * 4+ years old
  * Solr Search Service  
-   * Backend Darwin era product search indexer
-   * 3+ years old
-  * Cart Consumer 
-   * Backend service that integrates with fsw.com shopping cart process
-   * Converts carts, updates inventory, auths cards, sends emails, and sends POs
-   * 3+ years old
+     * Backend Darwin era product search indexer
+     * 3+ years old
+ * Cart Consumer 
+     * Backend service that integrates with fsw.com shopping cart process
+     * Converts carts, updates inventory, auths cards, sends emails, and sends POs
+     * 3+ years old
   * NightlyDbUpdates
-   * Backend processes triggered on a schedule
-   * Updates Incentives on Skus
-   * Generates Solr Search synonyms
-        * Used for matching search patterns
-   * 2+ years old
-  * FswAdmin.com Components (Internal tools with a UI)
-   * Model Type Auto Complete Tool
-     * Manages whether or not orders on Fsw.com will autocomplete (send POs without intervention by phone sales team) by item model type
+     * Backend processes triggered on a schedule
+     * Updates Incentives on Skus
+     * Generates Solr Search synonyms
+          * Used for matching search patterns
      * 5+ years old
-   * Marketing Content Manager
-     * Manages header banners and advertisements on public Fsw.com
-     * 1+ year old
-   * SEO Manager 2
-     * Tool for managing/manipulating how search engines rank and index our pages
-     * Can set canonical, nofollow, and other SEO related aspects of public website
-     * 2+ years old
+  * FswAdmin.com Components (Internal tools with a UI)
+     * Model Type Auto Complete Tool
+         * Manages whether or not orders on Fsw.com will autocomplete (send POs without intervention by phone sales team) by item model type
+         * 5+ years old
+     * Marketing Content Manager
+         * Manages header banners and advertisements on public Fsw.com
+         * 1+ year old
+     * SEO Manager 2
+         * Tool for managing/manipulating how search engines rank and index our pages
+         * Can set canonical, nofollow, and other SEO related aspects of public website
+         * 2+ years old
  * Avalara (3rd party backend service)
-    * Unseen 3rd party service/integration for getting tax rates by location a specific location
-   * 3+ years old
+     * Unseen 3rd party service/integration for getting tax rates by location a specific location
+         * 3+ years old
  * Paymentech (3rd party backend service)
-   * Backend service to validate/authorize credit cards and capture funds
-   * Checks newly added customer credit cards for validity
-   * 5+++ years old
+     * Backend service to validate/authorize credit cards and capture funds
+     * Checks newly added customer credit cards for validity
+     * 5+++ years old
 
 ## Phone Sales
 * Major functions:
