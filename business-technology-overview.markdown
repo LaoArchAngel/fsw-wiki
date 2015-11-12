@@ -64,49 +64,49 @@
 * User Count: 30
 * Key Technologies:
  * FswAdmin.com Components (Internal tools with a UI)
-   * Frogger
-     * Order creation and editing tool
-     * Generate and send quotes
-     * 4+ years old
-   * Odie
-     * Order fulfillment tool
-     * Track item/order status
-     * Make Cancellations/Returns/Concessions on items and orders
-     * 5+ years old
+     * Frogger
+         * Order creation and editing tool
+         * Generate and send quotes
+         * 4+ years old
+     * Odie
+         * Order fulfillment tool
+         * Track item/order status
+         * Make Cancellations/Returns/Concessions on items and orders
+         * 5+ years old
    * Async Queue Consumer
      * Backend service that integrates with Frogger and Odie
      * Updates inventory, auths cards, sends emails, and sends POs
      * 2+ years old
    * Site Search Windows Service
      * Backend search indexing service that powers:
-       * Admin header search
-       * Frogger product search
+         * Admin header search
+         * Frogger product search
      * 5+ years old
  * SalesForce Windows Service
-   * Backend service that provides real-time SalesForce data sync
-   * 5+ years old
+     * Backend service that provides real-time SalesForce data sync
+     * 5+ years old
  * Bat Console
-   * Backend service that runs every two minutes to perform SalesForce data sync in batches
-   * 1 year old
+     * Backend service that runs every two minutes to perform SalesForce data sync in batches
+     * 1 year old
  * SalesForce.com CRM (3rd party UI – Limited customization for Fsw)
-   * SalesForce UI for managing contacts
-   * Leads/Contacts/Accounts/Projects can all be managed in this UI
+     * SalesForce UI for managing contacts
+     * Leads/Contacts/Accounts/Projects can all be managed in this UI
  * Avalara (3rd party backend service)
-   * Unseen 3rd party service/integration for getting tax rates by location a specific location
-   * 3+ years old
+     * Unseen 3rd party service/integration for getting tax rates by location a specific location
+     * 3+ years old
  * Paymentech (3rd party backend service)
-   * Backend service to validate/authorize credit cards and capture funds
-   * Checks newly added customer credit cards for validity
-   * 5+++ years old
+     * Backend service to validate/authorize credit cards and capture funds
+     * Checks newly added customer credit cards for validity
+     * 5+++ years old
 
 ## National Accounts
 * Major functions:
- * Maintain relationships with larger account customers
- * Government/School/Military sales
+  * Maintain relationships with larger account customers
+  * Government/School/Military sales
 * User Count: 10
 * ~8% of yearly revenue
 * Key Technologies:
- * Same as Phone Sales
+  * Same as Phone Sales
 
 ## 3rd Party Operations
 * Major functions:
@@ -115,17 +115,17 @@
 * ~3.6% of yearly revenue
 * Key Technologies:
   * FswAdmin.com Components (Internal tools with a UI)
-   * Pollywog
-    * Order review tool for incoming partner EDI orders
-    * 3+ years old
+      * Pollywog
+          * Order review tool for incoming partner EDI orders
+          * 3+ years old
   * Scheduled Transmission Processor
-   * Backend service that performs many critical tasks including:
-    * Processes 3rd Party Purchase Orders
-    * Sends Ship Notifications
-   * 5+ years old
+     * Backend service that performs many critical tasks including:
+          * Processes 3rd Party Purchase Orders
+          * Sends Ship Notifications
+     * 5+ years old
   * Incoming Transmission Service
-   * Backend service that receives new EDI orders from partners
-   * 5+ years old
+     * Backend service that receives new EDI orders from partners
+     * 5+ years old
 
 ## Customer Service
 * Major Functions:
@@ -156,17 +156,17 @@
 * User Count: 20
 * Key Technologies:
   * Eclipse
-   * Dealers can place orders for their customers that are fulfilled by various manufacturers, including FSW
+     * Dealers can place orders for their customers that are fulfilled by various manufacturers, including FSW
   * Mercury
-   * Dealers can place orders with the sole purpose of stocking their individual warehouses
+     * Dealers can place orders with the sole purpose of stocking their individual warehouses
   * Apollo
-   * Contains orders placed in both Eclipse and Mercury.  Dealers can edit and send purchase orders to be processed/shipped
+     * Contains orders placed in both Eclipse and Mercury.  Dealers can edit and send purchase orders to be processed/shipped
   * Helios
-   * Displays the status of an order on the project level
+     * Displays the status of an order on the project level
   * Fulfiller Manager
-   * Dealers are able to define fulfillers for specific manufacturer
+     * Dealers are able to define fulfillers for specific manufacturer
   * Brand Manager
-   * An internal application that allows us to define addresses for brands and which distributors can fulfill certain brands
+     * An internal application that allows us to define addresses for brands and which distributors can fulfill certain brands
 
 ## IppBuy
 * Major functions:
