@@ -170,44 +170,44 @@
 
 ## IppBuy
 * Major functions:
- * Ordering platform for Pride dealers
+  * Ordering platform for Pride dealers
 * User Count: 5 in Fsw + any dealers using the program
 * Vital to business
   * ~37.4% of yearly revenue
 * Key Technologies:
- * FswAdmin.com Components (Internal tools with a UI) 
-   * (All tools under Partner Tools tab – most of them 2-3 years old)
-    * Dealer Contracts
-     * Tool for giving dealers access to order Fsw warehoused products by manufacturer
-    * Dealer Direct Group Buys
-     * Tool for creating and managing Group Buy promotions for dealer orders
-    * Fsw Assist Handling Fees
-     * Tool for managing handling fees added to dealer orders based on quantity of products ordered
-    * Fsw Assist Master Order list
-     * Tool used for creating and editing aggregated True purchase orders from both IppBuy.com and Fsw core business
-    * IppBuy Dealer Manager
-     * Tool for adding and editing dealer profiles and settings
-    * IppBuy Freight Invoices
-     * Tool for viewing and managing invoices on IppBuy freight orders
-    * IppBuy Fulfillers
-     * Tool for adding and editing IppBuy fulfillers by manufacturer
-    * IppBuy Invoicing
-     * Tool for viewing and managing orders ready for invoicing
-    * IppBuy Settings
-     * Tool for managing settings on a manufacturer by IppBuy program
-    * IppBuy Tax Manager
-     * Tool for applying tax to IppBuy orders for specific manufacturers by state
-    * IppBuy Unverified Queue
-     * Orders which require review from the Internal IppBuy team may be viewed here
-  * IppBuy.com project (Located in Fsw4.0 solution)
-   * Publicly facing website for dealers to create and manage orders
-   * 3+ years old
-  * Solr Search Service
-   * IppBuy product collection search indexer
-   * 3+ years old
-  * Avalara (3rd party backend service)
-   * Unseen 3rd party service/integration for getting tax rates by location a specific location
-   * 3+ years old
+  * FswAdmin.com Components (Internal tools with a UI) 
+      * (All tools under Partner Tools tab – most of them 2-3 years old)
+         * Dealer Contracts
+             * Tool for giving dealers access to order Fsw warehoused products by manufacturer
+         * Dealer Direct Group Buys
+             * Tool for creating and managing Group Buy promotions for dealer orders
+         * Fsw Assist Handling Fees
+             * Tool for managing handling fees added to dealer orders based on quantity of products ordered
+         * Fsw Assist Master Order list
+             * Tool used for creating and editing aggregated True purchase orders from both IppBuy.com and Fsw core business
+         * IppBuy Dealer Manager
+             * Tool for adding and editing dealer profiles and settings
+         * IppBuy Freight Invoices
+             * Tool for viewing and managing invoices on IppBuy freight orders
+         * IppBuy Fulfillers
+             * Tool for adding and editing IppBuy fulfillers by manufacturer
+         * IppBuy Invoicing
+             * Tool for viewing and managing orders ready for invoicing
+         * IppBuy Settings
+             * Tool for managing settings on a manufacturer by IppBuy program
+         * IppBuy Tax Manager
+             * Tool for applying tax to IppBuy orders for specific manufacturers by state
+         * IppBuy Unverified Queue
+             * Orders which require review from the Internal IppBuy team may be viewed here
+   * IppBuy.com project (Located in Fsw4.0 solution)
+      * Publicly facing website for dealers to create and manage orders
+      * 3+ years old
+   * Solr Search Service
+      * IppBuy product collection search indexer
+      * 3+ years old
+   * Avalara (3rd party backend service)
+      * Unseen 3rd party service/integration for getting tax rates by location a specific location
+      * 3+ years old
 
 ## Distribution
 * Major functions:
