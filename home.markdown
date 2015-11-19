@@ -60,3 +60,9 @@ click on the attaching link at the bottom of the **Content** pane.
 #### DataTiers
 ##### Entity Framework
 + [Regenerating Entity Framework Data Tiers](data/datatiers/entityFramework/regen)
+
+#### Tips / Gotchas
++ [LINQ to SQL & LINQ to EF truncates decimal values (not rounds)](data/tips/linq-to-sql-and-ef-truncates-decimals)
+
+### Third Party Libraries
++ [Telerik - Gotcha/Bug - Rendering ASP.NET MVC view throws "System.ArgumentException: An item with the same key has already been added"](libraries/telerik/gotchas/mvc-views-throw-duplicate-key-exception)
