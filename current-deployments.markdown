@@ -3,15 +3,14 @@
 ### **Larger Sites**
 
 * **Fsw.com**
+ * [Fsw.com Build and Package Job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
+ * [Fsw.com Promotions - STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fsw-com_choco_only/)
+
+
 * **FswAdmin.com**
+ * [FswAdmin.com Build and Package Job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
+ * [FswAdmin.com Promotions - STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fswadmin-com_choco_only/)
 
-Build Jobs (Create packages from here):
-* [Fsw.com Build Job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
-* [FswAdmin.com Build Job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
-
-Promotion Jobs (Promote packages across all environments, including production, from here):
-* [Fsw.com Promotions](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fsw-com_choco_only/)
-* [FswAdmin.com Promotions](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fswadmin-com_choco_only/)
 
 ### **Smaller Sites**
 
@@ -20,9 +19,8 @@ Promotion Jobs (Promote packages across all environments, including production, 
 * **PartnerPortal**
 * **Reporting**
 
-Build and Deploy Job (To STAGE Only):
-* [IppBuy, FswOrderup, PartnerPortal, Reporting build job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
- * These sites currently deployed to production via Powershell Scripts on FswMulti1
+ * [Build and Deploy sites - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
+      * These sites currently deployed to production via Powershell Scripts on FswMulti1
 
 ### **Windows Services**
 
@@ -35,10 +33,16 @@ Build and Deploy Job (To STAGE Only):
 * **CartConsumerService**
 * **TransmissionConsumerService**
 
-Build and Deploy Job (To STAGE Only):
-* [Windows Services build job](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
- * These windows services currently deployed to production via Powershell Scripts on FswMulti1
+ * [Build and Deploy Windows Services - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
+      * These windows services currently deployed to production via Powershell Scripts on FswMulti1
 
+### **Console Applications and Other**
 
+* **OcrImport**
+* **NightlyDbUpdates**
+* **ScheduledTransmissionProcessor**
+* **KountIncoming**
 
-
+ * [Build and Deploy Console Apps - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
+ * [Build and Publish To FswMulti1 - PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_fsw40_prod/)
+        * These applications currently deployed to production via Powershell Scripts on FswMulti1
