@@ -49,6 +49,7 @@ click on the attaching link at the bottom of the **Content** pane.
 + [MongoDB presentation] (http://gitlab.fsw.com/tfs/library/blob/master/resources/MongoDB.pptx)
 + [Technical Specialists] (technical_specialists)
 + [Business-Technology Overview] (http://gitlab.fsw.com/tfs/library/wikis/business-technology-overview)
++ [HOWTO: Deploy Fsw4.0 Apps] (http://gitlab.fsw.com/tfs/library/wikis/current-deployments)
 
 ### Testing
 + [Unit Testing](Testing/UnitTesting)
