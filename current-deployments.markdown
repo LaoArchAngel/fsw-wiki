@@ -1,6 +1,6 @@
 # Current Deployment Procedures
 ## Fsw4.0 Repository
-### **Larger Sites**
+### **Websites**
 
 * **Fsw.com**
  * [Fsw.com Build, Package, and Deploy - SNAPSHOT](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution_snapshots/)
@@ -14,14 +14,13 @@
        * [FswAdmin.com Promotions - DEPLOY TO STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fswadmin-com_choco_only/)
 
 
-### **Smaller Sites**
-
+#### **Other websites:**
 * **IppBuy.com**
 * **FswOrderup.com**
 * **PartnerPortal**
 * **Reporting**
 
- * [Build and Deploy sites - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
+ * [Build and Deploy sites - DEPLOY TO STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
       * These sites currently deployed to production via Powershell Scripts on FswMulti1
 
 ### **Windows Services**
@@ -35,7 +34,7 @@
 * **CartConsumerService**
 * **TransmissionConsumerService**
 
- * [Build and Deploy Windows Services - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
+ * [Build and Deploy Windows Services - DEPLOY TO STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
       * These windows services currently deployed to production via Powershell Scripts on FswMulti1
 
 ### **Console Applications and Other**
