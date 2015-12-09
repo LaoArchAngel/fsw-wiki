@@ -1,5 +1,7 @@
 So you want to build a new micro service using node.js and all the existing deployment infrastructure, eh? AWesome! You came to the right place. The process isn't too arduous but may seem like a lot of steps at first. Don't fret. We'll be done in no time.
 
+### Prepare for It
+
 First things first. We need to install some things locally to make this work. We need `node.js 4.0` and `npm`. You can get this from [NodeJS.org](https://nodejs.org).
 
 We also need the [FSW Hapi Generator](http://gitlab.fsw.com/acme/generator-fsw-hapi/) and [yeoman](http://yeoman.io/). These can be installed from the [FSW NPM Registry](http://proget.fsw.com/npm-feeds/fsw-npm).
@@ -17,6 +19,8 @@ cd dev
 mkdir newApp
 cd newApp
 ```
+
+### Generate It
 
 Populating this new folder with our application is our next goal. Yeoman to the rescue!
 
@@ -77,3 +81,18 @@ git remote add origin http://gitlab.fsw.com/TEAM/APP.git
 # put the code online
 git push -u origin master
 ```
+
+After getting the code onto gitlab, it is time to generate the build jobs on Jenkins.
+
+Navigate to [MaxPower Jenkins](http://minion01.tools.k8s.acme:32303/) and go to the [Generate Node.js Janky Jobs](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/). Then click [Build with Parameters](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/build?delay=0sec). The values should match those used in the generator before. After the job has finished, you'll need to go to [Manage Jenkins](http://minion01.tools.k8s.acme:32303/manage) and click "Reload Configuration from Disk".
+
+### Build It
+
+[[Explain Release and Snapshot Jobs]]
+
+[[Explain Promotions & Gator]]
+
+
+### Deploy It
+
+[[ Explain Deploying a gator version to a cluster ]]
