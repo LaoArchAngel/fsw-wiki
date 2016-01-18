@@ -4,7 +4,7 @@ So you want to build a new micro service using node.js and all the existing depl
 
 First things first. We need to install some things locally to make this work. We need `node.js 4.0` and `npm`. You can get this from [NodeJS.org](https://nodejs.org).
 
-We also need the [FSW Hapi Generator](http://gitlab.fsw.com/acme/generator-fsw-hapi/) and [yeoman](http://yeoman.io/). These can be installed from the [FSW NPM Registry](http://proget.fsw.com/npm-feeds/fsw-npm).
+We also need the [FSW Hapi Generator](http://gitlab.fsw.com/acme/generator-fsw-hapi/) and [yeoman](http://yeoman.io/). These can be installed from the [FSW NPM Registry](http://proget.fsw.com/npm-feeds/fsw-npm). NOTE: if yeoman cannot find fsw-hapi generator, pull the repo down locally and 'npm link' it from within the directory
 
 ```
 npm config set registry http://proget.fsw.com/npm/fsw-npm
