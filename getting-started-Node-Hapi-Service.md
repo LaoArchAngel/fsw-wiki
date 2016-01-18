@@ -84,7 +84,7 @@ git push -u origin master
 
 After getting the code onto gitlab, it is time to generate the build jobs on Jenkins.
 
-Navigate to [MaxPower Jenkins](http://minion01.tools.k8s.acme:32303/) and go to the [Generate Node.js Janky Jobs](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/). Then click [Build with Parameters](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/build?delay=0sec). The values should match those used in the generator before. After the job has finished, you'll need to go to [Manage Jenkins](http://minion01.tools.k8s.acme:32303/manage) and click "Reload Configuration from Disk".
+Navigate to [MaxPower Jenkins](http://k8sminion01.fsw.io:31427/) and go to the [Generate Node.js Janky Jobs](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/). Then click [Build with Parameters](http://minion01.tools.k8s.acme:32303/job/Generate%20Node.js%20Janky%20Jobs/build?delay=0sec). The values should match those used in the generator before. After the job has finished, you'll need to go to [Manage Jenkins](http://minion01.tools.k8s.acme:32303/manage) and click "Reload Configuration from Disk".
 
 ### Build It
 
