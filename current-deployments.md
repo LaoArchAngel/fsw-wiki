@@ -56,5 +56,5 @@
  * Production deploys to **FswMulti1**
  * [Build and Deploy Console Apps - STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
  * [Build, Publish, and Deploy Console Apps To FswMulti1 - PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_fsw40_prod/)
-        * This job will currently only automatically deploy STP and OcrImport - NightlyDbUpdates and ITS still need test as of 1/6/2016
-        * NightlyDbUpdates and IncomingTransmissionProcessor may still be deployed using the release scripts on FswMulti1
+        * This job will currently only automatically deploy STP, OcrImport, and NightlyDbUpdates ---- ITS still need test as of 1/28/2016
+        * IncomingTransmissionProcessor may still be deployed using the release scripts on FswMulti1
