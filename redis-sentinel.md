@@ -1,5 +1,7 @@
 **Redis sentinel** allows a high-availability, clustered deployment of redis utilizing a similar strategy to that employed by other clustered systems such as MongoDB and Elasticsearch.
 
+Official docs: http://redis.io/topics/sentinel
+
 Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. The name of the master node is provided in a configuration file (usually `sentinel.conf`). There is no need to specify slaves; they are discovered automatically.
 
 Here is an example configuration file:
@@ -21,5 +23,3 @@ If the master node becomes unavailable, every other sentinel will send an `SDOWN
 When the missing node becomes available again, sentinel will recognize this and reconfigure it as a slave. Any writes that were sent to this master (as it may have simply been in a network partition) will be discarded.
 
 It can be easy to conflate the terms "master" and "leader". Understand that "master" refers to `redis-server`'s role in replication, while a "leader" is strictly a sentinel concept. 
-
-Official docs: http://redis.io/topics/sentinel
