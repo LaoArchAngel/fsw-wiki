@@ -1,4 +1,4 @@
-**Redis sentinel** allows a high-availability, clustered deployment of redis.
+**Redis sentinel** allows a high-availability, clustered deployment of redis utilizing a similar strategy to that employed by other clustered systems such as MongoDB and Elasticsearch.
 
 Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. The name of the master node is provided in a configuration file (usually `sentinel.conf`). There is no need to specify slaves; they are discovered automatically.
 
