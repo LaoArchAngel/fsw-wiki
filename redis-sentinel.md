@@ -18,7 +18,7 @@ Line by line:
 `sentinel failover-timeout mymaster 180000` If the failover does not succeed, wait 180 seconds before trying to failover again.  
 `sentinel parallel-syncs mymaster 1` When a new master is elected, only sync 1 node at a time.  
 
-If the master node becomes unavailable, every other sentinel will send an `SDOWN` ("subjective down") message. If a quorum (configurable) of reachable redis sentinels agree that the master is unreachable, an `ODOWN` ("objective down") message is sent which causes the "leader" sentinel process to begin a majority vote to select a new master, after which all sentinel configurations will be rewritten to reflect the new master. The `SDOWN` and `ODOWN` messages can be subscribed to. If the leader is on the same node that is missing, a new leader is elected before failing over.
+If the master node becomes unavailable, every other sentinel will send an `SDOWN` ("subjective down") message. If a quorum of reachable redis sentinels (in the above case, two) agree that the master is unreachable, an `ODOWN` ("objective down") message is sent which causes the "leader" sentinel process to begin a majority vote to select a new master, after which all sentinel configurations will be rewritten to reflect the new master. The `SDOWN` and `ODOWN` messages can be subscribed to. If the leader is on the same node that is missing, a new leader is elected before failing over.
 
 When the missing node becomes available again, sentinel will recognize this and reconfigure it as a slave. Any writes that were sent to this master (as it may have simply been in a network partition) will be discarded.
 
