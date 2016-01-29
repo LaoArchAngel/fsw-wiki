@@ -7,3 +7,5 @@ If this node becomes unavailable, every other sentinel will send an `SDOWN` ("su
 When the missing node becomes available again, sentinel will recognize this and reconfigure it as a slave. Any writes that were sent to this master (as it may have simply been in a network partition) will be discarded.
 
 It can be easy to conflate the terms "master" and "leader". Understand that "master" refers to `redis-server`'s role in replication, while a "leader" is strictly a sentinel concept. 
+
+http://redis.io/topics/sentinel
