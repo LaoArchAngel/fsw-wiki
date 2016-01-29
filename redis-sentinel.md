@@ -1,6 +1,6 @@
 **Redis sentinel** allows a high-availability, clustered deployment of redis.
 
-Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. The name of the master node is provided in a configuration file (usually `sentinel.conf`).
+Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. The name of the master node is provided in a configuration file (usually `sentinel.conf`). There is no need to specify slaves; they are discovered automatically.
 
 If this node becomes unavailable, every other sentinel will send an `SDOWN` ("subjective down") message. If a quorum (configurable) of reachable redis sentinels agree that the master is unreachable, an `ODOWN` ("objective down") message is sent which causes the "leader" sentinel process to begin a majority vote to select a new master, after which all sentinel configurations will be rewritten to reflect the new master. The `SDOWN` and `ODOWN` messages can be subscribed to. If the leader is on the same node that is missing, a new leader is elected before failing over.
 
