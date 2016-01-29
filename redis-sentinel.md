@@ -11,10 +11,10 @@ Here is an example configuration file:
 
 Line by line:
 
-`sentinel monitor mymaster 127.0.0.1 6379 2` Monitor a redis master node with the name of `mymaster`, running at 127.0.0.1 on port 6379, with a quorum of 2. 
-`sentinel down-after-milliseconds mymaster 60000` Consider it down after 60 seconds.
-`sentinel failover-timeout mymaster 180000` If the failover does not succeed, wait 180 seconds before trying to failover again.
-`sentinel parallel-syncs mymaster 1` When a new master is elected, only sync 1 node at a time.
+`sentinel monitor mymaster 127.0.0.1 6379 2` Monitor a redis master node with the name of `mymaster`, running at 127.0.0.1 on port 6379, with a quorum of 2.  
+`sentinel down-after-milliseconds mymaster 60000` Consider it down after 60 seconds.  
+`sentinel failover-timeout mymaster 180000` If the failover does not succeed, wait 180 seconds before trying to failover again.  
+`sentinel parallel-syncs mymaster 1` When a new master is elected, only sync 1 node at a time.  
 
 If the master node becomes unavailable, every other sentinel will send an `SDOWN` ("subjective down") message. If a quorum (configurable) of reachable redis sentinels agree that the master is unreachable, an `ODOWN` ("objective down") message is sent which causes the "leader" sentinel process to begin a majority vote to select a new master, after which all sentinel configurations will be rewritten to reflect the new master. The `SDOWN` and `ODOWN` messages can be subscribed to. If the leader is on the same node that is missing, a new leader is elected before failing over.
 
