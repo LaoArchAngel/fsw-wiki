@@ -2,7 +2,7 @@
 
 Official docs: http://redis.io/topics/sentinel
 
-Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. There is no need to specify slaves; they are discovered automatically.
+Sentinel is run as a **separate process** using a special configuration file, and monitors the specified master node of a redis cluster. It can be, and often is, run alongside the redis server itself, but does not have to be. There is no need to specify slaves; they are discovered automatically.
 
 Here is an example configuration file:
 
