@@ -4,7 +4,7 @@
 
 ## Server Setup
 
-### To start, you need to machines and a Virtual IP:
+### To start, you need to define 2 load balancer machines and a Virtual IP:
 
     10.0.49.181 vip    
     10.0.49.179 server1
