@@ -145,7 +145,7 @@ sudo bin/server.js --port 8080 --haproxyPidPath /run/haproxy.pid --haproxyCfgPat
 Create a default backend
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: eb57ad59-52fc-7194-4e08-4de1ac8f8343" -d '{
+curl -X PUT -H "Content-Type: application/json" -d '{
     "type": "static",
     "name": "default",
     "version": "1.0.0",
@@ -165,7 +165,7 @@ curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H 
 Create a backend to a non-ssl app on non-standard port:
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: c27384f8-1f41-66e7-4d12-9d3d96a1e739" -d '{
+curl -X PUT -H "Content-Type: application/json" -d '{
     "type": "static",
     "name": "gator-live",
     "version": "1.0.0",
@@ -185,7 +185,7 @@ curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H 
 Create an ssl backend for the dev-fsw.com domain:
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: 02423cca-dea2-a655-195c-64187c81b829" -d '
+curl -X PUT -H "Content-Type: application/json" -d '
 {
     "type": "static",
     "name": "authcentral-live",
@@ -209,7 +209,7 @@ Create the https frontend that routes traffic the correct backend based on host 
 
 ```bash
 
-{
+curl -X PUT -H "Content-Type: application/json" -d '{
     "key": "https",
     "bind": "*:443 ssl crt /etc/haproxy/dev-fsw.com.pem",
     "mode": "http",
@@ -232,7 +232,7 @@ Create the https frontend that routes traffic the correct backend based on host 
         }
     ],
     "natives": []
-}
+}' "http://192.168.111.10:8080/frontends/https"
 
 ```
 
