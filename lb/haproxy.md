@@ -139,3 +139,173 @@ mkdir data-persistence
 sudo bin/server.js --port 8080 --haproxyPidPath /run/haproxy.pid --haproxyCfgPath /etc/haproxy/haproxy.cfg --persistence ./data-persistence/data --sudo  --debug
 ```
 
+## Use the REST API to configure haproxy
+
+Create a default backend
+
+```bash
+curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: eb57ad59-52fc-7194-4e08-4de1ac8f8343" -d '{
+    "type": "static",
+    "name": "default",
+    "version": "1.0.0",
+    "balance": "roundrobin",
+    "mode": "http",
+    "members": [
+        {
+            "name": "localhost",
+            "version": "1.0.0",
+            "host": "127.0.0.1",
+            "port": 9000
+        }    
+    ]
+}' "http://192.168.111.10:8080/backends/default"
+```
+
+Create a backend to a non-ssl app on non-standard port:
+
+```bash
+curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: c27384f8-1f41-66e7-4d12-9d3d96a1e739" -d '{
+    "type": "static",
+    "name": "gator-live",
+    "version": "1.0.0",
+    "balance": "roundrobin",
+    "mode": "http",
+    "members": [
+        {
+            "name": "fswgator01",
+            "version": "1.0.0",
+            "host": "10.0.49.76",
+            "port": 9000
+        }    
+    ]
+}' "http://192.168.111.10:8080/backends/gator-live"
+```
+
+Create an ssl backend for the dev-fsw.com domain:
+
+```bash
+curl -X PUT -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: 02423cca-dea2-a655-195c-64187c81b829" -d '
+{
+    "type": "static",
+    "name": "authcentral-live",
+    "balance": "roundrobin",
+    "mode": "http",
+    "members": [
+       {
+            "name": "fswauthdev01",
+            "version": "1.0.0",
+            "host": "10.0.50.226",
+            "port": "443",
+            "options": "ssl ca-file /etc/haproxy/dev-fsw.com.pem verify required weight 10 maxconn 100",
+            "lastKnown": ""
+        }
+    ]
+}' "http://192.168.111.10:8080/backends/authcentral-live"
+
+```
+
+Create the https frontend that routes traffic the correct backend based on host header:
+
+```bash
+
+{
+    "key": "https",
+    "bind": "*:443 ssl crt /etc/haproxy/dev-fsw.com.pem",
+    "mode": "http",
+    "keepalive": "server-close",
+    "backend": "default",
+    "rules": [
+        {
+          "type": "header",
+          "header": "host",
+          "operation": "hdr_dom",
+          "value": "gator.dev-fsw.com",
+          "backend": "gator-live"
+        },
+        {
+          "type": "header",
+          "header": "host",
+          "operation": "hdr_dom",
+          "value": "secure.dev-fsw.com",
+          "backend": "authcentral-live"
+        }
+    ],
+    "natives": []
+}
+
+```
+
+The resulting haproxy config should look like this:
+
+```bash
+
+global
+  log 127.0.0.1 local0
+  log 127.0.0.1 local1 notice
+  daemon
+  maxconn 4096
+  tune.ssl.default-dh-param 2048
+
+  # stats socket /tmp/haproxy.status.sock user USER_RUNNING_NODE_PROCESS level admin
+  stats socket /tmp/haproxy.status.sock level admin
+
+  defaults
+    log global
+    option dontlognull
+    option redispatch
+    retries 3
+    maxconn 2000
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+  listen stats :1988
+    mode http
+    stats enable
+    stats uri /
+    stats refresh 2s
+    stats realm Haproxy\ Stats
+    stats auth showme:showme
+
+  frontend https
+    option forwardfor
+    http-request set-header X-Forwarded-Proto https if { ssl_fc }
+    bind *:443 ssl crt /etc/haproxy/dev-fsw.com.pem
+    mode http
+    default_backend default
+    option httplog
+    option http-server-close
+    option http-pretend-keepalive
+    acl header_cc8fr hdr_dom(host) gator.dev-fsw.com
+    use_backend gator-live if header_cc8fr
+    acl header_vobt9 hdr_dom(host) secure.dev-fsw.com
+    use_backend authcentral-live if header_vobt9
+
+  backend authcentral-live
+    mode http
+    balance roundrobin
+    server authcentral-live_10.0.50.226:443 10.0.50.226:443 ssl ca-file /etc/haproxy/dev-fsw.com.pem verify required weight 10 maxconn 100 check inter 2000
+
+  backend default
+    mode http
+    balance roundrobin
+    server default_127.0.0.1:9000 127.0.0.1:9000  check inter 2000
+
+  backend gator-live
+    mode http
+    balance roundrobin
+    server gator-live_10.0.49.76:9000 10.0.49.76:9000  check inter 2000
+
+```
+
+Now, assuming dns resolves to your VIP for the following domains, the load balancer should route traffic as follows:
+
+```bash
+https://gator.dev-fsw.com       --> http://10.0.49.76:9000
+https://secure.dev-fsw.com      --> https://10.0.50.226:443
+https://unavailable.dev-fsw.com --> returns a `503 Service Unavailable` result
+```
+
+And, as a final check, we can view the frontends and backends in the haproxy statistics UI:
+
+![haproxy_statistics_report](/uploads/3db23e50c116c5871b3061a377c74564/haproxy_statistics_report.png)
