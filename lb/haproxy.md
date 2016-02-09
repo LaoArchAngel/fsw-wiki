@@ -135,6 +135,7 @@ git checkout no-thalassa
 Then create a `data-persistence` directory and reference it when starting up the api server:
 
 ```bash
+npm install 
 mkdir data-persistence
 sudo bin/server.js --port 8080 --haproxyPidPath /run/haproxy.pid --haproxyCfgPath /etc/haproxy/haproxy.cfg --persistence ./data-persistence/data --sudo  --debug
 ```
