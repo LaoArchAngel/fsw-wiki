@@ -66,3 +66,7 @@
  * [Build, Publish, and Deploy Console Apps To FswMulti1 - PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_fsw40_prod/)
         * This job will currently only automatically deploy STP, OcrImport, and NightlyDbUpdates ---- ITS still need test as of 1/28/2016
         * IncomingTransmissionProcessor may still be deployed using the release scripts on FswMulti1
+* **FswEcommProductManagementApi**
+ * Stage deploys to **FswEcPmStg**
+ * Production deploys to **FswEcPm1**
+ * [build_ecomm_proudct_management_api](http://fswjenkins01:8080/job/build_ecomm_product_management_api/) Will build a deployable package version of the Api.
