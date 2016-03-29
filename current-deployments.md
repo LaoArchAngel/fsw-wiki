@@ -2,13 +2,21 @@
 ## Fsw4.0 Repository
 ### **Websites**
 
-* **Fsw.com**
+* **Fsw.com(old)**
  * Stage deploys to **FswEcStgOldWeb1** and **FswEcStgOldWeb2**
  * Production deploys to **FswWeb10/11/12** and **FswWeb14/15/16** depending on cluster in service
  * [Fsw.com Build, Package, and Deploy - SNAPSHOT](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution_snapshots/)
  * [Fsw.com Build and Package - RELEASE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
        * [Fsw.com Promotions - DEPLOY TO STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fsw-com_choco_only/)
 
+* **Fsw.com(archer)**
+ * Stage deploys to **FswEcArcherStg1** OR **2** depending on cluster group.
+ * Prod deploys to **FswEcArcher1/2** OR **FswEcArcher3/4** depending on cluster group.
+ * [build_ecomm_archer](http://fswjenkins01:8080/job/build_ecomm_archer/) builds a deployable package version of whatever branch is specified.
+ * [deploy_ecomm_archer](http://fswjenkins01:8080/job/deploy_ecomm_archer/) deploys the given version to the specified environment AND cluster.
+     * Use [stage status](http://www.stg-fsw.com:9000/status) and [prod status](http://www.fsw.com:9000/status) to determine the current In Service cluster.
+     * **NOTE**: Should the deployment hang for an reason, stop the job. You will need to log onto the server/s that the job was attempting to deploy to and kill 7Zip and Chocolatey. For some reason they hang and don't send a response back to Jenkins. Re-running the last job should work after that.
+ * [deploy_ecomm_loadbalancer](http://fswjenkins01:8080/job/deploy_ecomm_loadbalancer/) Will put into service whichever cluster/environment is specified.
 
 * **FswAdmin.com**
  * Stage deploys to **STG-FswAdmin1**
