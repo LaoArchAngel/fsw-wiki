@@ -70,3 +70,10 @@
  * Stage deploys to **FswEcPmStg**
  * Production deploys to **FswEcPm1**
  * [build_ecomm_proudct_management_api](http://fswjenkins01:8080/job/build_ecomm_product_management_api/) Will build a deployable package version of the Api.
+ * [deploy_ecomm_product_management_api]() Takes the pervious package version and deploys to specified environment.
+     * On deployment, it will try to automatically set a schedule for both Hydration and Popularity. Use a GET on the following to see that they are set, or not.
+         * https://ecomm-product-mgmt-api.stg-fsw.com:8457/api/ProductManagement/interval/Hydrator
+         * https://ecomm-product-mgmt-api.stg-fsw.com:8457/api/ProductManagement/interval/Popularity
+     * Should they not be set, they can be set by adding the following.
+         * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
+     * **NOTE**: After Hydration has started, it is a good idea to watch the logs and ensure it completes at least once. There can be issues with 'out of memory' exceptions.
