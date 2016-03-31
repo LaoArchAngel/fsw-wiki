@@ -59,11 +59,12 @@
         * This job will currently only automatically deploy STP, OcrImport, and NightlyDbUpdates ---- ITS still need test as of 1/28/2016
         * IncomingTransmissionProcessor may still be deployed using the release scripts on FswMulti1
 
+
 * [**FswEcommProductManagementApi**](http://gitlab.fsw.com/the-a-team/product-management-api)
  * Stage deploys to **FswEcPmStg**
  * Production deploys to **FswEcPm1**
  * [build_ecomm_proudct_management_api](http://fswjenkins01:8080/job/build_ecomm_product_management_api/) Will build a deployable package version of the Api.
- * [deploy_ecomm_product_management_api]() Takes the pervious package version and deploys to specified environment.
+ * [deploy_ecomm_product_management_api](http://fswjenkins01:8080/job/deploy_ecomm_product_management_api/) Takes the pervious package version and deploys to specified environment.
      * On deployment, it will try to automatically set a schedule for both Hydration and Popularity. Use a GET on the following to see that they are set, or not.
          * https://ecomm-product-mgmt-api.stg-fsw.com:8457/api/ProductManagement/interval/Hydrator
          * https://ecomm-product-mgmt-api.stg-fsw.com:8457/api/ProductManagement/interval/Popularity
@@ -71,18 +72,46 @@
          * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
      * **NOTE**: After Hydration has started, it is a good idea to watch the logs and ensure it completes at least once. There can be issues with 'out of memory' exceptions.
 
+
 * [**FswEcommPageManagementApi**](http://gitlab.fsw.com/the-a-team/page-management-api)
  * Stage deploys to **FswEcPmStg**
  * Production deploys to **FswEcPm1**
- * [build_ecomm_page_management_api](http://fswjenkins01:8080/job/build_ecomm_page_management_api/) Will build a deployable package version of the Api.
- * [deploy_ecomm_page_management_api]() Takes the pervious package version and deploys to specified environment.
+ * [build_ecomm_page_management_api](http://fswjenkins01:8080/job/build_ecomm_page_mgmt_api/) Will build a deployable package version of the Api.
+ * [deploy_ecomm_page_management_api](http://fswjenkins01:8080/job/deploy_ecomm_page_management_api/) Takes the pervious package version and deploys to specified environment.
      * On deployment, it will try to automatically set a schedule for both RefreshIndex and Popularity. Use a GET on the following to see that they are set, or not.
          * https://ecomm-product-mgmt-api.stg-fsw.com:9457/api/PageManagement/interval/RefreshIndex
          * https://ecomm-product-mgmt-api.stg-fsw.com:9457/api/PageManagement/interval/Popularity
      * Should they not be set, they can be set by adding the following.
          * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
 
- ### **Core Components & Applications**
+
+* [**FswEcommElasticSearch**](http://gitlab.fsw.com/the-a-team/page-management-api)
+ * Dev deploys to **FswEcEsDev1**,**FswEcEsDev2**, and **FswEcEsDev3**
+ * Stage deploys to **FswEcEsStg1**,**FswEcEsStg2**, and **FswEcEsStg3**
+ * Production deploys to **FswEcEsProd1**,**FswEcEsProd2**, and **FswEcEsProd3**
+ * [deploy_ecomm_elasticsearch](http://fswjenkins01:8080/job/deploy_ecomm_elasticsearch/) Deploys the fsw.elasticsearch repo along with index mapping changes from ecomm-elasticsearch-indexmappings
+     * This includes setting up the cluster for elasticsearch itself
+
+
+* [**FswEcommImageApi(ImageCopy)**](http://gitlab.fsw.com/the-a-team/image-service)
+ * This is also a non-deployable for most apps but there is an api located in the same repo for the imagecopy(imageApi).
+ * [build_ecomm_page_management_api](http://fswjenkins01:8080/job/build_ecomm_page_management_api/) Will build a deployable package version of the Api.
+ * [build_ecomm_image_service](http://fswjenkins01:8080/job/build_ecomm_image_service/) Will build a deployable package version of the service.
+ * [deploy_ecomm_imagecopy](http://fswjenkins01:8080/job/deploy_ecomm_imagecopy/)
+ * Dev deploys to **FswEcImgApiStg**
+ * Stage deploys to **FswEcImgApiStg**
+ * Production deploys to **FswEcImageApi1**   
+
+
+* [**FswEcommSiteMapApi**](http://gitlab.fsw.com/the-a-team/sitemap)
+ * The image service is also a non-deployable for most apps but there is an api located in the same repo for the sitemap api.
+ * [build_ecomm_sitemap](http://fswjenkins01:8080/job/build_ecomm_sitemap/) Will build a deployable package version of the service.
+ * [deploy_ecomm_sitemap](http://fswjenkins01:8080/job/deploy_ecomm_sitemap/)
+ * Dev deploys to **FswEcSiteMapDev**
+ * Stage deploys to **FswEcSiteMapStg**
+ * Production deploys to **FswEcSiteMap1**
+
+### **Core Components & Applications**
 
  * [**Ansible**](http://fswjenkins01:8080/computer/)
   * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
