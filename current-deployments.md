@@ -69,3 +69,15 @@
      * Should they not be set, they can be set by adding the following.
          * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
      * **NOTE**: After Hydration has started, it is a good idea to watch the logs and ensure it completes at least once. There can be issues with 'out of memory' exceptions.
+
+
+### **Core Components & Applications**
+
+* **Ansible**
+* **Jenkins**
+* **SQL**
+* **Mongo**
+* **Accellos**
+* **GitLab**
+* **ProGet**
+* **Gator**
