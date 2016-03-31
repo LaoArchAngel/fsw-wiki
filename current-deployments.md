@@ -77,8 +77,7 @@
  * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
  * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
  * FSWAnsibleMasterProd (10.0.50.85)
-* **Jenkins**
- * http://fswjenkins01:8080/
+* [**Jenkins**](http://fswjenkins01:8080/)
 * **SQL** - Main FSW DB
  * Dev - fswdev3
  * Stage - fswstg3
@@ -88,8 +87,8 @@
  * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
  * Prod - FSWmongo01.foodservicewarehouse.com:30000,FSWmongo02.foodservicewarehouse.com,FSWmongo03.foodservicewarehouse.com
 * **Accellos**
-* **GitLab**
-* **ProGet**
+* [**GitLab**](http://gitlab.fsw.com/)
+* [**ProGet**](http://proget.fsw.com/)
 * **Gator**
 
 ### **Non-Deployables**
