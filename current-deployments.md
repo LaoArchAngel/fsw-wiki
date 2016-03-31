@@ -50,7 +50,12 @@
 * **NightlyDbUpdates**
 * **ScheduledTransmissionProcessor**
 * **KountIncoming**
-* **Distribution Services**
+* **Distribution Services** all on FswDistScv01
+ * Inventory.QuantityFeed
+ * Queueing.Consumer
+ * Shipping.Accellos.Feed
+ * Shipping.UpsFeed
+ * Purchasing
 
  * Stage deploys to **STG-FswSvc1**
  * Production deploys to **FswMulti1**
