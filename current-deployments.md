@@ -89,7 +89,7 @@
 * **Accellos**
 * [**GitLab**](http://gitlab.fsw.com/)
 * [**ProGet**](http://proget.fsw.com/)
-* **Gator**
+* [**Gator**](http://gator.fsw.com:9000/)
 
 ### **Non-Deployables**
 None of the following are deployed, but they do use a Jenkins job to build a useable packaged. Packages are pushed up to ProGet.
