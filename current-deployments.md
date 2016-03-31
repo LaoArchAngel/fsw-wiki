@@ -26,12 +26,6 @@
        * [FswAdmin.com Promotions - DEPLOY TO STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fswadmin-com_choco_only/)
 
 
-#### **Other websites:**
-* **IppBuy.com**
-* **FswOrderup.com**
-* **PartnerPortal**
-* **Reporting**
-
  * Stage deploys to **STG-FswWeb1**
  * Production deploys to **FswWeb1** and **FswWeb2**
  * [Build and Deploy sites - DEPLOY TO STAGE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_deploy_fsw40/)
@@ -39,11 +33,8 @@
 
 ### **Windows Services**
 
-* **AsyncUpdateWindowsService**
 * **SalesForceWindowsService**
 * **IncomingTransmissionService**
-* **SolrWindowsService**
-* **WinnowingWindowsService**
 * **AsyncQueueConsumer**
 * **CartConsumerService**
 * **TransmissionConsumerService**
@@ -59,6 +50,7 @@
 * **NightlyDbUpdates**
 * **ScheduledTransmissionProcessor**
 * **KountIncoming**
+* **Distribution Services**
 
  * Stage deploys to **STG-FswSvc1**
  * Production deploys to **FswMulti1**
