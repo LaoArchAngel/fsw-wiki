@@ -58,7 +58,8 @@
  * [Build, Publish, and Deploy Console Apps To FswMulti1 - PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_publish_fsw40_prod/)
         * This job will currently only automatically deploy STP, OcrImport, and NightlyDbUpdates ---- ITS still need test as of 1/28/2016
         * IncomingTransmissionProcessor may still be deployed using the release scripts on FswMulti1
-* **FswEcommProductManagementApi**
+
+* [**FswEcommProductManagementApi**](http://gitlab.fsw.com/the-a-team/product-management-api)
  * Stage deploys to **FswEcPmStg**
  * Production deploys to **FswEcPm1**
  * [build_ecomm_proudct_management_api](http://fswjenkins01:8080/job/build_ecomm_product_management_api/) Will build a deployable package version of the Api.
@@ -70,6 +71,16 @@
          * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
      * **NOTE**: After Hydration has started, it is a good idea to watch the logs and ensure it completes at least once. There can be issues with 'out of memory' exceptions.
 
+* [**FswEcommPageManagementApi**](http://gitlab.fsw.com/the-a-team/page-management-api)
+ * Stage deploys to **FswEcPmStg**
+ * Production deploys to **FswEcPm1**
+ * [build_ecomm_page_management_api](http://fswjenkins01:8080/job/build_ecomm_page_management_api/) Will build a deployable package version of the Api.
+ * [deploy_ecomm_page_management_api]() Takes the pervious package version and deploys to specified environment.
+     * On deployment, it will try to automatically set a schedule for both RefreshIndex and Popularity. Use a GET on the following to see that they are set, or not.
+         * https://ecomm-product-mgmt-api.stg-fsw.com:9457/api/PageManagement/interval/RefreshIndex
+         * https://ecomm-product-mgmt-api.stg-fsw.com:9457/api/PageManagement/interval/Popularity
+     * Should they not be set, they can be set by adding the following.
+         * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
 
 ### **Core Components & Applications**
 
@@ -77,19 +88,13 @@
  * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
  * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
  * FSWAnsibleMasterProd (10.0.50.85)
-* [**Jenkins**](http://fswjenkins01:8080/)
-* **SQL** - Main FSW DB
- * Dev - fswdev3
- * Stage - fswstg3
- * Prod - fswdb
+* **Jenkins**
+* **SQL**
 * **Mongo**
- * Dev - FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000
- * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
- * Prod - FSWmongo01.foodservicewarehouse.com:30000,FSWmongo02.foodservicewarehouse.com,FSWmongo03.foodservicewarehouse.com
 * **Accellos**
-* [**GitLab**](http://gitlab.fsw.com/)
-* [**ProGet**](http://proget.fsw.com/)
-* [**Gator**](http://gator.fsw.com:9000/)
+* **GitLab**
+* **ProGet**
+* **Gator**
 
 ### **Non-Deployables**
 None of the following are deployed, but they do use a Jenkins job to build a useable packaged. Packages are pushed up to ProGet.
