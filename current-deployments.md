@@ -73,7 +73,10 @@
 
 ### **Core Components & Applications**
 
-* **Ansible**
+* [**Ansible**](http://fswjenkins01:8080/computer/)
+ * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
+ * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
+ * FSWAnsibleMasterProd (10.0.50.85)
 * **Jenkins**
 * **SQL**
 * **Mongo**
