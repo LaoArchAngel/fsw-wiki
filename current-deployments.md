@@ -51,10 +51,10 @@
 * **ScheduledTransmissionProcessor**
 * **KountIncoming**
 * **Distribution Services** all on FswDistScv01
- * Inventory.QuantityFeed
+ * Inventory.QuantityFeed 
  * Queueing.Consumer
- * Shipping.Accellos.Feed
- * Shipping.UpsFeed
+ * Shipping.Accellos.Feed   deployed using http://fswjenkins01:8080/
+ * Shipping.UpsFeed         deployed using http://fswjenkins01:8080/
  * Purchasing
 
  * Stage deploys to **STG-FswSvc1**
