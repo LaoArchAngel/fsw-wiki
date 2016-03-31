@@ -78,8 +78,15 @@
  * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
  * FSWAnsibleMasterProd (10.0.50.85)
 * **Jenkins**
+ * http://fswjenkins01:8080/
 * **SQL**
+ * fswdev3
+ * fswstg3
+ * fswdb
 * **Mongo**
+ * Dev - FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000
+ * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
+ * Prod - FSWmongo01.foodservicewarehouse.com:30000,FSWmongo02.foodservicewarehouse.com,FSWmongo03.foodservicewarehouse.com
 * **Accellos**
 * **GitLab**
 * **ProGet**
