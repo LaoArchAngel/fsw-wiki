@@ -50,12 +50,7 @@
 * **NightlyDbUpdates**
 * **ScheduledTransmissionProcessor**
 * **KountIncoming**
-* **Distribution Services** all on FswDistScv01
- * Inventory.QuantityFeed 
- * Queueing.Consumer
- * Shipping.Accellos.Feed   deployed using http://fswjenkins01:8080/
- * Shipping.UpsFeed         deployed using http://fswjenkins01:8080/
- * Purchasing
+* **Distribution Services**
 
  * Stage deploys to **STG-FswSvc1**
  * Production deploys to **FswMulti1**
@@ -86,3 +81,16 @@
 * **GitLab**
 * **ProGet**
 * **Gator**
+
+### **Non-Deployables**
+None of the following are deployed, but they do use a Jenkins job to build a useable packaged. Packages are pushed up to ProGet.
+* **eComm.ProductService**
+ * [build_ecomm_product_service](http://fswjenkins01:8080/job/build_ecomm_product_service/)
+* **eComm.PageService**
+ * [build_ecomm_page_service](http://fswjenkins01:8080/job/build_ecomm_page_service/)
+* **eComm.SchedulerService**
+ * [build_ecomm_scheduler_service](http://fswjenkins01:8080/job/build_ecomm_scheduler_service/)
+* **eComm.RedirectService**
+* **eComm.ImageService**
+* **eComm.CartService**
+* **eComm.LeadAggregationService**
