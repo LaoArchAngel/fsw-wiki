@@ -9,8 +9,7 @@
  * [Fsw.com Build and Package - RELEASE](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/build_fsw_solution/)
        * [Fsw.com Promotions - DEPLOY TO STAGE & PRODUCTION](http://fswjenkins01:8080/view/Fsw4.0%20Deployment%20Jobs/job/package_fsw-com_choco_only/)
 
-* **Fsw.com(archer)**
- * [Code] (http://gitlab.fsw.com/the-a-team/fsw.com)
+* **[Fsw.com(archer)](http://gitlab.fsw.com/the-a-team/fsw.com)**
  * Stage deploys to **FswEcArcherStg1** OR **2** depending on cluster group.
  * Prod deploys to **FswEcArcher1/2** OR **FswEcArcher3/4** depending on cluster group.
  * [build_ecomm_archer](http://fswjenkins01:8080/job/build_ecomm_archer/) builds a deployable package version of whatever branch is specified.
