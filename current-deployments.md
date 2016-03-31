@@ -79,11 +79,10 @@
  * FSWAnsibleMasterProd (10.0.50.85)
 * **Jenkins**
  * http://fswjenkins01:8080/
-* **SQL**
- * Main FSW DB
-  * Dev - fswdev3
-  * Stage - fswstg3
-  * Prod - fswdb
+* **SQL** - Main FSW DB
+ * Dev - fswdev3
+ * Stage - fswstg3
+ * Prod - fswdb
 * **Mongo**
  * Dev - FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000
  * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
