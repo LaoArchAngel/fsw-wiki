@@ -82,19 +82,25 @@
      * Should they not be set, they can be set by adding the following.
          * ?intervalInMinutes=60&runDate=2016-02-22T14:31&overrideInterval=true
 
-### **Core Components & Applications**
+ ### **Core Components & Applications**
 
-* [**Ansible**](http://fswjenkins01:8080/computer/)
- * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
- * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
- * FSWAnsibleMasterProd (10.0.50.85)
-* **Jenkins**
-* **SQL**
-* **Mongo**
-* **Accellos**
-* **GitLab**
-* **ProGet**
-* **Gator**
+ * [**Ansible**](http://fswjenkins01:8080/computer/)
+  * FswAnsibleMaster01 - v1.9-beta (10.0.49.6)
+  * FswAnsibleMaster03 - v1.9.2 (10.0.49.7)
+  * FSWAnsibleMasterProd (10.0.50.85)
+ * [**Jenkins**](http://fswjenkins01:8080/)
+ * **SQL** - Main FSW DB
+  * Dev - fswdev3
+  * Stage - fswstg3
+  * Prod - fswdb
+ * **Mongo**
+  * Dev - FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000
+  * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
+  * Prod - FSWmongo01.foodservicewarehouse.com:30000,FSWmongo02.foodservicewarehouse.com,FSWmongo03.foodservicewarehouse.com
+ * **Accellos**
+ * [**GitLab**](http://gitlab.fsw.com/)
+ * [**ProGet**](http://proget.fsw.com/)
+ * [**Gator**](http://gator.fsw.com:9000/)
 
 ### **Non-Deployables**
 None of the following are deployed, but they do use a Jenkins job to build a useable packaged. Packages are pushed up to ProGet.
