@@ -50,6 +50,14 @@
 * **NightlyDbUpdates**
 * **ScheduledTransmissionProcessor**
 * **KountIncoming**
+  * Load the _FSW4.0_ solution.
+  * Navigate to the _KountEns_ project. (/ThirdParty-ToRemove/Kount/KountEns)
+  * Right-click on _KountEns_.
+    * Click the _Publish..._ option.
+  * Click the _Preview_ tab on the left.
+  * Ensure _KountIncoming_ is selected in the drop-down.
+  * Click the _Publish_ button.
+  * **NOTE:** I do not actually know if these are the most up-to-date instructions.  The person who does left weeks ago.
 * **Distribution Services**
 
  * Stage deploys to **STG-FswSvc1**
@@ -128,6 +136,14 @@
   * Prod - FSWmongo01.foodservicewarehouse.com:30000,FSWmongo02.foodservicewarehouse.com,FSWmongo03.foodservicewarehouse.com
  * **Accellos**
  * [**GitLab**](http://gitlab.fsw.com/)
+  * To access the GitLab server via ssh, you will need the fswadmin public and
+  private key.[Public Key](ssh/fswadmin_ssh.pub) / [Private Key](ssh/fswadmin_ssh)
+  * To ssh into GitLab, use the following command:
+    ```bash
+    ssh fswadmin@gitlab.fsw.com -i path/to/fswadmin_ssh
+    ```
+  * The GitLab server is hosted as a VM.  Moving the repositories should be done by moving the VM.
+  * If moving the server VM is not possible, it is possible to clone any desired repositories and then push them to a new host.
  * [**ProGet**](http://proget.fsw.com/)
  * [**Gator**](http://gator.fsw.com:9000/)
 
