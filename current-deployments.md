@@ -137,7 +137,7 @@
  * **Accellos**
  * [**GitLab**](http://gitlab.fsw.com/)
   * To access the GitLab server via ssh, you will need the fswadmin public and
-  private key.[Public Key](ssh/fswadmin_ssh.pub) / [Private Key](ssh/fswadmin_ssh)
+  private key. [Public Key](http://gitlab.fsw.com/tfs/library/raw/master/ssh/fswadmin_ssh.pub) / [Private Key](http://gitlab.fsw.com/tfs/library/raw/master/ssh/fswadmin_ssh)
   * To ssh into GitLab, use the following command:
     ```bash
     ssh fswadmin@gitlab.fsw.com -i path/to/fswadmin_ssh
