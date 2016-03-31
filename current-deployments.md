@@ -80,9 +80,10 @@
 * **Jenkins**
  * http://fswjenkins01:8080/
 * **SQL**
- * fswdev3
- * fswstg3
- * fswdb
+ * Main FSW DB
+  * Dev - fswdev3
+  * Stage - fswstg3
+  * Prod - fswdb
 * **Mongo**
  * Dev - FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000
  * Stage - FSWStgMongo:30000,FSWStgMongo:40000,FSWStgMongo:50000
