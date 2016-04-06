@@ -16,7 +16,7 @@
  * [deploy_ecomm_archer](http://fswjenkins01:8080/job/deploy_ecomm_archer/) deploys the given version to the specified environment AND cluster.
      * Use [stage status](http://www.stg-fsw.com:9000/status) and [prod status](http://www.fsw.com:9000/status) to determine the current In Service cluster.
      * **NOTE**: Should the deployment hang for an reason, stop the job. You will need to log onto the server/s that the job was attempting to deploy to and kill 7Zip and Chocolatey. For some reason they hang and don't send a response back to Jenkins. Re-running the last job should work after that.
- * [deploy_ecomm_loadbalancer](http://fswjenkins01:8080/job/deploy_ecomm_loadbalancer/) Will put into service whichever cluster/environment is specified.
+ * [deploy_ecomm_loadbalancer](http://fswjenkins01:8080/job/deploy_ecomm_loadbalancer/) Will put into service whichever cluster/environment is specified.  Note that the first run of this deploy often fails--re-run immediately and it should work.
 
 * **FswAdmin.com**
  * Stage deploys to **STG-FswAdmin1**
